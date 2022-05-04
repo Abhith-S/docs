@@ -135,19 +135,19 @@ You can now use this access setting the `--access` flag. For example, to copy th
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe --access cheesecake cp sj://cakes/cheesecake.jpg .
+./uplink.exe cp --access cheesecake sj://cakes/cheesecake.jpg .
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink --access cheesecake cp sj://cakes/cheesecake.jpg .
+uplink cp --access cheesecake sj://cakes/cheesecake.jpg .
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink --access cheesecake cp sj://cakes/cheesecake.jpg .
+uplink cp --access cheesecake sj://cakes/cheesecake.jpg .
 ```
 {% endtab %}
 {% endtabs %}

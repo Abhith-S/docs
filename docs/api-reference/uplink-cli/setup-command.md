@@ -28,9 +28,17 @@ uplink setup [flags]
 
 ## Flags
 
-| Flag           | Description    |
-| -------------- | -------------- |
-| `--help`, `-h` | help for setup |
+| Flag                    | Description                                                                                                               |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `--auth-service string` | If generating backwards-compatible S3 Gateway credentials, use this auth service (default https://auth.us1.storjshare.io) |
+
+## Global flags
+
+| Flag                  | Description                                   |
+| --------------------- | --------------------------------------------- |
+| `--config-dir string` | Directory that stores the configuration       |
+| `--help`, `-h`        | help for setup                                |
+| `--advanced`          | when used with -h, prints advanced flags help |
 
 ## Example
 

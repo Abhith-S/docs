@@ -21,19 +21,19 @@ For security reasons it's better to use a casual user to work from the CLI, thus
 [Navigate to the directory your **uplink.exe** file is located](../../../support/faqs.md#how-do-i-navigate-to-the-binary-location):
 
 ```
-./uplink.exe access save main accessgrant.txt
+./uplink.exe access import main accessgrant.txt
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink access save main accessgrant.txt
+uplink access import main accessgrant.txt
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink access save main accessgrant.txt
+uplink access import main accessgrant.txt
 ```
 {% endtab %}
 {% endtabs %}

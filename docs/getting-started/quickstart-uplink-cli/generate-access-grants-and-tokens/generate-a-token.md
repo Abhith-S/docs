@@ -15,7 +15,7 @@ description: >-
 
 ![](<../../../.gitbook/assets/image (181).png>)
 
-4\. Copy and save the **Satellite Address** and **API Key** as it will only appear once.
+4\. Copy and save the **Satellite Address** and **API Key** in a safe place as they will only appear once.
 
 ![](<../../../.gitbook/assets/image (174).png>)
 
@@ -24,25 +24,25 @@ description: >-
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe access create
+./uplink.exe setup
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink access create
+uplink setup
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink access create
+uplink setup
 ```
 {% endtab %}
 {% endtabs %}
 
 {% hint style="info" %}
-For anyone who has previously configured an uplink please use a named access. If you want to replace the default access, you should [Create an Access Grant](../uploading-your-first-object/create-first-access-grant.md) and use `--overwrite` flag.
+For anyone who has previously configured an Uplink, please use a named access. If you want to replace the default access, you need to either [Create an Access Grant](../uploading-your-first-object/create-first-access-grant.md) and use the [`uplink access import`](../../../api-reference/uplink-cli/access-command/access-import.md#import-access-grant-and-replace-the-existing-access) command with `--force` flag to import it, or use the [`uplink access create --import-to <name>`](../../../api-reference/uplink-cli/access-command/access-create.md#create-an-access-grant-and-replace-the-existing-access) command with `--force` flag to create an Access Grant in CLI and import it to the specified access in the local store of Uplink.
 {% endhint %}
 
 6\. Follow the prompts. When asked for your API Key, enter it (you should have saved it in step 4 above).
@@ -74,7 +74,11 @@ uplink share --readonly=false
 {% endtabs %}
 
 {% hint style="danger" %}
-Keep your full-rights Access Grant in secret, it contains encryption key and it will allow to upload, download or delete your data from the entire project!
+Keep your full-rights Access Grant secret, it contains the encryption key and will enable uploading, downloading or deleting your data from the entire project!
 {% endhint %}
 
 8\. Your Access Grant should have been output.&#x20;
+
+{% hint style="success" %}
+The alternative for using the `uplink setup` command and then `uplink share` is to use the [`uplink access create`](../../../api-reference/uplink-cli/access-command/access-create.md) command instead, it will print the Access Grant right away.
+{% endhint %}

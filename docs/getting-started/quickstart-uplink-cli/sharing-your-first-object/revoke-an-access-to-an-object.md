@@ -5,19 +5,19 @@ You can revoke an access grant to an object at any time with the command `uplink
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe revoke asdfRF...
+./uplink.exe access revoke asdfRF...
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink revoke asdfRF...
+uplink access revoke asdfRF...
 ```
 {% endtab %}
 
 {% tab title="MacOS" %}
 ```
-uplink revoke asdfRF...
+uplink access revoke asdfRF...
 ```
 {% endtab %}
 {% endtabs %}
@@ -33,19 +33,19 @@ If you want to share this content again you should create a new access grant thr
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe revoke --access access-name
+./uplink.exe access revoke access-name
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink revoke --access access-name
+uplink access revoke access-name
 ```
 {% endtab %}
 
 {% tab title="MacOS" %}
 ```
-uplink revoke --access access-name
+uplink access revoke access-name
 ```
 {% endtab %}
 {% endtabs %}
