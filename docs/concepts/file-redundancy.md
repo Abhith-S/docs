@@ -1,6 +1,6 @@
 # File Redundancy
 
-### Durability and expansion factor <a href="durability-and-expansion-factor" id="durability-and-expansion-factor"></a>
+### Durability and expansion factor <a href="#durability-and-expansion-factor" id="durability-and-expansion-factor"></a>
 
 In a decentralized storage network, any storage node could go offline permanently at any time. A storage network’s redundancy strategy must store data in a way that provides access with high probability, even though any given number of individual nodes may be in an offline state. To achieve a specific level of _durability_ (defined as the probability that data remains available in the face of failures), many products in this space (Filecoin, MaidSafe, Siacoin, GFS, Ceph, IPFS, etc.) by default use replication, which means simply having multiple copies of the data stored on different nodes.
 
@@ -10,7 +10,7 @@ For example, suppose your desired durability level requires a replication strate
 
 On the one hand, replication does make network maintenance simpler. If a node goes offline, only one of the other storage nodes is needed to bring a new replacement node into the fold. On the other hand, for every node that is added to the redundancy pool, 100% of the replicated data must be transferred.
 
-### Erasure Code <a href="erasure-codes" id="erasure-codes"></a>
+### Erasure Code <a href="#erasure-codes" id="erasure-codes"></a>
 
 Erasure codes are another redundancy approach, and importantly, they do not tie durability to the expansion factor. You can tune your durability without increasing the overall network traffic!
 
@@ -22,23 +22,23 @@ If a block of data is _s_ bytes large, each of the _n_ erasure shares are roughl
 
 Interestingly, the durability of a _k_ = 20, _n_ = 40 erasure code is better than a _k_ = 10, _n_ = 20 erasure code, even though the expansion factor (2x) is the same for both. This is because the risk is spread across more nodes in the _k_ = 20, _n_ = 40 case. To help drive this point home, we calculated the durability for various erasure code configuration choices in a network with a churn of 10%. We talked more about the math behind this table in section 3.4 of [our paper](https://storj.io/storjv3.pdf), and we’ll discuss more about churn in an upcoming blog post, but suffice it to say, we hope these calculated values are illustrative:
 
-![](https://storj.io/blog/img/stats1.png)
+![](<../.gitbook/assets/image (159).png>)
 
 Notice how increasing the amount of storage nodes involved increases the amount of durability significantly (each new 9 is 10x more durable), without a change in the expansion factor. We also put this data together in a graph:
 
-![](https://storj.io/blog/img/graph.png)
+![](<../.gitbook/assets/image (134).png>)
 
 Admittedly, this graph is a little disingenuous: the chances of you caring about having thirty-two 9s of durability is… low, to say the least. The National Weather Service [estimates](https://www.weather.gov/safety/lightning-odds) the likelihood of you not getting hit by lightning this year at only six 9s after all. But you should still be able to see that a _k_ = 2, _n_ = 4 is less durable than a _k_ = 16, _n_ = 32 configuration.
 
 In contrast, replication requires significantly higher expansion factors for the same durability. The following table shows durability with a replication scheme:
 
-![](https://storj.io/blog/img/stats2.png)
+![](<../.gitbook/assets/image (136).png>)
 
 Comparing the two tables, notice that replicating data at 10x can’t beat erasure codes with _k_ = 16, _n_ = 32, which is an expansion factor of only two. For durable storage, erasure codes simply require ridiculously less disk space than replication.
 
-If you want to learn more about how erasure codes work, you can read [this introductory tutorial I co-wrote last year.](https://innovation.vivint.com/introduction-to-reed-solomon-bc264d0794f8)
+If you want to learn more about how erasure codes work, you can read [this introductory tutorial](https://innovation.vivint.com/introduction-to-reed-solomon-bc264d0794f8) co-written by some of our team members in 2017.
 
-### Okay, erasure codes take less disk space. But isn’t repairing data more expensive? <a href="okay-erasure-codes-take-less-disk-space-but-isn-t-repairing-data-more-expensive" id="okay-erasure-codes-take-less-disk-space-but-isn-t-repairing-data-more-expensive"></a>
+### Okay, erasure codes take less disk space. But isn’t repairing data more expensive? <a href="#okay-erasure-codes-take-less-disk-space-but-isn-t-repairing-data-more-expensive" id="okay-erasure-codes-take-less-disk-space-but-isn-t-repairing-data-more-expensive"></a>
 
 It’s true that replication makes repair _simpler_. Every time a node is lost, only one of the remaining nodes is necessary for recovery. On the flip side, erasure codes require several nodes to be involved for each repair. Though this feels like a problem, it’s actually not.
 
@@ -48,7 +48,7 @@ At 9x, replication in our model of course has an expansion factor of 9. Once aga
 
 With _k_ = 18, _n_ = 36 erasure codes (with an expansion factor of only two), losing one-third of our nodes means we now only have 24 nodes still available and need to repair to twelve new nodes. The data each node is storing is only 1 MB each, but eighteen nodes must be contacted to rebuild the data. Let’s designate one of the nodes to rebuild the data. It will download eighteen 1 MB pieces, reconstruct the original file, then store the missing twelve 1 MB pieces on new nodes. If this designated node is one of the new nodes, we can avoid one of the transfers. The total overall bandwidth used is at most 30 MB, which is almost half of the replication scenario. This advantage in bandwidth savings becomes even wider with higher durabilities.
 
-### Downsides? <a href="downsides" id="downsides"></a>
+### Downsides? <a href="#downsides" id="downsides"></a>
 
 Erasure coding did require more CPU time, that’s true. Still, a reasonable erasure encoding library can generate encoded data at at least 650 MB/s, which is unlikely to be the major throughput bottleneck over a wide-area network with unreliable storage nodes.
 
@@ -56,7 +56,7 @@ Erasure coding also required a designated node to do the repair. While this comp
 
 Notably, erasure coding does _not_ complicate streaming. Remember how I said erasure codes are used for satellite communication and CDs? As long as erasure coding is batched into small operations, streaming continues to work just fine. See Figure 4.2 and sections 4.1.2 and 4.8 in [our white paper](https://storj.io/storjv3.pdf) for more details about how we can pull native video streaming off.
 
-### Upsides? <a href="upsides" id="upsides"></a>
+### Upsides? <a href="#upsides" id="upsides"></a>
 
 Comparing 9x replication and _k_ = 18, _n_ = 36 erasure coding, the latter uses less than half the overall bandwidth for repair. It also uses less than a third of the bandwidth for storage and takes up less than a third of the disk space. It is roughly ten times more durable! Holy crap!
 
@@ -66,7 +66,7 @@ It’s worth re-reading those last two paragraphs. These gains are significant. 
 
 In this edition we dive deeper into why nodes joining and leaving the network - also known as churn - has a much more significant (and also bad) impact on a redundancy strategy that relies on replication. We make the case that using replication in a high-churn environment is not only impractical, but inevitably doomed to fail. Quoting [Blake and Rodrigues](http://www.eecs.harvard.edu/\~margo/cs261/papers-a1/blake.pdf), “Data redundancy is the key to any data guarantees. However, preserving redundancy in the face of highly dynamic membership is costly.”
 
-#### An Aside on Dynamics <a href="an-aside-on-dynamics" id="an-aside-on-dynamics"></a>
+#### An Aside on Dynamics <a href="#an-aside-on-dynamics" id="an-aside-on-dynamics"></a>
 
 Before diving into the exciting math parts, we need to quickly define a couple of concepts relating to network dynamics. The lifetime of a node is the duration between it joining and leaving the system for whatever reason. A network made of several nodes has an average lifetime, commonly called the mean time to failure (MTTF). The inverse of mean time to failure is churn rate or frequency of failure-per-unit-of-time. It’s an important relationship to understand, especially when MTTF is a unit of time much greater than the units needed for a specific problem.
 
@@ -74,17 +74,17 @@ Distributed storage systems have mechanisms to repair data by replacing the piec
 
 After reading part one of this series, it’s clearly not feasible to rely on replication alone, but some projects have proposed combining erasure coding and replication. Once you’ve erasure coded a file and distributed it across a set of nodes, it’s going to have a defined durability for a given level of node churn. If you want to increase that durability for that given level of node churn, you have two choices: increase the erasure code k/n ratio or use replication to make copies of the erasure coded pieces. These two strategies are very different and have a huge impact on the network beyond just increasing durability.
 
-#### Our Hypothetical Networks <a href="our-hypothetical-networks" id="our-hypothetical-networks"></a>
+#### Our Hypothetical Networks <a href="#our-hypothetical-networks" id="our-hypothetical-networks"></a>
 
 So, let’s define two hypothetical distributed storage networks, one using erasure coding alone for redundancy (the approach used on Storj’s V3 network), and one using erasure coding plus replication for redundancy (which is the approach used by Filecoin as well as the previous, depreciated Storj network). We will assume nodes on both networks are free to join and leave at any time, and that uptime for nodes can be highly variable based on the hardware, OS, available bandwidth, and a variety of other factors. When a node leaves a network, the pieces of data on that node become permanently unavailable. Of course, if nodes fall below a certain threshold of availability in a given month, the impact on the overall availability of files is effectively equivalent to the node leaving the network altogether.
 
 Let’s also assume both hypothetical networks use a 4⁄8 Reed-Solomon erasure code ratio and have 99.9% durability with node churn at 10%. Both networks want to achieve eleven 9s of durability though. One is going to achieve it through erasure coding alone, and the other is going to combine erasure coding with replication.
 
-#### And Now, Some Math <a href="and-now-some-math" id="and-now-some-math"></a>
+#### And Now, Some Math <a href="#and-now-some-math" id="and-now-some-math"></a>
 
 As it turns out, if you know the target durability, you know the MTTF for nodes, and you know the erasure coding scheme, you can calculate the amount of data churn in a given time period. The formula for calculating data churn is:
 
-![](https://storj.io/blog/img/rvsec-formula-1.png)
+![](<../.gitbook/assets/image (138).png>)
 
 where is the churn rate, B is the number of bytes on the network, n is the total number of erasure shares, m is the repair threshold, and k is the number of pieces needed for rebuild.
 
@@ -99,7 +99,7 @@ So, let’s take that math and apply it to our two hypothetical networks. The fi
 
 To calculate the durability of a replicated or erasure-coded file, we consider the CDF of the Poisson distribution, given by the formula:
 
-![](https://storj.io/blog/img/rvsec-formula-2.png)
+![](<../.gitbook/assets/image (153).png>)
 
 where D is the event that the most n-k pieces have been lost. In the case of simple replication, k=1, so a file is still recoverable when at most n-1 of the pieces have been lost; that is, if at least one of the copies is still on the network, the data is still accessible. When considering replication on a file that has already been subjected to erasure encoding, the calculation changes.
 
@@ -107,34 +107,34 @@ Suppose that a file undergoes k=4, n=8 erasure-encoding (where 8 pieces are crea
 
 Thus, rather than having a single factor of P(D) determining the durability (with at most n-1 pieces being lost), one has a factor of P(D) for each unique set required for rebuild, since there are now k sets of which each one must not have lost more than r-1 pieces, where the expansion factor r determines the number of copies that are made (with there being r-1 copies made to achieve an expansion factor of r, including the original file). Calculating this probability requires the use of the Binomial distribution, where we let p be the probability that at most r-1 copies have been lost from a set. Then, to calculate the probability that there are at least k sets containing at least 1 copy each, we find the area of the upper tail of the Binomial CDF:
 
-![](https://storj.io/blog/img/rvsec-formula-3.png)
+![](<../.gitbook/assets/image (145).png>)
 
 Let’s first look at the impact of node churn on durability based on the two hypothetical scenarios, one using replication+erasure coding, and the other optimizing for erasure coding alone. Based on the above formulas, the results are as follows:
 
-![](https://storj.io/blog/img/table-1.png)
+![](<../.gitbook/assets/image (161).png>)
 
 As it turns out (predictably) the increased durability can be achieved in the erasure-code-only scenario with no increase in expansion factor. Adding replication to already-erasure-coded data is much more efficient that just straight up replicating the original file, (which requires 17 copies to achieve), but has triple the expansion factor of erasure codes alone.
 
 In an environment where churn is even higher, or highly variable, durability is impacted significantly in either scenario:
 
-![](https://storj.io/blog/img/table-2.png)
+![](<../.gitbook/assets/image (182).png>)
 
 In these unpredictable or highly variable environments, it becomes necessary to address the worst case scenario in order to maintain a constant level of durability. Again, as is clear from the table below, node churn has a massive impact, and when using replication, that massive impact translates directly into increases in the expansion factor. In the table below you can see the impact of churn on expansion factor when trying to maintain a minimum durability of eleven 9s:
 
-![](https://storj.io/blog/img/table-3.png)
+![](<../.gitbook/assets/image (124).png>)
 
 So, what do these tables tell us? Well, there are a number of interesting observations to be drawn:
 
-* At higher rates of churn, replication dramatically increases the expansion factor and, as we learned in [the previous blog post](https://storj.io/blog/2018/11/replication-is-bad-for-decentralized-storage-part-1-erasure-codes-for-fun-and-profit/), requires much higher bandwidth utilization for repair.
+* At higher rates of churn, replication dramatically increases the expansion factor and, as we learned in [this blog post](https://storj.io/blog/2018/11/replication-is-bad-for-decentralized-storage-part-1-erasure-codes-for-fun-and-profit/), requires much higher bandwidth utilization for repair.
 * Erasure coding can be used to achieve higher rates of durability without increasing either the expansion factor or the amount of bandwidth used for repair.
 
 Just to drive that point home, let’s first look at how a file actually exists on the two hypothetical networks:
 
-![](https://storj.io/blog/img/table-4.png)
+![](<../.gitbook/assets/image (168).png>)
 
 It is worth understanding the differences in how repair actually behaves on our two networks, because the process for replication is very different compared to erasure codes. Continuing the example of the 1 TB file above, let’s examine how repair actually looks when 1⁄3 of nodes storing the data exit the network:
 
-![](https://storj.io/blog/img/table-5.png)
+![](<../.gitbook/assets/image (135).png>)
 
 One other important thing to remember about distributed storage networks is that the amount of data the network can store isn’t constrained by the amount of available hard drive space on the nodes. It’s constrained by the amount of bandwidth available to nodes. Allow me to explain.
 
@@ -143,13 +143,11 @@ The following variables and calculated values are used in determining the amount
 **Variables**
 
 1. **Storage per storage node operator** - The amount of hard drive space available to share by a storage node.
-2. **Download speed** - The downstream bandwidth available on the network on which the storage node is operating, measured in Mbps.\
-
+2. **Download speed** - The downstream bandwidth available on the network on which the storage node is operating, measured in Mbps.
 3. **Upload speed** - The upstream bandwidth available on the network on which the storage node is operating, measured in Mbps.
 4. **ISP bandwidth cap** - The maximum amount of bandwidth a storage node operator can utilize in a month before being subjected to a bandwidth cap enforcement action such as incurring a financial penalty or being subjected to bandwidth throttling from an ISP.
 5. **Storage node operator bandwidth utilization percentage** - The percentage of the total monthly bandwidth cap that a user will dedicate to be used by their storage node, assuming some percentage of bandwidth will be utilized for other services.
-6. **Egress bandwidth percentage** - The average amount of egress traffic from client downloads based on the use cases we support.\
-
+6. **Egress bandwidth percentage** - The average amount of egress traffic from client downloads based on the use cases we support.
 7. **Repair bandwidth ratio (as a percent of storage)** - The percentage amount of repair traffic on the network, primarily driven by node churn, software or hardware failure. While actual nodes may experience higher or lower repair traffic based on the pieces they hold, this is the average across the network.
 8. **Ingress bandwidth percentage** - The amount of bandwidth available for uploads of new data from clients.\
 
@@ -169,7 +167,7 @@ Although download speed is typically higher in asynchronous internet connections
 
 The following examples are based on two different storage nodes with different bandwidth caps. Note that the amount of data stored is inclusive of the expansion factor.
 
-![](https://storj.io/blog/img/table-6.png)
+![](<../.gitbook/assets/image (122).png>)
 
 Bandwidth has a significant impact across the board. It’s generally finite and has to be split between ingress, egress and repair. As the expansion factor increases, the actual amount of bandwidth consumed for those functions increases at the same rates. Lower bandwidth caps further lower the actual amount of data the network can store with a given number of nodes. Increase the amount of bandwidth required for file repair and that number gets lower still.
 
@@ -177,8 +175,7 @@ Let’s look at the impact on bandwidth available for repair if you also constra
 
 * 2 TB bandwidth cap
 * 100 Mbps down/10 Mbps up asynchronous bandwidth
-* 2 TB of shared storage on average\
-
+* 2 TB of shared storage on average
 * 50% of data downloaded per month
 * 40% data uploaded per month
 * 10% churn
@@ -186,7 +183,7 @@ Let’s look at the impact on bandwidth available for repair if you also constra
 
 Each node has less than 0.12 TB of bandwidth available for repair. And that’s in an environment storing archival data without a lot of download bandwidth. When scaling that distributed storage network up to an exabyte of data stored, you really see the impact of the expansion factor.
 
-![](https://storj.io/blog/img/table-7.png)
+![](<../.gitbook/assets/image (133).png>)
 
 Ultimately, the result is an exponential increase in the number of nodes required to support a given network size. Higher bandwidth use cases further exacerbate the problem by increasing the number of nodes required to service a given amount of stored data. That given network size has a finite amount of revenue associated with it, which is then spread over an increasing number of storage node operators, meaning that over time the amount of money earned by storage node operators decreases.
 

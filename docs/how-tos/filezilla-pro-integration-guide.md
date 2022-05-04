@@ -160,7 +160,7 @@ Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location. N
 3. Enter a name for the Site - for example, _**US1 GatewayMT**_.
 4. In the protocol section, select **S3 - Amazon Simple Storage Service** from the **Protocol** drop-down list.
 
-![](<../.gitbook/assets/image (124).png>)
+![](<../.gitbook/assets/image (124) (2).png>)
 
 5\. Provide the **Access key ID **_****_ and **Secret Access Key** in the parameters for the new Site.
 

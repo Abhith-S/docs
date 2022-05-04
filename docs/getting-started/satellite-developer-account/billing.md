@@ -36,7 +36,7 @@ In the _**Billing History**_ screen you can see a list of paid invoices and can 
 
 To add a [**Payment Method**](../../billing-payment-and-accounts-1/storj-token/) you can select **Add STORJ** or **Add Card**.
 
-![](<../../.gitbook/assets/image (138).png>)
+![](<../../.gitbook/assets/image (138) (1).png>)
 
 Please read the [pricing](../../billing-payment-and-accounts-1/pricing/ "mention") section for details.
 
@@ -66,7 +66,7 @@ You can see a **Short Balance History** right in the _**Billing**_ screen below 
 
 To see a full **Balance History** you can select it in the drop down list **Available Balance** on top of the _**Billing**_ screen.
 
-![](<../../.gitbook/assets/image (135) (1).png>)
+![](<../../.gitbook/assets/image (135) (1) (1).png>)
 
 It will show the **Balance History** page.
 
@@ -86,6 +86,6 @@ Please provide a valid Card number, expiration date and CVC, then confirm adding
 
 You can **Add Coupon Code** or scan it:
 
-![](<../../.gitbook/assets/image (145).png>)
+![](<../../.gitbook/assets/image (145) (1).png>)
 
 The added Coupon will be listed below.

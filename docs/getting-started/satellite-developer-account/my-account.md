@@ -18,7 +18,7 @@ If you click the **(i)** icon on the right of the Satellite short name, you will
 
 The [_**Account Settings**_](my-account.md#account-settings) page allows you to [**Edit Profile**](my-account.md#undefined), [**Change Password**](my-account.md#undefined) or enable/disable [**Two-Factor Authentication**](my-account.md#undefined).
 
-![](<../../.gitbook/assets/image (135).png>)
+![](<../../.gitbook/assets/image (135) (1).png>)
 
 ### Edit Profile
 

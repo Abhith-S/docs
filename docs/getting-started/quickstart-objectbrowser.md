@@ -70,7 +70,7 @@ You can create your buckets in the **Objects** view or if you click on the **<-B
 
 To create a new bucket, click the **New bucket** button in the **Objects** view. A new module window will pop up called **Create Bucket**. Please provide a name using only lower case alphanumeric characters and dashes (this is a limitation for compatibility with existing object storages).
 
-![](<../.gitbook/assets/image (168).png>)
+![](<../.gitbook/assets/image (168) (1).png>)
 
 After creating your new bucket, you will be placed into the bucket where you can [make folders and/or upload files](quickstart-objectbrowser.md#upload-files-and-folders).
 
@@ -106,6 +106,6 @@ The **Share** pop-up window allows you to share the link via social media or cop
 
 The share link includes a rendering of where the pieces of your file are located on the globally distributed network of storage nodes, as well as a preview of that file.&#x20;
 
-![](<../.gitbook/assets/image (122).png>)
+![](<../.gitbook/assets/image (122) (1).png>)
 
 This concludes the Object Browser Quickstart.
