@@ -17,13 +17,13 @@ description: >-
 
 {% tab title="Linux" %}
 ```
-uplink cp SOURCE DESTINATION [flags]
+uplink cp [flags] SOURCE DESTINATION
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink cp SOURCE DESTINATION [flags]
+uplink cp [flags] SOURCE DESTINATION
 ```
 {% endtab %}
 {% endtabs %}
@@ -32,14 +32,18 @@ The `cp` command is used to upload and download objects. The `cp` command abstra
 
 ## Flags
 
-| Flag                | Description                                                                                                  |
-| ------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `--access string`   | the serialized access, or name of the access to use                                                          |
-| `--expires string`  | <p>optional expiration date of an object. <br>Please use format (<code>yyyy-mm-ddThh:mm:ssZhh:mm</code>)</p> |
-| `--help`, `-h`      | help for cp                                                                                                  |
-| `--metadata string` | optional metadata for the object. Please use a single level JSON object of string to string only             |
-| `--parallelism int` | controls how many parallel uploads/downloads of a single object will be performed (default 1)                |
-| `--progress`        | if true, show progress (default true)                                                                        |
+| Flag                            | Description                                                                                                                                                              |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--access string`               | the serialized access, or name of the access to use                                                                                                                      |
+| `-r, --recursive`               | Perform a recursive copy                                                                                                                                                 |
+| `-t, --transfers int`           | Controls how many uploads/downloads to perform in parallel (default 1)                                                                                                   |
+| `--dry-run`                     | Print what operations would happen but don't execute them                                                                                                                |
+| `--progress`                    | Show a progress bar when possible (default true)                                                                                                                         |
+| `--range string`                | Downloads the specified range bytes of an object. For more information about the HTTP Range header, see https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.35 |
+| `-p, --parallelism int`         | Controls how many parallel chunks to upload/download from a file (default 1)                                                                                             |
+| `--parallelism-chunk-size Size` | Controls the size of the chunks for parallelism (default 64.0 MiB)                                                                                                       |
+| `--expires relative_date`       | Schedule removal after this time (e.g. '+2h', 'now', '2020-01-02T15:04:05Z0700')                                                                                         |
+| `--help`, `-h`                  | help for cp                                                                                                                                                              |
 
 ## Examples
 
@@ -112,19 +116,19 @@ The uploaded object can be set to expire at a certain time. After the expiration
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe cp cheesecake.jpg --expires 2021-12-31T13:00:00+02:00 sj://cakes
+./uplink.exe cp --expires 2021-12-31T13:00:00+02:00 cheesecake.jpg sj://cakes
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink cp cheesecake.jpg --expires 2021-12-31T13:00:00+02:00 sj://cakes
+uplink cp  --expires 2021-12-31T13:00:00+02:00 cheesecake.jpg sj://cakes
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink cp cheesecake.jpg --expires 2021-12-31T13:00:00+02:00 sj://cakes
+uplink cp  --expires 2021-12-31T13:00:00+02:00 cheesecake.jpg sj://cakes
 ```
 {% endtab %}
 {% endtabs %}
@@ -144,19 +148,19 @@ To increase upload speed, you can use the `cp` command with the `--parallelism 1
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe cp cheesecake.jpg sj://cakes --parallelism 10
+./uplink.exe cp --parallelism 10 cheesecake.jpg sj://cakes
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink cp cheesecake.jpg sj://cakes --parallelism 10
+uplink cp --parallelism 10 cheesecake.jpg sj://cakes
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink cp cheesecake.jpg sj://cakes --parallelism 10
+uplink cp --parallelism 10 cheesecake.jpg sj://cakes
 ```
 {% endtab %}
 {% endtabs %}
@@ -167,17 +171,48 @@ Since our sample object is small, you likely will not notice a difference.
 
 It would be significantly different with big objects like videos or OS images etc. and for upstream bandwidth much greater than 100Mbps.
 
-### Copy an object from one location to another in Storj DCS
+### Recursive copy of objects from local location to the bucket
+
+You can recursively copy files:
+
+{% tabs %}
+{% tab title="Windows" %}
+```
+./uplink.exe cp --recursive ~/receipts sj://cakes/
+```
+{% endtab %}
+
+{% tab title="Linux" %}
+```
+uplink cp --recursive ~/receipts sj://cakes/
+```
+{% endtab %}
+
+{% tab title="macOS" %}
+```
+uplink cp --recursive ~/receipts sj://cakes/
+```
+{% endtab %}
+{% endtabs %}
+
+Sample output:
+
+```
+upload /home/user/receipts/cheescake.jpg to sj://cakes/cheescake.jpg
+upload /home/user/receipts/pancake.jpg to sj://cakes/pancake.jpg
+```
+
+### Copy an object from one location to another within Storj DCS
 
 It is possible to copy a file from one Storj DCS location to another Storj DCS location within the same project.
 
-When the `cp` command is used to copy a file from one Storj DCS location to another Storj DCS location, the CLI will **download** the object from the previous location and **upload** it to a new location.
+When the `cp` command is used to copy a file from one Storj DCS location to another Storj DCS location, the object will be copied entirely on the "server" side - **this will not count against your egress limits, as the object is not being downloaded**.
 
-{% hint style="warning" %}
-The download bandwidth will count against your egress limits. You can be charged for egress traffic according to your [tariff plan](broken-reference).
+{% hint style="info" %}
+You need to have at least version 1.54.1 of Uplink installed to support server-side copy
 {% endhint %}
 
-To create a new bucket, we will use the `mb` command, as copying is possible only to an existing bucket.
+First, to create a new bucket, we will use the `mb` command, as copying is possible only to an existing bucket.
 
 {% tabs %}
 {% tab title="Windows" %}
@@ -207,7 +242,7 @@ Bucket new-recipes created
 Nested buckets are not supported, but you can use prefixes, as they would act almost like subfolders.
 {% endhint %}
 
-To copy a file from a project to another bucket in the same project and with prefix `cakes`, use:
+Now, to copy a file from a bucket within a project to another bucket in the same project with prefix `cakes`, use:
 
 {% tabs %}
 {% tab title="Windows" %}
@@ -231,36 +266,8 @@ uplink cp sj://cakes/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
 
 Sample Output:
 
-![](<../../.gitbook/assets/image (125) (1) (1).png>)
-
-### Copy a file to a bucket with metadata
-
-You can include metadata when uploading your file using the --metadata flag. These metadata are provided in JSON format.&#x20;
-
-{% hint style="info" %}
-You must use a single level JSON object of **string to string** only (e.g. '{"key1":"value1",  "key2": "value2"'}
-{% endhint %}
-
-For example, to include information about the baker of a cheesecake and the author of the photo:
-
-{% tabs %}
-{% tab title="Windows" %}
 ```
-./uplink.exe cp cheesecake.jpg sj://cakes --metadata '{\"baker\":\"cheeseman\", \"picture_author\": \"picman\"}'
+upload sj://cakes/cheesecake.jpg sj://new-recipes/cakes/cheesecake.jpg
 ```
-{% endtab %}
 
-{% tab title="Linux" %}
-```
-uplink cp cheesecake.jpg sj://cakes --metadata '{"baker":"cheeseman", "picture_author": "picman"}'
-```
-{% endtab %}
-
-{% tab title="macOS" %}
-```
-uplink cp cheesecake.jpg sj://cakes --metadata '{"baker":"cheeseman", "picture_author": "picman"}'
-```
-{% endtab %}
-{% endtabs %}
-
-You can retrieve these metadata using the [`meta get` command.](meta-command/meta-get-command.md)
+There is no progress bar shown since nothing was downloaded or uploaded, as the copying happens on the "server" side (within a Storj DCS project.)
