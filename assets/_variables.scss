@@ -17,7 +17,7 @@ $padding-32: $padding-16 * 2;
     --color-link: #84b2ff;
     --color-visited-link: #b88dff;
 
-    --body-background: #343a40;
+    --body-background: var(--gray-100);
     --body-font-color: #e9ecef;
 
     --icon-filter: brightness(0) invert(1);
