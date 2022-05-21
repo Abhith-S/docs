@@ -14,7 +14,7 @@ The [_**Billing**_](billing.md) screen allows you to see all your projects and t
 
 If you select the **Current Billing Period** on top right, you will see two additional options:
 
-![](<../../.gitbook/assets/image (146).png>)
+![](<../../.gitbook/assets/image (146) (1).png>)
 
 ### View a Previous Billing Period
 
@@ -28,7 +28,7 @@ You can expand any Project to see details of the charge. See [billing-and-paymen
 
 Select a **Billing History** in the drop down menu [**Current Billing Period** / **Previous Billing Period**](billing.md#view-a-previous-billing-period-and-invoices).
 
-![](<../../.gitbook/assets/image (155).png>)
+![](<../../.gitbook/assets/image (155) (1).png>)
 
 In the _**Billing History**_ screen you can see a list of paid invoices and can view/download a PDF file of the selected invoice.
 
@@ -62,7 +62,7 @@ Please note, the payment will be accounted only after some amount of confirmatio
 
 You can see a **Short Balance History** right in the _**Billing**_ screen below the **Payment Method** section.
 
-![](<../../.gitbook/assets/image (165).png>)
+![](<../../.gitbook/assets/image (165) (1).png>)
 
 To see a full **Balance History** you can select it in the drop down list **Available Balance** on top of the _**Billing**_ screen.
 

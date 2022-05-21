@@ -128,7 +128,7 @@ Be sure to download the Access Grant to save it and then click on the **Generate
 
 Now click on the **Generate Credentials** button.
 
-![](<../.gitbook/assets/image (161).png>)
+![](<../.gitbook/assets/image (165).png>)
 
 Copy your _**Access Key**_, _**Secret Key**_, and _**Endpoint**_ to a safe location.
 

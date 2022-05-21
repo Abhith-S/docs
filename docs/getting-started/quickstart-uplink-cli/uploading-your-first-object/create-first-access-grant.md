@@ -38,7 +38,7 @@ Importantly, if you want two access grants to have access to the same data, **th
 Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (157).png>)
+![](<../../../.gitbook/assets/image (157) (1).png>)
 
 Access Grant is generated. **The Access Grant will only display once.** Save this information in a password manager or wherever you prefer to store sensitive information.&#x20;
 

@@ -10,7 +10,7 @@ description: >-
 
 The [_**My Account**_](my-account.md) will allow you to read documentation about the Satellite, change your [**Account Settings**](my-account.md#account-settings) or **Logout** from the Satellite Admin Console.
 
-![](<../../.gitbook/assets/image (155) (1).png>)
+![](<../../.gitbook/assets/image (155) (1) (1).png>)
 
 If you click the **(i)** icon on the right of the Satellite short name, you will be redirected to the [Key Architectural Construct](../../concepts/key-architecture-constructs.md) [**Satellite**](../../concepts/satellite.md).
 

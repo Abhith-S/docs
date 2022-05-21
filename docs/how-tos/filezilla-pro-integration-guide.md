@@ -44,21 +44,21 @@ There are benefits to each method of integration. To provide users with the best
 
 Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page within your project and then click on ‘**Create Access Grant**’&#x20;
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2F3wJnsmllerNs1nKDx9vz%2Fimage.png?alt=media\&token=38f36b08-f8c3-444a-ba7b-d66d134ebf3d)
+![](<../.gitbook/assets/image (149).png>)
 
 then give your new Access Grant a name.
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FQ6t8Q0lZVzDZK3qt1zO4%2Fimage.png?alt=media\&token=5bdd06cd-03ec-4a8b-b0e6-fa58a2a22d57)
+![](<../.gitbook/assets/image (161).png>)
 
 Assign permissions to the Access Grant.
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FYntUQ4tviuRhVZkbeIMy%2Fimage.png?alt=media\&token=2430d3be-e395-47a8-a50e-c12c142ad169)
+![](<../.gitbook/assets/image (146).png>)
 
 If you click **Continue in Browser**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with [Gateway MT](../api-reference/s3-compatible-gateway/) for S3 compatibility. Only then will your access grant be shared with our servers.
 
 Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, that’s completely understandable, and you should instead select **Continue in CLI** and follow [these instructions](../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md).
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FDuNiKeRIwlVHk4vg9FIM%2Fimage.png?alt=media\&token=e93e7bd2-7d79-4511-90f5-4dc1c2cea0cb)
+![](<../.gitbook/assets/image (154).png>)
 
 {% hint style="info" %}
 The instructions below assume you selected **Continue in Browser**.
@@ -81,7 +81,7 @@ Importantly, if you want various access grants to have access to the same data, 
 Please note that Storj does not know or store your encryption passphrase, so if you lose it, you will not be able to recover your files. Please store it in a safe place.
 {% endhint %}
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FiKW39FXWEqaZuqKDmcE1%2Fimage.png?alt=media\&token=77ea9f32-6e14-4f89-94ca-a58e53923712)
+![](<../.gitbook/assets/image (155).png>)
 
 Now that the Access Grant has been generated, this will allow for integration with FileZilla Pro via native uplink. Let's take a look.
 
@@ -103,27 +103,27 @@ In this section, we’ll go through the Storj FileZilla Pro integration leveragi
 
 Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page within your project and then click on **Create Access Grant +**. A modal window will pop up where you should enter a name for this access grant.
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2F3wJnsmllerNs1nKDx9vz%2Fimage.png?alt=media\&token=38f36b08-f8c3-444a-ba7b-d66d134ebf3d)
+![](<../.gitbook/assets/image (149).png>)
 
 Assign the permissions you want this access grant to have, then click on **Continue in Browser**:
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FYntUQ4tviuRhVZkbeIMy%2Fimage.png?alt=media\&token=2430d3be-e395-47a8-a50e-c12c142ad169)
+![](<../.gitbook/assets/image (146).png>)
 
 Enter the encryption passphrase you used for your other access grants (click on the **Enter Phrase** option at the top far right to do so.) If this is your first access grant, use the **Generate Phrase** option as shown below - we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one for you on the client-side.)
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FDuNiKeRIwlVHk4vg9FIM%2Fimage.png?alt=media\&token=e93e7bd2-7d79-4511-90f5-4dc1c2cea0cb)
+![](<../.gitbook/assets/image (154).png>)
 
 When you are ready - click **Next**.
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FiKW39FXWEqaZuqKDmcE1%2Fimage.png?alt=media\&token=77ea9f32-6e14-4f89-94ca-a58e53923712)
+![](<../.gitbook/assets/image (155).png>)
 
 Click on the **Generate S3 Gateway Credentials** link and then click on the **Generate Credentials** button.
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FZGFHdpPjj7GgSJEFQ99i%2Fimage.png?alt=media\&token=1b050ea8-cba8-46f1-8287-ceac84359bf8)
+![](<../.gitbook/assets/image (157).png>)
 
 Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location. Now you are ready to use FileZillaPro to work with Gateway MT.
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2F8zcpGtFAJ47uKN1iiIvw%2Fimage.png?alt=media\&token=c0346bd7-c04f-423f-8f48-4b464cc28322)
+![](<../.gitbook/assets/image (173).png>)
 
 ### Setting up regions
 
@@ -162,7 +162,7 @@ Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location. N
 
 ![](<../.gitbook/assets/image (124) (2).png>)
 
-5\. Provide the **Access key ID **_****_ and **Secret Access Key** in the parameters for the new Site.
+5\. Provide the **Access key ID** and **Secret Access Key** in the parameters for the new Site.
 
 6\. Click **Connect** to connect to Storj via Gateway MT.
 
@@ -174,6 +174,6 @@ If this is the first time you connect, you may see a message like this:
 You will need to confirm it by clicking the **OK** button.
 {% endhint %}
 
-Now you should be able to see your buckets now:
+You should now see your buckets:
 
 ![](<../.gitbook/assets/image (143).png>)

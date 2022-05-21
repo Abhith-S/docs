@@ -102,7 +102,7 @@ Or you can click on the three vertical dots to the right of the file you want to
 
 The **Share** pop-up window allows you to share the link via social media or copy it with **Copy Link**.
 
-![](<../.gitbook/assets/image (146) (1).png>)
+![](<../.gitbook/assets/image (146) (1) (1).png>)
 
 The share link includes a rendering of where the pieces of your file are located on the globally distributed network of storage nodes, as well as a preview of that file.&#x20;
 
