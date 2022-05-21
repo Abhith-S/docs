@@ -130,7 +130,7 @@ Now click on the **Generate Credentials** button.
 
 ![](<../.gitbook/assets/image (161).png>)
 
-Copy your _**Access Key**_, ** **_**Secret Key**_, and ** **_**Endpoint**_ to a safe location.
+Copy your _**Access Key**_, _**Secret Key**_, and _**Endpoint**_ to a safe location.
 
 ### Configuring Storj + Cyberduck
 
