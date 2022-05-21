@@ -49,7 +49,7 @@ At the moment the Satellite Admin Console will not allow you to delete a Project
 But you can delete all buckets and Access Grants from it and [rename it](manage-projects.md#modify-the-existing-project) to something like "not used". The empty project costs nothing.
 {% endhint %}
 
-If you believe that you need to remove it anyway, then please remove all data and Access Grants from it before [file a support request](https://supportdcs.storj.io).
+If you believe that you need to remove it anyway, then please remove all data and Access Grants from it before [file a support request](https://supportdcs.storj.io/).
 
 {% hint style="warning" %}
 We do not have an access to your data and Access Grants, because they are encrypted, and cannot remove your data on your behalf. So, please, remove them yourself before file a support request. We will ask you to do so anyway.

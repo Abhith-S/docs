@@ -2,7 +2,7 @@
 
 ## Integration with Kerberos.io
 
-The [Kerberos.io](https://kerberos.io) project (not to be confused with the authentication protocol of the same name) offers an open-source platform for video analytics and monitoring. With a modular system design focused on minimal startup requirements and additional components available to add later, Kerberos.io is built to work for everything from small, personal systems to complex enterprise configurations. This makes it a useful solution that is relevant at all scales.
+The [Kerberos.io](https://kerberos.io/) project (not to be confused with the authentication protocol of the same name) offers an open-source platform for video analytics and monitoring. With a modular system design focused on minimal startup requirements and additional components available to add later, Kerberos.io is built to work for everything from small, personal systems to complex enterprise configurations. This makes it a useful solution that is relevant at all scales.
 
 The modularity of Kerberos.io includes optional components that help integrate it into any cloud architecture. One of these components is [Kerberos Vault](https://kerberos.io/product/vault/), which provides a flexible and extensible storage solution for video files. Kerberos Vault is designed to work with several different cloud providers, including Storj DCS, to allow for customized storage options where users can bring their own providers.
 

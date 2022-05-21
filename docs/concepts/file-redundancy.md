@@ -22,7 +22,7 @@ If a block of data is _s_ bytes large, each of the _n_ erasure shares are roughl
 
 Interestingly, the durability of a _k_ = 20, _n_ = 40 erasure code is better than a _k_ = 10, _n_ = 20 erasure code, even though the expansion factor (2x) is the same for both. This is because the risk is spread across more nodes in the _k_ = 20, _n_ = 40 case. To help drive this point home, we calculated the durability for various erasure code configuration choices in a network with a churn of 10%. We talked more about the math behind this table in section 3.4 of [our paper](https://storj.io/storjv3.pdf), and we’ll discuss more about churn in an upcoming blog post, but suffice it to say, we hope these calculated values are illustrative:
 
-![](<../.gitbook/assets/image (159).png>)
+![](<../.gitbook/assets/image (159) (1).png>)
 
 Notice how increasing the amount of storage nodes involved increases the amount of durability significantly (each new 9 is 10x more durable), without a change in the expansion factor. We also put this data together in a graph:
 
@@ -111,7 +111,7 @@ Thus, rather than having a single factor of P(D) determining the durability (wit
 
 Let’s first look at the impact of node churn on durability based on the two hypothetical scenarios, one using replication+erasure coding, and the other optimizing for erasure coding alone. Based on the above formulas, the results are as follows:
 
-![](<../.gitbook/assets/image (161).png>)
+![](<../.gitbook/assets/image (161) (1).png>)
 
 As it turns out (predictably) the increased durability can be achieved in the erasure-code-only scenario with no increase in expansion factor. Adding replication to already-erasure-coded data is much more efficient that just straight up replicating the original file, (which requires 17 copies to achieve), but has triple the expansion factor of erasure codes alone.
 
@@ -121,7 +121,7 @@ In an environment where churn is even higher, or highly variable, durability is 
 
 In these unpredictable or highly variable environments, it becomes necessary to address the worst case scenario in order to maintain a constant level of durability. Again, as is clear from the table below, node churn has a massive impact, and when using replication, that massive impact translates directly into increases in the expansion factor. In the table below you can see the impact of churn on expansion factor when trying to maintain a minimum durability of eleven 9s:
 
-![](<../.gitbook/assets/image (124).png>)
+![](<../.gitbook/assets/image (124) (1).png>)
 
 So, what do these tables tell us? Well, there are a number of interesting observations to be drawn:
 

@@ -19,7 +19,7 @@ To restore a small file, Duplicati has to download the entire block it is contai
 {% endhint %}
 
 1. [Download](https://github.com/duplicati/duplicati/releases) and install the Duplicati installer file for your OS or run the [docker container](https://hub.docker.com/r/duplicati/duplicati). Note **warning** above!
-2. Once installed, the software will open your browser to the local Duplicati dashboard. If not, it can be accessed at [http://localhost:8200/](http://localhost:8200)
+2. Once installed, the software will open your browser to the local Duplicati dashboard. If not, it can be accessed at [http://localhost:8200/](http://localhost:8200/)
 
 ## Setup
 

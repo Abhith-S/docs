@@ -8,7 +8,7 @@ description: Backup an instance using Restic, a fast and secure backup program
 
 **Restic** is a backup client written in Go language, it is highly secure and efficient. Each **Restic** backup is a snapshot of the server/files/directory, deduplicated from what was stored before. Any restore to a given backup will restore the server/files/directories to the exact state they were at that time.
 
-This is a quick-start tutorial that covers [Restic](https://restic.net) usage with Storj DCS.&#x20;
+This is a quick-start tutorial that covers [Restic](https://restic.net/) usage with Storj DCS.&#x20;
 
 In this guide, we will cover only some of the basic features of the tool.  The complete documentation for Restic is located here, at their [complete command reference](https://restic.readthedocs.io/en/latest/manual\_rest.html).
 
@@ -115,4 +115,4 @@ The `latest` option means we want to restore the latest snapshot.&#x20;
 
 The `--target` flag defines the directory where the backup will be restored.
 
-For more detailed information around Restic usage, please visit the [Restic documentation page](https://restic.readthedocs.io).
+For more detailed information around Restic usage, please visit the [Restic documentation page](https://restic.readthedocs.io/).

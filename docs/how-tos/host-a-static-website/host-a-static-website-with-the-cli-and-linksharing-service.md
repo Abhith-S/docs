@@ -95,7 +95,7 @@ Ensure you include the trailing `.` at the end of your CNAME if your DNS provide
 
 3\. You can check to make sure your DNS records are ready with `dig @1.1.1.1 txt-<hostname>.<domain> TXT`
 
-4\. Without further action, your site will be served with HTTP. You can secure your site by using an HTTPS proxy server such as [Fastly](https://fastly.com).
+4\. Without further action, your site will be served with HTTP. You can secure your site by using an HTTPS proxy server such as [Fastly](https://fastly.com/).
 
 5\. Optionally, if you create a page titled `404.html`in the root of your shared prefix, it will be served in 404 conditions.
 

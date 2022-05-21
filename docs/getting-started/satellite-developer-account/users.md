@@ -14,7 +14,7 @@ When you add another user to your project, that user will have full access to th
 
 Navigate to the **Users** screen.&#x20;
 
-![](<../../.gitbook/assets/image (131).png>)
+![](<../../.gitbook/assets/image (131) (1).png>)
 
 Select the **Add** button
 

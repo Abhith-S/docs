@@ -4,7 +4,7 @@ description: Rclone is a command line program to sync files and directories
 
 # Sync Files With Rclone
 
-These 'Getting Starting' tutorials will showcase the process for configuring [Rclone](https://rclone.org) with Storj DCS. We will cover only some of the basic features in this guide.
+These 'Getting Starting' tutorials will showcase the process for configuring [Rclone](https://rclone.org/) with Storj DCS. We will cover only some of the basic features in this guide.
 
 &#x20;For making the most of Rclone, take a look at the complete Rclone [command reference](https://rclone.org/commands/)
 

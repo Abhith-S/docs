@@ -20,7 +20,7 @@ All in, you’re looking at right around $60 of hardware to get going (prices as
 * [Adafruit Raspberry Pi Zero Case : ID 3252 : $4.75](https://www.adafruit.com/product/3252) (It should look good - you can 3d print your own for extra credit)
 * [SanDisk 256GB High Endurance Video microSDXC Card $37 ](https://www.amazon.com/SanDisk-Endurance-microSDXC-Adapter-Monitoring/dp/B07P4HBRMV)(Very important to have high quality storage with high write endurance. This gives you room for a few days in case you don’t connect to WiFi and won't wear out too quickly)
 * [USB Cable to plug into the car](https://www.adafruit.com/product/592)  USB A to Micro-B - 3 foot long
-* [Storj DCS cloud storage 150GB free](https://www.storj.io) and only $0.004 per GB-month after that! Secure, private and decentralized.&#x20;
+* [Storj DCS cloud storage 150GB free](https://www.storj.io/) and only $0.004 per GB-month after that! Secure, private and decentralized.&#x20;
 
 Optional hardware for easier setup:
 

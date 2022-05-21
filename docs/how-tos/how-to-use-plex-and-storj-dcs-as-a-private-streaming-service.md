@@ -14,7 +14,7 @@ The ability to store and retrieve your video files from anywhere using Storj's g
 
 ## Setting up Storj with Plex Using Rclone
 
-[Rclone](https://rclone.org) is a program that helps with the management of files on various cloud storage services. It provides a command called [`rclone mount`](https://rclone.org/commands/rclone\_mount/) that allows files on cloud storage to be mounted as a local filesystem.
+[Rclone](https://rclone.org/) is a program that helps with the management of files on various cloud storage services. It provides a command called [`rclone mount`](https://rclone.org/commands/rclone\_mount/) that allows files on cloud storage to be mounted as a local filesystem.
 
 For this guide, we are going to show how to set up Rclone to sync your local files with Storj DCS. This can then serve as your storage backend for a service like Plex.
 

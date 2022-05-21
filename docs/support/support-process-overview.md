@@ -12,7 +12,7 @@ There is a lot of information in the Documentation. The foundational information
 
 If you still need help, we've got a few more options.
 
-## Ask for Help in the [Storj Forum](https://forum.storj.io)
+## Ask for Help in the [Storj Forum](https://forum.storj.io/)
 
 The [Storj Community](https://forum.storj.io) is a great place to meet other people who are developing using Storj DCS and ask questions.  You'll find people with tremendous knowledge about the Storj DCS service, including Storj engineers.  If you're stuck on an issue, chances are someone has seen it before or can help you troubleshoot it. Join, browse, ask and answer! There are people on from all over the world, and members of the community, our community mods and Storj engineers are generally pretty quick to respond.
 

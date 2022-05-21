@@ -106,29 +106,29 @@ One of the most versatile ways to get up and running with **Storj DCS** is throu
 
 Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page within your project and then click on **Create Access Grant +**. A modal window will pop up where you should enter a name for this access grant.
 
-![](https://files.gitbook.com/v0/b/gitbook-legacy-files/o/assets%2F-LmlDzFHYn9g\_f2QxmPe%2F-MYQVLIIMCFtXDE8qzxZ%2F-MYQWpbsk7-KI2L\_YA0c%2FScreen%20Shot%202021-04-16%20at%209.02.50%20AM.png?alt=media\&token=e9af210f-5f94-45ee-ad14-5590d0bfdad7)
+![](<../.gitbook/assets/image (144).png>)
 
 Assign the permissions you want this access grant to have, then click on **Continue in Browser**:
 
-![](https://files.gitbook.com/v0/b/gitbook-legacy-files/o/assets%2F-LmlDzFHYn9g\_f2QxmPe%2F-MYQVLIIMCFtXDE8qzxZ%2F-MYQX4PIukMqd-fIQdkV%2FScreen%20Shot%202021-04-16%20at%209.03.15%20AM.png?alt=media\&token=384df630-92bc-4302-802b-342652825c9e)
+![](<../.gitbook/assets/image (131).png>)
 
 {% hint style="info" %}
 _If you do not feel comfortable entering this sensitive information into your browser, we understand. Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, please select “Continue in CLI” and follow_ [_these instructions_](../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) _instead._
 {% endhint %}
 
-![](https://files.gitbook.com/v0/b/gitbook-legacy-files/o/assets%2F-LmlDzFHYn9g\_f2QxmPe%2F-MYQVLIIMCFtXDE8qzxZ%2F-MYQXEVH2joTsdUHaBL1%2FScreen%20Shot%202021-04-16%20at%209.03.34%20AM.png?alt=media\&token=99debf2f-d31a-402e-bf6f-bee088572ebb)
+![](<../.gitbook/assets/image (159).png>)
 
 **Generate and Save the Encryption Passphrase.** If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you if you choose "Generate Phrase.") You will need this passphrase later if you want to again access files uploaded with this encryption phrase.
 
-![](https://files.gitbook.com/v0/b/gitbook-legacy-files/o/assets%2F-LmlDzFHYn9g\_f2QxmPe%2F-MYQXInmQn0RUm82NU3s%2F-MYQak0-ztaNYqXEtOZS%2FScreen%20Shot%202021-04-16%20at%209.03.50%20AM.png?alt=media\&token=1e7ab286-af99-4964-9658-e811888e62e1)
+![](<../.gitbook/assets/image (124).png>)
 
 Be sure to download the Access Grant to save it and then click on the **Generate S3 Gateway Credentials** link.&#x20;
 
-![](https://files.gitbook.com/v0/b/gitbook-legacy-files/o/assets%2F-LmlDzFHYn9g\_f2QxmPe%2F-MYQXInmQn0RUm82NU3s%2F-MYQcC3DlpKlaom3E-gj%2FScreen%20Shot%202021-04-16%20at%209.03.54%20AM.png?alt=media\&token=e59efad0-4cf6-41fe-aaaf-7d5dd68d6a49)
+![](<../.gitbook/assets/image (169).png>)
 
 Now click on the **Generate Credentials** button.
 
-![](https://files.gitbook.com/v0/b/gitbook-legacy-files/o/assets%2F-LmlDzFHYn9g\_f2QxmPe%2F-MYQXInmQn0RUm82NU3s%2F-MYQcUv\_UZxoAOmIVAvS%2FScreen%20Shot%202021-04-16%20at%209.04.08%20AM.png?alt=media\&token=39d49b74-5680-46ed-9925-ba5f33248cc6)
+![](<../.gitbook/assets/image (161).png>)
 
 Copy your _**Access Key**_, ** **_**Secret Key**_, and ** **_**Endpoint**_ to a safe location.
 
@@ -159,7 +159,7 @@ Back to the open connection in Cyberduck as we referenced above in [**Using Cybe
 
 *   **select your saved bookmark** Here, you'll see the Amazon S3 server window reopen. To move forward, you'll simply just add in your Storj Gateway S3 credentials that we previously configured.
 
-    ![](<../.gitbook/assets/image (179).png>)
+    <img src="../.gitbook/assets/image (179).png" alt="" data-size="original">
 * Enter your S3 Gateway Credentials Endpoint for the **Server** selection
 * Enter your S3 Gateway Credentials Access Key into the **Access Key ID** selection
 * Enter your S3 Gateway Credentials Secret Key into the **Secret Access Key** selection

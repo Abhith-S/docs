@@ -16,7 +16,7 @@ However, there are some caveats around using FileZilla that Storj DCS users shou
 
 FileZilla is available in a free version, known as FileZilla Standard. It not only supports Storj DCS and FTP, but also FTP over TLS (FTPS) and SFTP. It is open-source software distributed free of charge under the terms of the GNU General Public License.
 
-****[**FileZillaPro**](https://filezillapro.com) is a paid upgrade which delivers all of the base functionality of [**FileZilla Standard**](https://filezilla-project.org), while adding additional support for many of today’s popular cloud data storage services like Amazon S3, OneDrive, Dropbox, WebDAV, Microsoft Azure, OneDrive for Business and SharePoint, Google Cloud, Backblaze and, of course, Storj DCS.
+****[**FileZillaPro**](https://filezillapro.com/) is a paid upgrade which delivers all of the base functionality of [**FileZilla Standard**](https://filezilla-project.org/), while adding additional support for many of today’s popular cloud data storage services like Amazon S3, OneDrive, Dropbox, WebDAV, Microsoft Azure, OneDrive for Business and SharePoint, Google Cloud, Backblaze and, of course, Storj DCS.
 
 You can use FileZilla Standard with the Storj DCS native connector—as long as you don’t use a package manager to [download it](set-up-filezilla-for-decentralized-file-transfer.md#downloading-filezilla). To learn how to use the Storj integration with FileZilla Standard, check out this [how-to doc](set-up-filezilla-for-decentralized-file-transfer.md). To leverage the FileZillaPro functionality, you can integrate it with Storj using a native connector or our backwards S3-compatible Gateway MT. Below we will focus on the integration between Storj and FileZilla Pro.
 

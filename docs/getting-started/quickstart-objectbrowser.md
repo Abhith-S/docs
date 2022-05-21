@@ -24,7 +24,7 @@ Don't forget to save your **Encryption Passphrase** generated below, you will ne
 
 If this is your first time using the object browser, you **must create an encryption passphrase.** We strongly encourage you to use a mnemonic phrase. The GUI automatically generates one on the client side for you in the **Generate a new passphrase** tab. You can also download it as a text file.
 
-![](<../.gitbook/assets/image (144).png>)
+![](<../.gitbook/assets/image (144) (1).png>)
 
 Alternatively, you can enter your own passphrase in the **Enter your own passphrase** tab.
 

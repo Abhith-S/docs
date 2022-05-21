@@ -18,7 +18,7 @@ One license allows you to install one instance of S3 Browser on a single compute
 
 As noted, S3 Browser is only available for Windows, supporting **Windows XP/Vista/7/8/10/11 and Windows Server 2003/2008/2012/2016/2019/2022.**
 
-Users can download the S3 Browser client by navigating to the S3 Browser homepage at [https://s3browser.com/](https://s3browser.com) and selecting the _Download Now_ icon, or at [https://s3browser.com/download.aspx](https://s3browser.com/download.aspx).
+Users can download the S3 Browser client by navigating to the S3 Browser homepage at [https://s3browser.com/](https://s3browser.com/) and selecting the _Download Now_ icon, or at [https://s3browser.com/download.aspx](https://s3browser.com/download.aspx).
 
 Some stats for the S3 Browser Download:&#x20;
 

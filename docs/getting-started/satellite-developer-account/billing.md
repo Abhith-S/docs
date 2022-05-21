@@ -80,7 +80,7 @@ You can select to **Add Card** on the _**Billing**_ screen. You will be prompted
 
 ![](<../../.gitbook/assets/image (128).png>)
 
-Please provide a valid Card number, expiration date and CVC, then confirm adding a Card with the **Add Card** button. We do not store your card details, they are used to register your Card on [Stripe](https://stripe.com).
+Please provide a valid Card number, expiration date and CVC, then confirm adding a Card with the **Add Card** button. We do not store your card details, they are used to register your Card on [Stripe](https://stripe.com/).
 
 ## Add Coupons
 
