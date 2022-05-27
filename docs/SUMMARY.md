@@ -1,17 +1,11 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Getting Started on DCS](README.md)
 * [Node Docs](http://docs.storj.io/node/)
 
 ## Decentralized Cloud Storage <a href="#storage" id="storage"></a>
 
 * [Product Overview](storage/considerations.md)
-
-## downloads
-
-* [Download Uplink CLI](downloads/download-uplink-cli.md)
-* [Download Self-hosted S3 Compatible Gateway](downloads/download-self-hosted-s3-compatible-gateway.md)
-* [Download Storj Client Libraries](downloads/download-storj-client-libraries.md)
 
 ## Getting Started
 
@@ -50,6 +44,12 @@
   * [Resources](getting-started/satellite-developer-account/resources.md)
   * [Quick Start](getting-started/satellite-developer-account/quick-start.md)
   * [My Account](getting-started/satellite-developer-account/my-account.md)
+
+## downloads
+
+* [Download Uplink CLI](downloads/download-uplink-cli.md)
+* [Download Self-hosted S3 Compatible Gateway](downloads/download-self-hosted-s3-compatible-gateway.md)
+* [Download Storj Client Libraries](downloads/download-storj-client-libraries.md)
 
 ## SDK & Reference <a href="#api-reference" id="api-reference"></a>
 
