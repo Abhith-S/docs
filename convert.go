@@ -503,6 +503,8 @@ func (conv *Convert) ReplaceTags(page *Page) {
 	page.Content = rxTag.ReplaceAllStringFunc(page.Content, func(tag string) string {
 		tok := rxTag.FindStringSubmatch(tag)
 		switch tok[1] {
+		case "code", "endcode":
+			return ""
 		case "tabs":
 			tabIndex++
 			return fmt.Sprintf(`{{< tabs id%d >}}`, tabIndex)
