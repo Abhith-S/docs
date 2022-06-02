@@ -1,0 +1,12 @@
+<script>
+// try to guess the operating system the user is on
+var os = "Linux";
+if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+  os = "macOS"
+} else if (/(Win)/i.test(navigator.platform)) {
+  os = "Windows"
+}
+// change all tabs to that OS
+var els = document.querySelectorAll(".tab-toggle[data-name=\"" + os + "\"]");
+for(var i = 0; i < els.length; i++) els[i].checked = true;
+</script>
