@@ -66,7 +66,7 @@ You can see a **Short Balance History** right in the _**Billing**_ screen below 
 
 To see a full **Balance History** you can select it in the drop down list **Available Balance** on top of the _**Billing**_ screen.
 
-![](<../../.gitbook/assets/image (135) (1) (1).png>)
+![](<../../.gitbook/assets/image (135) (1) (1) (1).png>)
 
 It will show the **Balance History** page.
 

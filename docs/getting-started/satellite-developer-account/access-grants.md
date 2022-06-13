@@ -14,7 +14,7 @@ Let's start with creating an Access Grant. Click the **Create Access Grant** But
 
 Give your Access Grant a name:
 
-![](<../../.gitbook/assets/image (156).png>)
+![](<../../.gitbook/assets/image (156) (1).png>)
 
 Set any access restrictions you want encoded into your Access Grant. Through the Satellite Admin Console, you can set basic restrictions on your Access Grant. You can get [more sophisticated using the CLI](../quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) and add [further, more granular restrictions](../../api-reference/uplink-cli/share-command.md), for example, at the path prefix level within a Bucket.
 

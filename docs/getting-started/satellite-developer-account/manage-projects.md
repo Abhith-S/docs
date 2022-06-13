@@ -31,7 +31,7 @@ Specify the **Project Name**, optional **Description** and confirm the creating 
 
 To modify the existing Project on the _**Projects**_ screen you can select a needed project and modify its name or description.
 
-![](<../../.gitbook/assets/image (136) (1).png>)
+![](<../../.gitbook/assets/image (136) (1) (1).png>)
 
 ### Changing Project Limits
 

@@ -22,7 +22,7 @@ If a block of data is _s_ bytes large, each of the _n_ erasure shares are roughl
 
 Interestingly, the durability of a _k_ = 20, _n_ = 40 erasure code is better than a _k_ = 10, _n_ = 20 erasure code, even though the expansion factor (2x) is the same for both. This is because the risk is spread across more nodes in the _k_ = 20, _n_ = 40 case. To help drive this point home, we calculated the durability for various erasure code configuration choices in a network with a churn of 10%. We talked more about the math behind this table in section 3.4 of [our paper](https://storj.io/storjv3.pdf), and we’ll discuss more about churn in an upcoming blog post, but suffice it to say, we hope these calculated values are illustrative:
 
-![](<../.gitbook/assets/image (159) (1).png>)
+![](<../.gitbook/assets/image (159) (1) (1).png>)
 
 Notice how increasing the amount of storage nodes involved increases the amount of durability significantly (each new 9 is 10x more durable), without a change in the expansion factor. We also put this data together in a graph:
 
@@ -32,7 +32,7 @@ Admittedly, this graph is a little disingenuous: the chances of you caring about
 
 In contrast, replication requires significantly higher expansion factors for the same durability. The following table shows durability with a replication scheme:
 
-![](<../.gitbook/assets/image (136).png>)
+![](<../.gitbook/assets/image (136) (1).png>)
 
 Comparing the two tables, notice that replicating data at 10x can’t beat erasure codes with _k_ = 16, _n_ = 32, which is an expansion factor of only two. For durable storage, erasure codes simply require ridiculously less disk space than replication.
 
@@ -130,11 +130,11 @@ So, what do these tables tell us? Well, there are a number of interesting observ
 
 Just to drive that point home, let’s first look at how a file actually exists on the two hypothetical networks:
 
-![](<../.gitbook/assets/image (168).png>)
+![](<../.gitbook/assets/image (168) (1).png>)
 
 It is worth understanding the differences in how repair actually behaves on our two networks, because the process for replication is very different compared to erasure codes. Continuing the example of the 1 TB file above, let’s examine how repair actually looks when 1⁄3 of nodes storing the data exit the network:
 
-![](<../.gitbook/assets/image (135).png>)
+![](<../.gitbook/assets/image (135) (1).png>)
 
 One other important thing to remember about distributed storage networks is that the amount of data the network can store isn’t constrained by the amount of available hard drive space on the nodes. It’s constrained by the amount of bandwidth available to nodes. Allow me to explain.
 

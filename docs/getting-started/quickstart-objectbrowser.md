@@ -70,7 +70,7 @@ You can create your buckets in the **Objects** view or if you click on the **<-B
 
 To create a new bucket, click the **New bucket** button in the **Objects** view. A new module window will pop up called **Create Bucket**. Please provide a name using only lower case alphanumeric characters and dashes (this is a limitation for compatibility with existing object storages).
 
-![](<../.gitbook/assets/image (168) (1).png>)
+![](<../.gitbook/assets/image (168) (1) (1).png>)
 
 After creating your new bucket, you will be placed into the bucket where you can [make folders and/or upload files](quickstart-objectbrowser.md#upload-files-and-folders).
 
@@ -82,7 +82,7 @@ After creating your new bucket, you will be placed into the bucket where you can
 
 2\. Click the **Delete** command
 
-![](<../.gitbook/assets/image (156) (1).png>)
+![](<../.gitbook/assets/image (156) (1) (2).png>)
 
 3\. Type the _**Bucket Name**_ and **Confirm Delete Bucket**.
 
