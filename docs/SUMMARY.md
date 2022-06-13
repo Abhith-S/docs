@@ -119,6 +119,7 @@
 * [How to use Cyberduck and Storj DCS](how-tos/how-to-use-cyberduck-and-storj-dcs.md)
 * [Storj IPFS Pinning Service (Beta)](how-tos/storj-ipfs-pinning-service-beta.md)
 * [Simplify File Management with S3 Browser and Storj DCS](how-tos/simplify-file-management-with-s3-browser-and-storj-dcs.md)
+* [Nextcloud with Storj DCS](https://github.com/storj-thirdparty/nextcloud-app/#readme)
 
 ## Solution Architectures
 
