@@ -94,6 +94,7 @@
 
 ## How To's
 
+* [Photos+ Integration Guide](how-tos/photos+-integration-guide.md)
 * [Container Registry - Docker](how-tos/container-registry-docker.md)
 * [Host a Static Website](how-tos/host-a-static-website/README.md)
   * [Host a Static Website with the Uplink CLI and Linksharing Service](how-tos/host-a-static-website/host-a-static-website-with-the-cli-and-linksharing-service.md)
