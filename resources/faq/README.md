@@ -101,5 +101,3 @@ description: Frequently asked questions
 {% endcontent-ref %}
 
 ### Can't find an answer to your question? [Visit our Community.](https://forum.storj.io/c/sno-category)
-
-![](https://lh5.googleusercontent.com/jxVEe6-aMmvMN5ShWkIMuMMSNpmPGW8PXwYOQyCgtFuSYGovhEHFwiLUNjrbdfb1PxtDmwgJE1wpJIqkzSWT04vHzwfWtGF7OMzUKoaq6zSfjYnsRhvBzymsMzLwpRLjwvTj5VTg)
