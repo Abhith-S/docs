@@ -6,8 +6,7 @@ description: How Billing & Payment works on Storj DCS
 
 Billing is aggregated at the project level.  A project is the Storj DCS service construct used for aggregating usage, calculating billing, invoicing fees, and collecting payment. Projects are created by a single user, then multiple users may be added to a project team, and one user may be on more than one project. Within a project, usage is tracked at the bucket level and aggregated for invoicing to the project. Project names are not client-side encrypted so that they may be rendered in the satellite user interface. For more information about Developer Accounts, Projects, Buckets, etc., please read the [Key Architecture Constructs](../../concepts/key-architecture-constructs.md) under the Concepts section of this Documentation.
 
-The following table lists the types of metered services that appear in billing and usage user interfaces as well as invoices:\
-
+The following table lists the types of metered services that appear in billing and usage user interfaces as well as invoices:
 
 | **Metered Service  Type** | **Metered Units** | **Increment** | **Pricing Unit** | **Price per Pricing Unit** | **Description**                                                                                                        |
 | ------------------------- | ----------------- | ------------- | ---------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -37,4 +36,4 @@ A user downloads one 1 TB file. Based on the long tail elimination, up to 1.3 TB
 
 Unlike other cloud object storage vendors, we don't use high egress fees to create vendor lock-in.  If you discover that Storj DCS isn't a fit for your project or application and you transfer your data to another service, use our support portal to submit a ticket and let us know. As long as you follow the process, we won't charge you for that egress bandwidth. &#x20;
 
-All Projects have Project Limits on certain important constructs. Increases in Project Limits may impact the price of your use of Storj DCS. To learn more, check out the [Project Limits](../../concepts/limits.md) and [Usage Limit Increases](usage-limit-increases.md) sections of this Documentation\
+All Projects have Project Limits on certain important constructs. Increases in Project Limits may impact the price of your use of Storj DCS. To learn more, check out the [Project Limits](../../concepts/limits.md) and [Usage Limit Increases](usage-limit-increases.md) sections of this Documentation.
