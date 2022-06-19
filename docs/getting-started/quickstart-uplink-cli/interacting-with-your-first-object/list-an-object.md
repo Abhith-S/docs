@@ -27,5 +27,3 @@ uplink ls sj://cakes
 Result
 
 ![](../../../.gitbook/assets/list\_objects.png)
-
-##

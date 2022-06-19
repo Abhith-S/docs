@@ -31,5 +31,3 @@ Once the ticket is received, and we have confirmed there is no outstanding balan
 {% hint style="info" %}
 **Note: The user will be required to verify the request via the registered email address on the account.**
 {% endhint %}
-
-****

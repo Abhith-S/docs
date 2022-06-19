@@ -33,4 +33,4 @@ By keeping encryption and access management separate, and by implementing client
 
 If your encryption key is easily guessable, or is leaked via some means, you will have to re-encrypt and re-upload all of your data to change your keys. This is a consequence of the encryption passphrase being controlled by you and being deterministic.
 
-To try and help encourage users to have the right behavior, the access grant creation wizard on the Satellite dashboard will prompt first time users to create a 12 word passphrase.\
+To try and help encourage users to have the right behavior, the access grant creation wizard on the Satellite dashboard will prompt first time users to create a 12 word passphrase.

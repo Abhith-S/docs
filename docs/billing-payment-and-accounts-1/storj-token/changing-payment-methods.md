@@ -22,4 +22,4 @@ As described above any invoices will be first debited against the STORJ token pa
 
 ### **Changing from STORJ token to Credit Card**
 
-If a user wants to change from paying only in STORJ token to paying with a credit card, the user should add a credit card to the account. Any invoices will be first debited against the remaining STORJ token payment balance and once the balance is exhausted, any unpaid balance remaining will be debited against the credit card. All future payments will then be debited against the credit card.\
+If a user wants to change from paying only in STORJ token to paying with a credit card, the user should add a credit card to the account. Any invoices will be first debited against the remaining STORJ token payment balance and once the balance is exhausted, any unpaid balance remaining will be debited against the credit card. All future payments will then be debited against the credit card.

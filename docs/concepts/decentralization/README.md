@@ -27,5 +27,3 @@ You can learn more about erasure codes in Storj DCS under the [File Redundancy](
 You can learn more about data repair in Storj DCS under the [File Repair](../file-repair.md) section under Concepts.‌
 
 **​File Audit** is the action of testing if a random piece can successfully be retrieved from a node that is storing it. File Audits are continually applied to assure the durability of the files on Storj DCS.‌ The audit service is a highly scalable and performant analog to the consensus mechanism, typically a distributed ledger, used in other decentralized storage services.
-
-**​**

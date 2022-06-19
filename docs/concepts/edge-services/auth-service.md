@@ -29,4 +29,4 @@ Where customers elect to utilize [server-side encryption](../encryption-key/desi
 
 ### **Registering an Access Grant**
 
-Access Grants are registered with the Auth Service either via [the Object Browser](../../getting-started/quickstart-objectbrowser.md) in the Satellite Admin Console or via the CLI. The CLI may be used to [generate Linkshare links](../../api-reference/uplink-cli/share-command.md#link-sharing) or [S3-compatible gateway credentials](../../api-reference/uplink-cli/share-command.md#register-with-gateway-mt).\
+Access Grants are registered with the Auth Service either via [the Object Browser](../../getting-started/quickstart-objectbrowser.md) in the Satellite Admin Console or via the CLI. The CLI may be used to [generate Linkshare links](../../api-reference/uplink-cli/share-command.md#link-sharing) or [S3-compatible gateway credentials](../../api-reference/uplink-cli/share-command.md#register-with-gateway-mt).

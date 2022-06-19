@@ -35,4 +35,4 @@ Generally, a Storj DCS connector will interface directly with [libuplink](https:
 
 ### **Get Started - and Monetize OSS!**
 
-We hope that the Storj Connector Partner Program will empower a new class of entrepreneurs to ‘be the cloud’, and create more sustainable business models built on top of open-source software.\
+We hope that the Storj Connector Partner Program will empower a new class of entrepreneurs to ‘be the cloud’, and create more sustainable business models built on top of open-source software.

@@ -40,4 +40,4 @@ The [Storj DCS Linkshare service](../../api-reference/linksharing-service.md) is
 [auth-service.md](auth-service.md)
 {% endcontent-ref %}
 
-Both the Storj S3-compatible gateway and the Linkshare service leverage the [Auth Service ](auth-service.md)for access management via a registered Access Grant.\
+Both the Storj S3-compatible gateway and the Linkshare service leverage the [Auth Service ](auth-service.md)for access management via a registered Access Grant.

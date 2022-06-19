@@ -42,4 +42,4 @@ It is also possible to restrict an Access Grant to provide a limited level of ac
 
 An API Key has three parts, a head, a list of caveats, and a tail. These are concatenated and serialized together. An unrestricted API Key has no caveats, so it’s just a head and a tail. The head is a random nonce, and the tail of the unrestricted API Key is the HMAC of the root secret and the head.
 
-The next section will detail the specific restrictions on the bucket and object constructs.\
+The next section will detail the specific restrictions on the bucket and object constructs.
