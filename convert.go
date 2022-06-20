@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io"
 	"io/fs"
+	"io/ioutil"
 	"net/http"
 	"os"
 	"os/exec"
@@ -17,6 +18,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"unicode"
 )
 
 const assetsDir = "_assets"
@@ -813,4 +815,184 @@ func mustCompile(s string) *regexp.Regexp {
 type topLevelMenu struct {
 	title  string
 	weight int
+}
+
+type SummaryItem2 struct {
+	Top        bool
+	Title      string
+	Dir        string
+	Slug       string
+	Link       string
+	LineNumber int
+	Indent     int
+	Children   []*SummaryItem2
+}
+
+// ParseSummary parses SUMMARY.md files.
+func ParseSummary(content string) []*SummaryItem2 {
+	rxEntry := mustCompile(`\[([^\]]*)\]\(([^)]*)\)`)
+
+	root := &SummaryItem2{}
+	root.Indent = -2
+	stack := []*SummaryItem2{root}
+
+	last := func() *SummaryItem2 {
+		return stack[len(stack)-1]
+	}
+	push := func(item *SummaryItem2) {
+		if item.Slug == "" {
+			if item.Link == "" || strings.HasPrefix(item.Link, "http") {
+				item.Slug = slugify(item.Title)
+			} else {
+				if strings.HasSuffix(item.Link, "README.md") {
+					item.Slug = path.Base(strings.TrimSuffix(item.Link, "/README.md"))
+				} else {
+					item.Slug = path.Base(strings.TrimSuffix(item.Link, ".md"))
+				}
+			}
+		}
+
+		// pop to the right level
+		for len(stack) > 0 {
+			if last().Indent >= item.Indent {
+				stack = stack[:len(stack)-1]
+			} else {
+				break
+			}
+		}
+
+		// calculate dir
+		for _, parent := range stack[1:] {
+			item.Dir += parent.Slug + "/"
+		}
+		if item.Dir != "" {
+			item.Dir = item.Dir[:len(item.Dir)-1]
+		}
+
+		// add to the parent
+		parent := last()
+		parent.Children = append(parent.Children, item)
+		// add itself to the stack
+		stack = append(stack, item)
+	}
+
+	for lineNumber, line := range strings.Split(content, "\n") {
+		if strings.TrimSpace(line) == "" {
+			continue
+		}
+
+		if strings.HasPrefix(line, "#") {
+			title, slug := parseSummaryTitle(line)
+			push(&SummaryItem2{
+				Top:        true,
+				Title:      title,
+				Slug:       slug,
+				Indent:     -1,
+				LineNumber: lineNumber + 1,
+			})
+		} else {
+			matches := rxEntry.FindStringSubmatch(line)
+			push(&SummaryItem2{
+				Title:      matches[1],
+				Link:       matches[2],
+				Indent:     countIndent(line),
+				LineNumber: lineNumber,
+			})
+		}
+	}
+
+	return root.Children
+}
+
+func countIndent(line string) int {
+	for i, p := range line {
+		if p != ' ' {
+			return i
+		}
+	}
+	return len(line)
+}
+
+func parseSummaryTitle(title string) (_, slug string) {
+	if p := strings.Index(title, "<"); p >= 0 {
+		slug = strings.TrimSpace(title[p:])
+		title = title[:p]
+	}
+	if slug != "" {
+		rxID := mustCompile(`^<a\s+href="[^"]*"\s+id="([^"]+)"><\/a>$`)
+		matches := rxID.FindStringSubmatch(slug)
+		slug = matches[1]
+	}
+	title = strings.Trim(title, " #")
+	return title, slug
+}
+
+func slugify(s string) string {
+	cutdash := true
+	emitdash := false
+
+	slug := make([]rune, 0, len(s))
+	for _, r := range s {
+		if unicode.IsNumber(r) || unicode.IsLetter(r) {
+			if emitdash && !cutdash {
+				slug = append(slug, '-')
+			}
+			slug = append(slug, unicode.ToLower(r))
+
+			emitdash = false
+			cutdash = false
+			continue
+		}
+		switch r {
+		case '/', '=':
+			if len(slug) == 0 || slug[len(slug)-1] != r {
+				slug = append(slug, r)
+			}
+			emitdash = false
+			cutdash = true
+		default:
+			emitdash = true
+		}
+	}
+
+	if len(slug) == 0 {
+		return "-"
+	}
+
+	return string(slug)
+}
+
+func testSummaryTree(in, out string) {
+	data, err := ioutil.ReadFile(in)
+	if err != nil {
+		panic(err)
+	}
+
+	toplevel := ParseSummary(string(data))
+	var b bytes.Buffer
+
+	var recurse func(indent int, item *SummaryItem2)
+	recurse = func(indent int, item *SummaryItem2) {
+		if indent == -2 {
+			fmt.Fprintf(&b, "## %s <%s>\n", item.Title, item.Slug)
+		} else {
+			link := path.Join(item.Dir, item.Slug)
+			if len(item.Children) > 0 {
+				link += "/_index.md"
+			} else {
+				link += ".md"
+			}
+			fmt.Fprintf(&b, "%s* [%s](%s)\n", strings.Repeat(" ", indent), item.Title, link)
+		}
+
+		for _, c := range item.Children {
+			recurse(indent+2, c)
+		}
+	}
+
+	for _, t := range toplevel {
+		recurse(-2, t)
+	}
+
+	os.WriteFile(out, b.Bytes(), 0755)
 }
