@@ -48,11 +48,11 @@ Access    : 1Dv4...
 ========== CREDENTIALS ===================================================================
 Access Key ID: jvw3fmzqyg2cvxm27qishw6y4qka
 Secret Key   : ...
-Endpoint     : https://gateway.us1.storjshare.io
+Endpoint     : https://gateway.storjshare.io
 Public Access:  true
 =========== BROWSER URL ==================================================================
 REMINDER  : Object key must end in '/' when trying to share recursively
-URL       : https://link.us1.storjshare.io/s/juexo54k2db7lt5fawuqkupqkcfa/cakes/cheesecake.jpg
+URL       : https://link.storjshare.io/s/juexo54k2db7lt5fawuqkupqkcfa/cakes/cheesecake.jpg
 ```
 
 This is a real distribution of your file's pieces that you uploaded to the network. You can share this file with anyone you'd like.

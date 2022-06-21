@@ -34,12 +34,12 @@ sudo mkdir /mnt/my-bucket
 sudo chown myuser /mnt/my-bucket
 ```
 
-Mount a bucket to the folder. We will assume that you [created a bucket `my-bucket`](how-to-connect-s3fs-to-storj-dcs.md#create-a-bucket) earlier. We will use the endpoint `https://gateway.us1.storjshare.io` here, but you can [choose the right one for you](../api-reference/s3-compatible-gateway/#regions-and-points-of-presence).
+Mount a bucket to the folder. We will assume that you [created a bucket `my-bucket`](how-to-connect-s3fs-to-storj-dcs.md#create-a-bucket) earlier. We will use the endpoint `https://gateway.storjshare.io` here, as this will [choose the right one for you](../api-reference/s3-compatible-gateway/#regions-and-points-of-presence) automatically.
 
 If you use the [Self-hosted S3 Compatible Gateway](../api-reference/s3-gateway/), then the endpoint could be `http://localhost:7777` (depends on your configuration and infrastructure).
 
 ```
-s3fs my-bucket /mnt/my-bucket -o passwd_file=${HOME}/.passwd-s3fs -o url=https://gateway.us1.storjshare.io/ -o use_path_request_style
+s3fs my-bucket /mnt/my-bucket -o passwd_file=${HOME}/.passwd-s3fs -o url=https://gateway.storjshare.io -o use_path_request_style
 ```
 
 ## Mount a bucket to the folder on boot
@@ -54,7 +54,7 @@ sudo chmod 600 /etc/passwd-s3fs
 Then add the following to `/etc/fstab`:
 
 ```
-my-bucket /mnt/my-bucket fuse.s3fs _netdev,allow_other,use_path_request_style,url=https://gateway.us1.storjshare.io/ 0 0
+my-bucket /mnt/my-bucket fuse.s3fs _netdev,allow_other,use_path_request_style,url=https://gateway.storjshare.io 0 0
 ```
 
 Check that it is working - The command:

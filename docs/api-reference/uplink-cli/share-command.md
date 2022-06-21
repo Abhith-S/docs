@@ -32,25 +32,25 @@ An access generated using `uplink share` with no arguments creates an access to 
 
 ## Flags
 
-| Flag                    | Description                                                                                                                                                     |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--access string`       | the serialized access, or name of the access to use                                                                                                             |
-| `--auth-service string` | <p>url for shared auth service</p><p>Asia https://auth.ap1.storjshare.io</p><p>US https://auth.us1.storjshare.io</p><p>EU https://auth.eu1.storjshare.io</p>    |
-| `--base-url string`     | <p>the base url for link sharing </p><p>Asia https://link.ap1.storjshare.io</p><p>US https://link.us1.storjshare.io</p><p>EU https://link.eu1.storjshare.io</p> |
-| `--disallow-deletes`    | if true, disallow deletes                                                                                                                                       |
-| `--disallow-lists`      | if true, disallow lists                                                                                                                                         |
-| `--disallow-reads`      | if true, disallow reads                                                                                                                                         |
-| `--disallow-writes`     | if true, disallow writes                                                                                                                                        |
-| `--dns string`          | specify your custom hostname. if set, returns dns settings for web hosting. implies `--register` and `--public`                                                 |
-| `--export-to string`    | path to export the shared access to                                                                                                                             |
-| `--help`, `-h`          | help for share                                                                                                                                                  |
-| `--not-after`           | disallow access after this time (e.g. '+2h', '2020-01-02T15:01:01-01:00')                                                                                       |
-| `--not-before`          | disallow access before this time (e.g. '+2h', '2020-01-02T15:01:01-01:00')                                                                                      |
-| `--public`              | if true, the access will be public. `--dns`and `--url`override this                                                                                             |
-| `--readonly`            | implies `--disallow-writes` and `--disallow-deletes`                                                                                                            |
-| `--register`            | if true, creates and registers access grant                                                                                                                     |
-| `--url`                 | if true, returns a url for the shared path. implies `--register` and `--public`                                                                                 |
-| `--writeonly`           | implies `--disallow-reads` and `--disallow-lists`                                                                                                               |
+| Flag                    | Description                                                                                                     |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `--access string`       | the serialized access, or name of the access to use                                                             |
+| `--auth-service string` | <p>url for shared auth service, </p><p>https://auth.storjshare.io by default</p>                                |
+| `--base-url string`     | <p>the base url for link sharing,  </p><p>https://link.storjshare.io by default</p>                             |
+| `--disallow-deletes`    | if true, disallow deletes                                                                                       |
+| `--disallow-lists`      | if true, disallow lists                                                                                         |
+| `--disallow-reads`      | if true, disallow reads                                                                                         |
+| `--disallow-writes`     | if true, disallow writes                                                                                        |
+| `--dns string`          | specify your custom hostname. if set, returns dns settings for web hosting. implies `--register` and `--public` |
+| `--export-to string`    | path to export the shared access to                                                                             |
+| `--help`, `-h`          | help for share                                                                                                  |
+| `--not-after`           | disallow access after this time (e.g. '+2h', '2020-01-02T15:01:01-01:00')                                       |
+| `--not-before`          | disallow access before this time (e.g. '+2h', '2020-01-02T15:01:01-01:00')                                      |
+| `--public`              | if true, the access will be public. `--dns`and `--url`override this                                             |
+| `--readonly`            | implies `--disallow-writes` and `--disallow-deletes`                                                            |
+| `--register`            | if true, creates and registers access grant                                                                     |
+| `--url`                 | if true, returns a url for the shared path. implies `--register` and `--public`                                 |
+| `--writeonly`           | implies `--disallow-reads` and `--disallow-lists`                                                               |
 
 ## Examples
 
@@ -135,24 +135,24 @@ Generate credentials to use with our S3 multitenant gateway (beta): [GatewayMT](
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe share sj://cakes/ --register --auth-service=https://auth.us1.storjshare.io
+./uplink.exe share sj://cakes/ --register --auth-service=https://auth.storjshare.io
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink share sj://cakes/ --register --auth-service=https://auth.us1.storjshare.io
+uplink share sj://cakes/ --register --auth-service=https://auth.storjshare.io
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink share sj://cakes/ --register --auth-service=https://auth.us1.storjshare.io
+uplink share sj://cakes/ --register --auth-service=https://auth.storjshare.io
 ```
 {% endtab %}
 {% endtabs %}
 
-Notice the endpoint generated for Gateway MT `gateway.us1.storjshare.io` corresponds to the auth service used `auth.us1.storjshare.io`
+Notice the endpoint generated for Gateway MT `gateway.storjshare.io` corresponds to the auth service used `auth.storjshare.io`.
 
 ```
 =========== ACCESS RESTRICTIONS ==========================================================
@@ -168,7 +168,7 @@ Access    : 1Q74vfxunqiAQ15WPxPqreya...
 ========== CREDENTIALS ===================================================================
 Access Key ID: jvguri...
 Secret Key   : j3nj4x...
-Endpoint     : https://gateway.us1.storjshare.io
+Endpoint     : https://gateway.storjshare.io
 ```
 
 ### Link Sharing
@@ -178,19 +178,19 @@ You can also generate a URL to share your projects/buckets/objects
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe share sj://cakes/ --url --not-after=none --base-url=https://link.us1.storjshare.io
+./uplink.exe share sj://cakes/ --url --not-after=none --base-url=https://link.storjshare.io
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink share sj://cakes/ --url --not-after=none --base-url=https://link.us1.storjshare.io
+uplink share sj://cakes/ --url --not-after=none --base-url=https://link.storjshare.io
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink share sj://cakes/ --url --not-after=none --base-url=https://link.us1.storjshare.io
+uplink share sj://cakes/ --url --not-after=none --base-url=https://link.storjshare.io
 ```
 {% endtab %}
 {% endtabs %}
@@ -215,20 +215,20 @@ Access    : 1Q74vfxunqiAQ15WPxPqreya...
 ========== CREDENTIALS ===================================================================
 Access Key ID: jvguri...
 Secret Key   : j3nj4x...
-Endpoint     : https://gateway.us1.storjshare.io
+Endpoint     : https://gateway.storjshare.io
 Public Access: true
 =========== BROWSER URL ==================================================================
 REMINDER  : Object key must end in '/' when trying to share recursively
-URL       : https://link.us1.storjshare.io/s/jvguri.../cakes
+URL       : https://link.storjshare.io/s/jvguri.../cakes
 ```
 
 Also note that the URL uses the same Gateway MT access key, so if you have that already, you don't necessarily need to run this command to generate a shareable link.&#x20;
 
-`https://link.<region>.storjshare.io/s/<access key>/<object path>`
+`https://link.storjshare.io/s/<access key>/<object path>`
 
-To download content directly, use `/raw/` in Linkshare URL ex: [https://link.us1.storjshare.io/raw/ju34skavohcqezr6vlfgshg5nmjq/dwebdemo/isthataquestion.mp4](https://link.us1.storjshare.io/raw/ju34skavohcqezr6vlfgshg5nmjq/dwebdemo/isthataquestion.mp4)
+To download content directly, use `/raw/` in Linkshare URL ex: [https://link.storjshare.io/raw/ju34skavohcqezr6vlfgshg5nmjq/dwebdemo/isthataquestion.mp4](https://link.storjshare.io/raw/ju34skavohcqezr6vlfgshg5nmjq/dwebdemo/isthataquestion.mp4)
 
-To view the object location map, use `/s/` in Linkshare URL ex: [https://link.us1.storjshare.io/s/ju34skavohcqezr6vlfgshg5nmjq/dwebdemo/isthataquestion.mp4](https://link.us1.storjshare.io/s/ju34skavohcqezr6vlfgshg5nmjq/dwebdemo/isthataquestion.mp4)
+To view the object location map, use `/s/` in Linkshare URL ex: [https://link.storjshare.io/s/ju34skavohcqezr6vlfgshg5nmjq/dwebdemo/isthataquestion.mp4](https://link.storjshare.io/s/ju34skavohcqezr6vlfgshg5nmjq/dwebdemo/isthataquestion.mp4)
 
 ### Webhosting
 
@@ -239,19 +239,19 @@ While you may share individual objects with the above linksharing instructions, 
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe share --dns www.mysite.com sj://cakes/ --base-url https://link.us1.storjshare.io
+./uplink.exe share --dns www.mysite.com sj://cakes/ --base-url https://link.storjshare.io
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink share --dns www.mysite.com sj://cakes/ --base-url https://link.us1.storjshare.io
+uplink share --dns www.mysite.com sj://cakes/ --base-url https://link.storjshare.io
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink share --dns www.mysite.com sj://cakes/ --base-url https://link.us1.storjshare.io
+uplink share --dns www.mysite.com sj://cakes/ --base-url https://link.storjshare.io
 ```
 {% endtab %}
 {% endtabs %}
@@ -270,13 +270,13 @@ Access    : 12BncZWg9xc4GyXCDX73...
 ========== CREDENTIALS ===================================================================
 Access Key ID: ju3ga56lfk7x...
 Secret Key   : j2psszecoqtc...
-Endpoint     : https://gateway.us1.storjshare.io
+Endpoint     : https://gateway.storjshare.io
 Public Access:  true
 =========== DNS INFO =====================================================================
 Remember to update the $ORIGIN with your domain name. You may also change the $TTL.
 $ORIGIN example.com.
 $TTL    3600
-www.mysite.com    	IN	CNAME	link.us1.storjshare.io.
+www.mysite.com    	IN	CNAME	link.storjshare.io.
 txt-www.mysite.com	IN	TXT  	storj-root:cakes
 txt-www.mysite.com	IN	TXT  	storj-access:ju3ga56lfk7x...
 ```

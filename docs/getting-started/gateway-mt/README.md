@@ -69,35 +69,31 @@ You can now use AWS CLI. Some examples of use:
 #### Make a bucket
 
 ```
-~ % aws --endpoint-url=https://gateway.eu1.storjshare.io s3 mb s3://waterbear
+~ % aws s3 --endpoint-url=https://gateway.storjshare.io mb s3://waterbear
 ```
-
-{% hint style="info" %}
-Make sure to adjust the endpoint URL to the one you have been given when creating your credentials.
-{% endhint %}
 
 #### Display buckets
 
 ```
-aws --endpoint-url=https://gateway.eu1.storjshare.io s3 ls
+aws s3 --endpoint-url=https://gateway.storjshare.io ls
 ```
 
 #### Copy a file
 
 ```
-aws --endpoint-url=https://gateway.eu1.storjshare.io s3 cp /tmp/test.zip s3://waterbear
+aws s3 --endpoint-url=https://gateway.storjshare.io cp /tmp/test.zip s3://waterbear
 ```
 
 #### List files in a bucket
 
 ```
-aws --endpoint-url=https://gateway.eu1.storjshare.io s3 ls s3://waterbear
+aws s3 --endpoint-url=https://gateway.storjshare.io ls s3://waterbear
 ```
 
 #### Copy a file from a bucket
 
 ```
-aws --endpoint-url=https://gateway.eu1.storjshare.io s3 cp s3://waterbear/test.zip /tmp/Archive.zip
+aws s3 --endpoint-url=https://gateway.storjshare.io cp s3://waterbear/test.zip /tmp/Archive.zip
 ```
 
 #### Delete a bucket

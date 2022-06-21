@@ -50,7 +50,7 @@ Below you can see we need to set the following parameters:
 import boto3
 ACCESS_KEY = "Your_Access_Key"
 SECRET_KEY = "Your_Secret_Key"
-URL = "https://gateway.us1.storjshare.io"
+URL = "https://gateway.storjshare.io"
 BUCKET_NAME = "yourbucketname"
 session = boto3.session.Session()
 s3 = session.client(service_name="s3", aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY, endpoint_url=URL)
@@ -71,5 +71,5 @@ python3 my_put_script.py
 Set for file name and extension and paste in your newly generated pre-signed URL. Note that the pre-signed URL below is invalid and included as an example only.
 
 ```bash
-curl -v --upload-file file.name "https://gateway.us1.storjshare.io/yourbucketname/path/within/bucket?AWSAccessKeyId=jvruleqdpbwqx7vxmwgqbtlbmapa&Signature=fUNxawPyFd%2F9apR%2FZnKmR%2BPXGCA%3D&Expires=1628019103"
+curl -v --upload-file file.name "https://gateway.storjshare.io/yourbucketname/path/within/bucket?AWSAccessKeyId=jvruleqdpbwqx7vxmwgqbtlbmapa&Signature=fUNxawPyFd%2F9apR%2FZnKmR%2BPXGCA%3D&Expires=1628019103"
 ```

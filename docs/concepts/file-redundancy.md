@@ -22,7 +22,7 @@ If a block of data is _s_ bytes large, each of the _n_ erasure shares are roughl
 
 Interestingly, the durability of a _k_ = 20, _n_ = 40 erasure code is better than a _k_ = 10, _n_ = 20 erasure code, even though the expansion factor (2x) is the same for both. This is because the risk is spread across more nodes in the _k_ = 20, _n_ = 40 case. To help drive this point home, we calculated the durability for various erasure code configuration choices in a network with a churn of 10%. We talked more about the math behind this table in section 3.4 of [our paper](https://storj.io/storjv3.pdf), and we’ll discuss more about churn in an upcoming blog post, but suffice it to say, we hope these calculated values are illustrative:
 
-![](<../.gitbook/assets/image (159) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (159) (1) (1).png>)
 
 Notice how increasing the amount of storage nodes involved increases the amount of durability significantly (each new 9 is 10x more durable), without a change in the expansion factor. We also put this data together in a graph:
 
@@ -107,7 +107,7 @@ Suppose that a file undergoes k=4, n=8 erasure-encoding (where 8 pieces are crea
 
 Thus, rather than having a single factor of P(D) determining the durability (with at most n-1 pieces being lost), one has a factor of P(D) for each unique set required for rebuild, since there are now k sets of which each one must not have lost more than r-1 pieces, where the expansion factor r determines the number of copies that are made (with there being r-1 copies made to achieve an expansion factor of r, including the original file). Calculating this probability requires the use of the Binomial distribution, where we let p be the probability that at most r-1 copies have been lost from a set. Then, to calculate the probability that there are at least k sets containing at least 1 copy each, we find the area of the upper tail of the Binomial CDF:
 
-![](<../.gitbook/assets/image (145) (1).png>)
+![](<../.gitbook/assets/image (145).png>)
 
 Let’s first look at the impact of node churn on durability based on the two hypothetical scenarios, one using replication+erasure coding, and the other optimizing for erasure coding alone. Based on the above formulas, the results are as follows:
 

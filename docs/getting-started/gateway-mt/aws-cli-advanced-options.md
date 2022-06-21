@@ -46,7 +46,7 @@ Configure plugin in your `~/.aws/config` file:
 ..and configure the default profile (see [#regions-and-points-of-presence](../../api-reference/s3-compatible-gateway/#regions-and-points-of-presence "mention") to choose a correct endpoint):
 
 ```
-~ % aws configure set default.s3.endpoint_url https://gateway.us1.storjshare.io
+~ % aws configure set default.s3.endpoint_url https://gateway.storjshare.io
 ~ % aws configure set default.s3.multipart_threshold 60MB
 ~ % aws configure set default.s3.multipart_chunksize 60MB
 ```
@@ -61,7 +61,7 @@ endpoint = awscli_plugin_endpoint
 
 [default]
 s3 =
-  endpoint_url = https://gateway.us1.storjshare.io
+  endpoint_url = https://gateway.storjshare.io
   multipart_threshold = 60MB
   multipart_chunksize = 60MB
 ```
@@ -75,7 +75,7 @@ endpoint = awscli_plugin_endpoint
 
 [default]
 s3 =
-  endpoint_url = https://gateway.us1.storjshare.io
+  endpoint_url = https://gateway.storjshare.io
   multipart_threshold = 60MB
   multipart_chunksize = 60MB
 ```
@@ -92,13 +92,13 @@ You can now use the AWS CLI without specifying an endpoint:
 To configure `s3api` endpoint you can use this command:
 
 ```
-~ % aws configure set default.s3api.endpoint_url https://gateway.us1.storjshare.io
+~ % aws configure set default.s3api.endpoint_url https://gateway.storjshare.io
 ```
 
 You can also use a different profile for Storj:
 
 ```
-~ % aws configure set profile.storj.s3.endpoint_url https://gateway.us1.storjshare.io
+~ % aws configure set profile.storj.s3.endpoint_url https://gateway.storjshare.io
 ~ % aws configure set profile.storj.s3.multipart_threshold 1TB
 ```
 

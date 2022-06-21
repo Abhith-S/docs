@@ -42,8 +42,4 @@ If you prefer a command line interface (CLI) or wish to programmatically integra
 
 ## Regions of availability
 
-| Region | CNAME                  |
-| ------ | ---------------------- |
-| Asia   | link.ap1.storjshare.io |
-| EU     | link.eu1.storjshare.io |
-| US     | link.us1.storjshare.io |
+Linksharing Service is available in several geographical regions. When you use the endpoint https://link.storjshare.io, it automatically routes traffic from the closest region to your location.

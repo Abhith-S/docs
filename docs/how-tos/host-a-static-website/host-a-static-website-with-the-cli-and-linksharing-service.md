@@ -15,7 +15,7 @@ You can use your own domain name and host your own static website on Storj DCS w
 ## Part 1: Uplink CLI
 
 1. Download the [Uplink Binary](../../getting-started/quickstart-uplink-cli/uploading-your-first-object/set-up-uplink-cli.md) and upload your static site files to Storj DCS. You may also upload your files in any other manner, but you will need the Uplink CLI for the remaining steps.
-2. Share the bucket or object prefix (not individual objects) that will be the root of your website/subdomain. At the root, name your home page`index.html`. The website will serve the index.html file automatically  e.g.`http://www.example.test` and `http://www.example.test/index.html`will serve the same content. Anything shared with `--dns` will be _readonly_ and available _publicly_ (no secret key needed). You can optionally specify your preferred linkshare region with `--base-url`
+2. Share the bucket or object prefix (not individual objects) that will be the root of your website/subdomain. At the root, name your home page`index.html`. The website will serve the index.html file automatically  e.g.`http://www.example.test` and `http://www.example.test/index.html`will serve the same content. Anything shared with `--dns` will be _readonly_ and available _publicly_ (no secret key needed). You can optionally specify your preferred linkshare endpoint with `--base-url`
 
 {% tabs %}
 {% tab title="Windows" %}
@@ -39,25 +39,19 @@ uplink share --dns <hostname> sj://<bucket>/<prefix> --base-url <linkshare url>
 
 Notably, this mechanism allows you to host multiple websites from the same bucket by using different prefixes. You may also create multiple subdomains by using different hostnames (however, the Uplink CLI only generates info for one at a time).
 
-The command above prints a zone file with the information needed to create 3 DNS records. Your CNAME should match the linkshare service region you prefer.&#x20;
-
-| Region | CNAME                  |
-| ------ | ---------------------- |
-| Asia   | link.ap1.storjshare.io |
-| EU     | link.eu1.storjshare.io |
-| US     | link.us1.storjshare.io |
+The command above prints a zone file with the information needed to create 3 DNS records. Your CNAME should match the linkshare service domain (`link.storjshare.io` by default).
 
 ```
 $ORIGIN example.com.
 $TTL    3600
-<hostname>    	IN	CNAME	link.<region>.storjshare.io.
+<hostname>    	IN	CNAME	link.storjshare.io.
 txt-<hostname> 	IN	TXT  	storj-root:<bucket>/<prefix>
 txt-<hostname> 	IN	TXT  	storj-access:<access key>
 ```
 
 Remember to update the `$ORIGIN` from `example.com` to your domain name (keep the trailing `.`). You may also change the DNS `$TTL`.
 
-For example, for objects stored on the **us1 satellite**, running
+For example, running
 
 ```
 uplink share --dns www.example.com sj://bucket/prefix
@@ -68,20 +62,18 @@ uplink share --dns www.example.com sj://bucket/prefix
 ```
 $ORIGIN example.com.
 $TTL    3600
-www.example.com    	IN	CNAME	link.us1.storjshare.io.
+www.example.com    	IN	CNAME	link.storjshare.io.
 txt-www.example.com	IN	TXT  	storj-root:bucket/prefix
 txt-www.example.com	IN	TXT  	storj-access:jqaz8xihdea93jfbaks8324jrhq1
 ```
 
 ## Part 2: DNS Provider
 
-1\. In your DNS provider, create a CNAME record on your hostname using the CNAME from your generated zone file as the target name.&#x20;
+1\. In your DNS provider, create a CNAME record on your hostname using the CNAME from your generated zone file as the target name.
 
 {% hint style="info" %}
 Ensure you include the trailing `.` at the end of your CNAME if your DNS providers allows.
 {% endhint %}
-
-![](../../.gitbook/assets/cname.png)
 
 2\. Create 2 TXT records, prepending `txt-` to your hostname.
 

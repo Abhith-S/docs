@@ -62,13 +62,7 @@ This will output an access key, a secret key, and an S3 compatible endpoint for 
 
 ### Regions and Points of Presence
 
-We currently have hosted Gateways in 3 regional locations and expect to expand as needed. Gateway endpoints that currently exist are:
-
-* https://gateway.us1.storjshare.io
-* https://gateway.ap1.storjshare.io
-* https://gateway.eu1.storjshare.io
-
-These are all interchangeable, and use the same encrypted database of access keys. Use whichever one is closest to you!
+We currently have hosted Gateways in several regional locations and expect to expand as needed. The Gateway endpoint https://gateway.storjshare.io is configured to automatically route the traffic from the instance closest to your location.
 
 ### Source code
 

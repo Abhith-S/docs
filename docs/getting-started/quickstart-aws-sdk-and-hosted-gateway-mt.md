@@ -64,7 +64,7 @@ import S3 from "aws-sdk/clients/s3";
 ```javascript
 const accessKeyId = "access key here";
 const secretAccessKey = "secret access key here";
-const endpoint = "https://gateway.us1.storjshare.io";
+const endpoint = "https://gateway.storjshare.io";
 
 const s3 = new S3({
   accessKeyId,

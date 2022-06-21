@@ -116,7 +116,7 @@ Assign the permissions you want this access grant to have, then click on **Conti
 _If you do not feel comfortable entering this sensitive information into your browser, we understand. Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, please select “Continue in CLI” and follow_ [_these instructions_](../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) _instead._
 {% endhint %}
 
-![](<../.gitbook/assets/image (159) (1) (1).png>)
+![](<../.gitbook/assets/image (159) (1).png>)
 
 **Generate and Save the Encryption Passphrase.** If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you if you choose "Generate Phrase.") You will need this passphrase later if you want to again access files uploaded with this encryption phrase.
 
@@ -128,7 +128,7 @@ Be sure to download the Access Grant to save it and then click on the **Generate
 
 Now click on the **Generate Credentials** button.
 
-![](<../.gitbook/assets/image (165) (1).png>)
+![](<../.gitbook/assets/image (165).png>)
 
 Copy your _**Access Key**_, _**Secret Key**_, and _**Endpoint**_ to a safe location.
 
