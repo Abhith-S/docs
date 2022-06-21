@@ -99,3 +99,15 @@ aws --endpoint-url=https://gateway.eu1.storjshare.io s3 ls s3://waterbear
 ```
 aws --endpoint-url=https://gateway.eu1.storjshare.io s3 cp s3://waterbear/test.zip /tmp/Archive.zip
 ```
+
+#### Delete a bucket
+
+```
+aws s3 --endpoint-url=https://gateway.storjshare.io rb s3://waterbear/
+```
+
+#### Delete a non-empty bucket
+
+```
+aws s3 --endpoint-url=https://gateway.storjshare.io rb --force s3://waterbear/
+```

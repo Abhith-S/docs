@@ -37,9 +37,9 @@ By selecting this integration pattern you are opting in to [server-side encrypti
 
 **Click on the Generate S3 Gateway Credentials** link **** and then click on the 'Generate Credentials' button.&#x20;
 
-![](<../../.gitbook/assets/image (164) (1).png>)
+![](<../../.gitbook/assets/image (164) (1) (1).png>)
 
-![](<../../.gitbook/assets/image (137) (1) (1).png>)
+![](<../../.gitbook/assets/image (137) (1) (1) (1).png>)
 
 **Copy your Access Key, Secret Key, and Endpoint** to a safe location.&#x20;
 

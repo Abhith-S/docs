@@ -46,33 +46,33 @@ Users interested in accessing their Storj DCS bucket(s) via S3 Browser can do so
 
 Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page within your project and then click on **Create Access Grant +.**
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FlWvNokLrxDXzJUlBzcyX%2Fimage.png?alt=media\&token=807509b5-d46d-409b-bcf5-41f49cbf31bf)
+![](<../.gitbook/assets/image (149).png>)
 
 Once you’ve selected **Create Access Grant,** a new window will pop up where you can enter a name for this access grant.
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FYmJK5XKEBXXCvPxOz6io%2Fimage.png?alt=media\&token=c54a780e-0958-4e43-b15f-4ea3ad0c1a5c)
+![](<../.gitbook/assets/image (156) (1).png>)
 
 Assign the permissions you want this access grant to have, then click on **Continue in Browser**:
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FYntUQ4tviuRhVZkbeIMy%2Fimage.png?alt=media\&token=2430d3be-e395-47a8-a50e-c12c142ad169)
+![](<../.gitbook/assets/image (123).png>)
 
 If you click **Continue in Browser**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with Gateway MT for S3 compatibility. Only then will your access grant be shared with our servers.
 
 If you already have created other access grants before, please enter the Encryption Passphrase you used for your other access grants in the **Enter Phrase** tab. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase. The GUI will automatically generate one on the client-side for you if you open the **Generate Phrase** tab, as shown in the screenshot below. Be sure to save the encryption phrase in a safe place.
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FDuNiKeRIwlVHk4vg9FIM%2Fimage.png?alt=media\&token=e93e7bd2-7d79-4511-90f5-4dc1c2cea0cb)
+![](<../.gitbook/assets/image (143) (1).png>)
 
 To generate S3 Gateway Credentials, click on the **Generate S3 Gateway Credentials** link:
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FiKW39FXWEqaZuqKDmcE1%2Fimage.png?alt=media\&token=77ea9f32-6e14-4f89-94ca-a58e53923712)
+![](<../.gitbook/assets/image (166).png>)
 
 Copy and save the Access Grant in a safe place and then click on the **Generate Credentials** button.
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2FZGFHdpPjj7GgSJEFQ99i%2Fimage.png?alt=media\&token=1b050ea8-cba8-46f1-8287-ceac84359bf8)
+![](<../.gitbook/assets/image (178).png>)
 
 Keep your **Access Key, Secret Key, and Endpoint** in a safe location. We’ll be using this shortly!
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-LmlDzFHYn9g\_f2QxmPe-887967055%2Fuploads%2F8zcpGtFAJ47uKN1iiIvw%2Fimage.png?alt=media\&token=c0346bd7-c04f-423f-8f48-4b464cc28322)
+![](<../.gitbook/assets/image (142).png>)
 
 {% hint style="info" %}
 Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, that’s completely understandable, and you should select **Continue in CLI** and follow [these instructions](../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md).

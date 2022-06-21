@@ -42,4 +42,4 @@ Please note that **Storj does not know or store your encryption passphrase**, so
 
 Access Grant is generated. **The Access Grant will only display once.** Save this information in a password manager or wherever you prefer to store sensitive information.&#x20;
 
-![](<../../../.gitbook/assets/image (164) (1).png>)
+![](<../../../.gitbook/assets/image (164) (1) (1).png>)

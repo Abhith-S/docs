@@ -31,7 +31,7 @@ The Storj Connector Framework is a basic set of utility methods and operations t
 
 Generally, a Storj DCS connector will interface directly with [libuplink](https://pkg.go.dev/storj.io/uplink), our native Go library, which enables you to programmatically interface with Storj. A basic architectural diagram of how a Storj Connector fits into the stack is located below:
 
-![](https://lh3.googleusercontent.com/o9Zo6dAdA9qrxDgsZh6kdPvtLHTjnbGUtkSuvZMTZabp47w8nrswys\_rdLcKvrjYLbDaJrSmR7a1emZSKfNRsTZzZbQy\_39P-O77CSvDvPPy8xEdulTRjio3mnPjomsZl-RcmAMw)
+![](<../.gitbook/assets/image (137).png>)
 
 ### **Get Started - and Monetize OSS!**
 

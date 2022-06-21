@@ -81,16 +81,16 @@ Note: These credentials are stored in a secret, called mongodb-ops-manager-secre
 
 You should see your MongoDB cluster once connected:
 
-![](https://lh6.googleusercontent.com/2Z9wvZ30LhSeHxBdHYp8\_\_5Sp0kkTNzGhwXAxKl7ILkrP0alKE0HXcnBRgxF-4wsz5Vav7CS12TPR0htHZA9nXgxSx0fS7MUVu2NIaxW9Zm3nOxbtYJEmPy585TJsc9fSV7bC4RC)
+![](<../.gitbook/assets/image (164).png>)
 
 ## **Setting up the S3 Blockstore pointing to local gateway**
 
 **You can configure backups for your app databases following this guide:** [**Backup Overview**](https://docs.opsmanager.mongodb.com/current/core/backup-overview/)**.** \
 
 
-![Backup in Action](https://lh6.googleusercontent.com/TOBjoo8U5xfwccYtIKk3L8bjSMZmepuzkcAUfwgRGhkvQHw\_qWC3-JQN7DYR4rBnODHKRKPf1pn4RrK0TZz6vebhWrz9E-q7wZQVBMsnU8k2NVTCLjdjWZJask4tbXYe6cWeM7XA)
+![](<../.gitbook/assets/image (165).png>)
 
-![](https://lh6.googleusercontent.com/i\_gN\_e-hEaFWNCkz6HkydfTfIcwGsb5sC9XsAWM3tuACBxIwpfKUI7a3zI30ajGuTM7YYEPStbomtUyoGqZIidCVYp0CHuXGIv\_LkcijaQZLd5TU6R9xoMvCkBAFP2h5byRaBfpp)
+![](<../.gitbook/assets/image (159).png>)
 
 Finally, you can see the backup data blocks stored in the Storj DCS bucket. You can even use the local tardigrade-gateway with command s3 command line tools:
 

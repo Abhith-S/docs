@@ -93,7 +93,7 @@ Once the FileZilla Pro client is open, select the **Open the Site Manager** icon
 
 Now, add the appropriate **Satellite** url (without adding `htpps://`) and simply copy your Access Grant that was previously generated within your Storj DCS account to the **Access Grant** field:
 
-![](<../.gitbook/assets/image (137).png>)
+![](<../.gitbook/assets/image (137) (1).png>)
 
 Hit **Connect**, and access to your Storj DCS account should be established.
 

@@ -155,10 +155,10 @@ For detailed information on how to remove a credit card from the Storj DCS servi
 
 Buckets can be created and deleted using the S3-compatible gateway, CLI, or Go library. For detailed information on how deleting a bucket works on  Storj DCS, please see the appropriate section of this documentation:
 
-* Delete a bucket from the Satellite user interface
+* [Delete a bucket from the Satellite user interface](../getting-started/quickstart-objectbrowser.md#deleting-buckets)
 * [Delete a bucket from the command line](../api-reference/uplink-cli/rb-command.md)
-* Delete a bucket using the Go library
-* Delete a bucket using the S3-compatible gateway
+* [Delete a bucket using the Go library](https://pkg.go.dev/storj.io/uplink#Project.DeleteBucket)
+* [Delete a bucket using the S3-compatible gateway](../getting-started/gateway-mt/#delete-a-bucket)
 
 ## How do I delete all my data?
 
