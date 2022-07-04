@@ -220,3 +220,155 @@ body, .book-menu-content {
     padding: $padding-16 * 2 $padding-16;
   }
 }
+
+/* Add custom header */
+
+body, html {
+  height: 100%;
+}
+
+.main-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; // FF flexbox overflow
+  height: 100%;
+}
+
+.storj-icon {
+  height: 1em;
+  vertical-align: middle;
+  margin-top: -0.1em;
+  margin-right: 0.3em;
+}
+
+.desktop-header {
+  display: none;
+}
+
+@media screen and (min-width: $mobile-breakpoint) {
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    min-height: 0; // FF flexbox overflow
+    width: 100%;
+  }
+
+  .desktop-header {
+    display: unset;
+  }
+  .mobile-only {
+    display: none;
+  }
+  .desktop-header .desktop-header-content {
+    display: flex;
+    flex-direction: column;
+    padding: $padding-16 $padding-16 0;
+    border-bottom: 1px solid var(--gray-neutral);
+  }
+  .desktop-title {
+    font-size: 1.5em;
+    margin-bottom: $padding-16;
+  }
+
+  .desktop-tabs {
+    display: flex;
+    gap: 1em; // TODO use better approach
+
+    a {
+      color: var(--body-font-color);
+      padding: 0 $padding-4 $padding-8;
+      border-bottom: 3px solid transparent;
+    }
+    a.active {
+      font-weight: bold;
+      padding: 0 $padding-4 $padding-8;
+      border-bottom: 3px solid var(--body-font-color);
+    }
+    a:hover {
+      color: var(--color-link);
+    }
+  }
+
+  .book-menu, .book-page, .book-toc {
+    height: 100%;
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .book-menu .book-menu-content {
+    position: static;
+  }
+  .book-toc .book-toc-content {
+    position: static;
+  }
+
+  /*
+  .book-menu .book-menu-content {
+    position: sticky;
+    height: calc(100vh);
+    bottom: unset;
+    padding-bottom: $header-height;
+  }
+
+  .book-toc .book-toc-content {
+    position: sticky;
+    height: calc(100vh);
+    bottom: unset;
+    padding-bottom: $header-height;
+  }
+  */
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  #menu-control:focus ~ .main-container main label[for="menu-control"] {
+    @include outline;
+  }
+
+  #menu-control:checked ~ .main-container main {
+    .book-menu {
+      visibility: initial;
+    }
+
+    .book-menu .book-menu-content {
+      transform: translateX($menu-width);
+      box-shadow: 0 0 $padding-8 rgba(0, 0, 0, 0.1);
+    }
+
+    .book-page {
+      opacity: 0.25;
+    }
+
+    .book-menu-overlay {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  #toc-control:focus ~ .main-container main label[for="toc-control"] {
+    @include outline;
+  }
+
+  #toc-control:checked ~ .main-container main {
+    .book-header aside {
+      display: block;
+    }
+  }
+
+  // for RTL support
+  body[dir="rtl"] #menu-control:checked ~ .main-container main {
+    .book-menu .book-menu-content {
+      transform: translateX(-$menu-width);
+    }
+  }
+
+  .book-menu .book-menu-content {
+    width: 75vw;
+  }
+}

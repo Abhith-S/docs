@@ -1,0 +1,14 @@
+<h2 class="mobile-only book-brand">
+  <a class="flex align-center" href="{{ cond (not .Site.Home.File) .Sites.First.Home.RelPermalink .Site.Home.RelPermalink }}">
+    {{- with .Site.Params.BookLogo -}}
+    <img src="{{ . | relURL }}" alt="Logo" />
+    {{- end -}}
+    <span><img src="{{ "svg/storj.svg" | relURL }}" class="storj-icon" alt="Storj Icon"><b>STORJ</b> | <span style="white-space: nowrap">{{ $.FirstSection.Title }}</span></span>
+  </a>
+</h2>
+<ul class="mobile-only book-first-sections">
+  {{- range .Site.Sections -}}
+    {{- $active := eq $.FirstSection . -}}
+    <li {{if $active}} class="active"{{end}}><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{- end -}}
+</ul>
