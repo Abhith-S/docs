@@ -2,6 +2,8 @@ name: Build with Hugo
 
 on:
   push:
+    branches:
+      - convert
   workflow_dispatch:
   workflow_call:
 jobs:
