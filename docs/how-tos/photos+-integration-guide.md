@@ -28,15 +28,15 @@ Mobile app download links:
 
 3\. Click on the cog wheel icon on the upper right to access Settings.
 
-![](https://lh6.googleusercontent.com/kMp86j824bq0MLmoyIW-hfQuHw7liR-vHTOEVLz7WK6N2BP-H5nD4qOCwl0Wnz3SMLn2pLB0BajD-aqWjhnkvKNiHrT5IqHa6-0ss8GgWWa9bKh9HTT2qslFN7kAk9dV\_NbFP1wScZ-5M8un1g)
+![](<../.gitbook/assets/IMG\_EDAEA36C758C-1 (2).jpeg>)
 
 4\. Click **Configure** to begin setting up Storj DCS for Photos+.
 
-![](https://lh3.googleusercontent.com/qw4aeqSKyZ-KQvluGdtggjvCJj8Ic3DdUnpvoZsHtL6AlhxfoDndydIiBbHA0nerJuHJ2Uwxxo7m5luuSii6jvNm4KBPu6pvrGB4b9mMr0F0vnk-qF72TJlVv9Au-6NGaX7DKwelaByf2LqNZQ)
+![](../.gitbook/assets/IMG\_F65448A9A594-1.jpeg)
 
-5\. Select **Other S3** and enter “gateway.storjshare.io” as the URL, along with your corresponding access key and secret key. See [Generate Gateway Credentials](../getting-started/gateway-mt/#generate-credentials-to-the-gateway-mt) for details on creating these access credentials.
+5\. Select **S3 Storage** and enter “gateway.storjshare.io” as the URL, along with your corresponding access key and secret key. See [Generate Gateway Credentials](../getting-started/gateway-mt/#generate-credentials-to-the-gateway-mt) for details on creating these access credentials.
 
-![](https://lh5.googleusercontent.com/nu58P6WGwe\_pMjNvF42rsvxgQOlf\_Nfmj0Qta7\_IRk5zlr4-hfsXgXnx8x\_Rg-naOlQsgMRsdhAXFa\_zGGpxSkCKJNE5aMMOgL5adnzqw8bX46X6Dta7AyABt7\_9qOAOWoLocB\_SWjLJ6q4Xug)
+![](../.gitbook/assets/IMG\_419569E7945F-1.jpeg)
 
 6\. Once you’ve completed configuring Storj DCS as your Cloud Storage Provider, to see Storj in action, you’ll need to click the icon in the lower right corner composed of four squares to return to your Library. From there, click the three-dot icon in the upper right corner.
 

@@ -10,7 +10,7 @@ The Access Grant screen allows you to create or delete Access Grants, and genera
 
 Let's start with creating an Access Grant. Click the **Create Access Grant** Button.
 
-![](<../../.gitbook/assets/image (137) (1).png>)
+![](<../../.gitbook/assets/image (137) (1) (1).png>)
 
 Give your Access Grant a name:
 

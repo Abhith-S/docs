@@ -62,7 +62,7 @@ Please note, the payment will be accounted only after some amount of confirmatio
 
 You can see a **Short Balance History** right in the _**Billing**_ screen below the **Payment Method** section.
 
-![](<../../.gitbook/assets/image (165) (1).png>)
+![](<../../.gitbook/assets/image (165) (1) (1).png>)
 
 To see a full **Balance History** you can select it in the drop down list **Available Balance** on top of the _**Billing**_ screen.
 
@@ -86,6 +86,6 @@ Please provide a valid Card number, expiration date and CVC, then confirm adding
 
 You can **Add Coupon Code** or scan it:
 
-![](<../../.gitbook/assets/image (145) (1).png>)
+![](<../../.gitbook/assets/image (145) (1) (1).png>)
 
 The added Coupon will be listed below.

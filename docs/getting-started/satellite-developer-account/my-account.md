@@ -32,7 +32,7 @@ If you selected a Professional Account [during creation](creating-your-account.m
 
 ### Change Password
 
-![](<../../.gitbook/assets/image (164).png>)
+![](<../../.gitbook/assets/image (164) (1).png>)
 
 Provide an **Old Password**, your **New Password** and **Confirm Password**. Select **Update** to change and save the New Password.
 
