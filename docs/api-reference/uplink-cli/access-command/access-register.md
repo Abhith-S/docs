@@ -41,19 +41,19 @@ Once you have an access grant from the [Satellite Admin Console](../../../gettin
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe access register --public=true --auth-service=<gateway auth service url> <ACCESS-GRANT>
+./uplink.exe access register --public=true --auth-service="https://auth.storjshare.io" <ACCESS-GRANT>
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink access register --public=true --auth-service=<gateway auth service url> <ACCESS-GRANT>
+uplink access register --public=true --auth-service="https://auth.storjshare.io" <ACCESS-GRANT>
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink access register --public=true --auth-service="https://auth.us1.storjshare.io" 1CoNaDGVYBVZcurLF99kmPrGLfcMw5qw9Vxv9hAKp9NK... 
+uplink access register --public=true --auth-service="https://auth.storjshare.io" 1CoNaDGVYBVZcurLF99kmPrGLfcMw5qw9Vxv9hAKp9NK... 
 ```
 {% endtab %}
 {% endtabs %}
@@ -62,5 +62,5 @@ uplink access register --public=true --auth-service="https://auth.us1.storjshare
 ========== CREDENTIALS ===================================================================
 Access Key ID: jw7w7n2...
 Secret Key   : jycbodr...
-Endpoint     : https://gateway.us1.storjshare.io
+Endpoint     : https://gateway.storjshare.io
 ```
