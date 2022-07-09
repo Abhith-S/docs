@@ -14,7 +14,7 @@ Mobile app download links:
 
 **Apple App Store**: [https://apps.apple.com/us/app/photos-cloud-library/id1310744251](https://apps.apple.com/us/app/photos-cloud-library/id1310744251)
 
-**Google Play Store**: [https://play.google.com/store/apps/details?id=com.pixegram.photosplus\&hl=en\_US\&gl=US](https://play.google.com/store/apps/details?id=com.pixegram.photosplus\&hl=en\_US\&gl=US)
+**Google Play Store**: [https://play.google.com/store/apps/details?id=com.pixegram.photosplus](https://play.google.com/store/apps/details?id=com.pixegram.photosplus)
 
 ## Configure Photos+ to use Storj DCS
 
