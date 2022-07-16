@@ -20,7 +20,7 @@ If you select the **Current Billing Period** on top right, you will see two addi
 
 After selecting a **Previous Billing Period** you can see how much you were billed in it.
 
-![](<../../.gitbook/assets/image (130).png>)
+![](<../../.gitbook/assets/image (130) (1).png>)
 
 You can expand any Project to see details of the charge. See [billing-and-payment.md](../../billing-payment-and-accounts-1/pricing/billing-and-payment.md "mention") for details.
 
@@ -36,7 +36,7 @@ In the _**Billing History**_ screen you can see a list of paid invoices and can 
 
 To add a [**Payment Method**](../../billing-payment-and-accounts-1/storj-token/) you can select **Add STORJ** or **Add Card**.
 
-![](<../../.gitbook/assets/image (138) (1).png>)
+![](<../../.gitbook/assets/image (138) (1) (1).png>)
 
 Please read the [pricing](../../billing-payment-and-accounts-1/pricing/ "mention") section for details.
 
@@ -66,11 +66,11 @@ You can see a **Short Balance History** right in the _**Billing**_ screen below 
 
 To see a full **Balance History** you can select it in the drop down list **Available Balance** on top of the _**Billing**_ screen.
 
-![](<../../.gitbook/assets/image (135) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (135) (1) (1) (1) (1).png>)
 
 It will show the **Balance History** page.
 
-![](<../../.gitbook/assets/image (129).png>)
+![](<../../.gitbook/assets/image (129) (1).png>)
 
 You can view a **Checkout** for your STORJ deposits.
 
@@ -78,7 +78,7 @@ You can view a **Checkout** for your STORJ deposits.
 
 You can select to **Add Card** on the _**Billing**_ screen. You will be prompted to specify Card details.
 
-![](<../../.gitbook/assets/image (128).png>)
+![](<../../.gitbook/assets/image (128) (1).png>)
 
 Please provide a valid Card number, expiration date and CVC, then confirm adding a Card with the **Add Card** button. We do not store your card details, they are used to register your Card on [Stripe](https://stripe.com/).
 
@@ -86,6 +86,6 @@ Please provide a valid Card number, expiration date and CVC, then confirm adding
 
 You can **Add Coupon Code** or scan it:
 
-![](<../../.gitbook/assets/image (145) (1) (1).png>)
+![](<../../.gitbook/assets/image (145) (1) (1) (1).png>)
 
 The added Coupon will be listed below.

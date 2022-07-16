@@ -94,6 +94,7 @@
 
 ## How To's
 
+* [Zerto Integration Guide](how-tos/zerto-integration-guide.md)
 * [Photos+ Integration Guide](how-tos/photos+-integration-guide.md)
 * [Container Registry - Docker](how-tos/container-registry-docker.md)
 * [Host a Static Website](how-tos/host-a-static-website/README.md)

@@ -26,13 +26,13 @@ Interestingly, the durability of a _k_ = 20, _n_ = 40 erasure code is better tha
 
 Notice how increasing the amount of storage nodes involved increases the amount of durability significantly (each new 9 is 10x more durable), without a change in the expansion factor. We also put this data together in a graph:
 
-![](<../.gitbook/assets/image (134).png>)
+![](<../.gitbook/assets/image (134) (1).png>)
 
 Admittedly, this graph is a little disingenuous: the chances of you caring about having thirty-two 9s of durability is… low, to say the least. The National Weather Service [estimates](https://www.weather.gov/safety/lightning-odds) the likelihood of you not getting hit by lightning this year at only six 9s after all. But you should still be able to see that a _k_ = 2, _n_ = 4 is less durable than a _k_ = 16, _n_ = 32 configuration.
 
 In contrast, replication requires significantly higher expansion factors for the same durability. The following table shows durability with a replication scheme:
 
-![](<../.gitbook/assets/image (136) (1).png>)
+![](<../.gitbook/assets/image (136) (1) (1).png>)
 
 Comparing the two tables, notice that replicating data at 10x can’t beat erasure codes with _k_ = 16, _n_ = 32, which is an expansion factor of only two. For durable storage, erasure codes simply require ridiculously less disk space than replication.
 
@@ -84,7 +84,7 @@ Let’s also assume both hypothetical networks use a 4⁄8 Reed-Solomon erasure 
 
 As it turns out, if you know the target durability, you know the MTTF for nodes, and you know the erasure coding scheme, you can calculate the amount of data churn in a given time period. The formula for calculating data churn is:
 
-![](<../.gitbook/assets/image (138).png>)
+![](<../.gitbook/assets/image (138) (1).png>)
 
 where is the churn rate, B is the number of bytes on the network, n is the total number of erasure shares, m is the repair threshold, and k is the number of pieces needed for rebuild.
 
@@ -99,7 +99,7 @@ So, let’s take that math and apply it to our two hypothetical networks. The fi
 
 To calculate the durability of a replicated or erasure-coded file, we consider the CDF of the Poisson distribution, given by the formula:
 
-![](<../.gitbook/assets/image (153).png>)
+![](<../.gitbook/assets/image (153) (1).png>)
 
 where D is the event that the most n-k pieces have been lost. In the case of simple replication, k=1, so a file is still recoverable when at most n-1 of the pieces have been lost; that is, if at least one of the copies is still on the network, the data is still accessible. When considering replication on a file that has already been subjected to erasure encoding, the calculation changes.
 
@@ -107,11 +107,11 @@ Suppose that a file undergoes k=4, n=8 erasure-encoding (where 8 pieces are crea
 
 Thus, rather than having a single factor of P(D) determining the durability (with at most n-1 pieces being lost), one has a factor of P(D) for each unique set required for rebuild, since there are now k sets of which each one must not have lost more than r-1 pieces, where the expansion factor r determines the number of copies that are made (with there being r-1 copies made to achieve an expansion factor of r, including the original file). Calculating this probability requires the use of the Binomial distribution, where we let p be the probability that at most r-1 copies have been lost from a set. Then, to calculate the probability that there are at least k sets containing at least 1 copy each, we find the area of the upper tail of the Binomial CDF:
 
-![](<../.gitbook/assets/image (145) (1).png>)
+![](<../.gitbook/assets/image (145) (1) (1).png>)
 
 Let’s first look at the impact of node churn on durability based on the two hypothetical scenarios, one using replication+erasure coding, and the other optimizing for erasure coding alone. Based on the above formulas, the results are as follows:
 
-![](<../.gitbook/assets/image (161) (1).png>)
+![](<../.gitbook/assets/image (161) (1) (1).png>)
 
 As it turns out (predictably) the increased durability can be achieved in the erasure-code-only scenario with no increase in expansion factor. Adding replication to already-erasure-coded data is much more efficient that just straight up replicating the original file, (which requires 17 copies to achieve), but has triple the expansion factor of erasure codes alone.
 
@@ -121,7 +121,7 @@ In an environment where churn is even higher, or highly variable, durability is 
 
 In these unpredictable or highly variable environments, it becomes necessary to address the worst case scenario in order to maintain a constant level of durability. Again, as is clear from the table below, node churn has a massive impact, and when using replication, that massive impact translates directly into increases in the expansion factor. In the table below you can see the impact of churn on expansion factor when trying to maintain a minimum durability of eleven 9s:
 
-![](<../.gitbook/assets/image (124) (1).png>)
+![](<../.gitbook/assets/image (124) (1) (1).png>)
 
 So, what do these tables tell us? Well, there are a number of interesting observations to be drawn:
 
@@ -134,7 +134,7 @@ Just to drive that point home, let’s first look at how a file actually exists 
 
 It is worth understanding the differences in how repair actually behaves on our two networks, because the process for replication is very different compared to erasure codes. Continuing the example of the 1 TB file above, let’s examine how repair actually looks when 1⁄3 of nodes storing the data exit the network:
 
-![](<../.gitbook/assets/image (135) (1).png>)
+![](<../.gitbook/assets/image (135) (1) (1).png>)
 
 One other important thing to remember about distributed storage networks is that the amount of data the network can store isn’t constrained by the amount of available hard drive space on the nodes. It’s constrained by the amount of bandwidth available to nodes. Allow me to explain.
 
@@ -183,7 +183,7 @@ Let’s look at the impact on bandwidth available for repair if you also constra
 
 Each node has less than 0.12 TB of bandwidth available for repair. And that’s in an environment storing archival data without a lot of download bandwidth. When scaling that distributed storage network up to an exabyte of data stored, you really see the impact of the expansion factor.
 
-![](<../.gitbook/assets/image (133).png>)
+![](<../.gitbook/assets/image (133) (1).png>)
 
 Ultimately, the result is an exponential increase in the number of nodes required to support a given network size. Higher bandwidth use cases further exacerbate the problem by increasing the number of nodes required to service a given amount of stored data. That given network size has a finite amount of revenue associated with it, which is then spread over an increasing number of storage node operators, meaning that over time the amount of money earned by storage node operators decreases.
 

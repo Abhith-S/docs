@@ -34,7 +34,7 @@ Please sign in to your Storj DCS account and **Navigate to the Access** page wit
 
 ![](<../.gitbook/assets/image (164) (1) (1).png>)
 
-![](<../.gitbook/assets/image (137) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (137) (1) (1) (1) (1).png>)
 
 **Copy your Access Key, Secret Key, and Endpoint** to a safe location, as you will be needing these to configure the UpdraftPlus plugin to work using Storj DCS as its back end.
 
@@ -50,7 +50,7 @@ Now that we have finished generating the Gateway MT credentials, let´s go back 
 
 1\. Click the **Settings** tab at the top part of the _**Settings**_ page of the **UpdraftPlus** plugin.
 
-![](<../.gitbook/assets/image (136).png>)
+![](<../.gitbook/assets/image (136) (1).png>)
 
 2\. Specify a preferred backup schedule for files and/or databases and how many incremental backups you want to have. See [https://wordpress.org/plugins/updraftplus/](https://wordpress.org/plugins/updraftplus/) for more details.
 
@@ -60,7 +60,7 @@ Now that we have finished generating the Gateway MT credentials, let´s go back 
 
 4\. Specify your **Access Key** from your GatewayMT credentials in the **S3 access key** field, your **Access Secret Key** from the GatewayMT credentials in the **S3 secret key** field, **Endpoint** from the GatewayMT credentials in the **S3 end-point** field (without `https://`), and your bucket access style in the **S3 location** field. Then click the **Test S3 settings** button below. If everything was specified correctly, you should see a successful message like this:
 
-![](<../.gitbook/assets/image (135).png>)
+![](<../.gitbook/assets/image (135) (1).png>)
 
 5\. Please save the **UpdraftPlus** plugin settings with the **Save changes** button at the bottom of the page.
 

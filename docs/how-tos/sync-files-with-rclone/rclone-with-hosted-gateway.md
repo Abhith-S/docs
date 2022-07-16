@@ -39,7 +39,7 @@ By selecting this integration pattern you are opting in to [server-side encrypti
 
 ![](<../../.gitbook/assets/image (164) (1) (1).png>)
 
-![](<../../.gitbook/assets/image (137) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (137) (1) (1) (1) (1).png>)
 
 **Copy your Access Key, Secret Key, and Endpoint** to a safe location.&#x20;
 
