@@ -217,7 +217,7 @@ func (conv *Convert) Convert(fullPath string) error {
 	contentPath := trimPrefix(fullPath, conv.SourceDir)
 
 	switch path.Ext(contentPath) {
-	case ".png", ".jpg", ".svg", ".gif":
+	case ".png", ".jpg", ".jpeg", ".svg", ".gif":
 		if !strings.HasPrefix(contentPath, ".gitbook/assets") {
 			return fmt.Errorf("don't know where to move")
 		}
