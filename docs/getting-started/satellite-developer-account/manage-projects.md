@@ -12,7 +12,7 @@ Learn more about [Projects](../../concepts/key-architecture-constructs.md#projec
 
 To select, create or **Manage Projects** you can click the name of your project on the left side toolbar above [**Dashboard**](dashboard.md).
 
-![](<../../.gitbook/assets/image (133) (1) (1).png>)\
+![](<../../.gitbook/assets/image (133) (1).png>)\
 In the **Manage Project** screen you can create or rename or modify your limits (if you use a Pro account).
 
 ## Create a new Project
@@ -23,7 +23,7 @@ On _**Projects**_ screen to create a new Project select the **Create Project**. 
 The availability of this function depends on your account tier. Please check [limits.md](../../concepts/limits.md "mention") for details.
 {% endhint %}
 
-![](<../../.gitbook/assets/image (140) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (140) (1) (1).png>)
 
 Specify the **Project Name**, optional **Description** and confirm the creating with the **Create Project** button.
 
@@ -31,7 +31,7 @@ Specify the **Project Name**, optional **Description** and confirm the creating 
 
 To modify the existing Project on the _**Projects**_ screen you can select a needed project and modify its name or description.
 
-![](<../../.gitbook/assets/image (136) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (136) (1) (1).png>)
 
 ### Changing Project Limits
 

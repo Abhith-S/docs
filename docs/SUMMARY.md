@@ -94,6 +94,7 @@
 
 ## How To's
 
+* [Iconik Integration Guide](how-tos/iconik-integration-guide.md)
 * [Zerto Integration Guide](how-tos/zerto-integration-guide.md)
 * [Photos+ Integration Guide](how-tos/photos+-integration-guide.md)
 * [Container Registry - Docker](how-tos/container-registry-docker.md)

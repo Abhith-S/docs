@@ -17,7 +17,7 @@ description: >-
 
 4\. Copy and save the **Satellite Address** and **API Key** in a safe place as they will only appear once.
 
-![](<../../../.gitbook/assets/image (174) (1).png>)
+![](<../../../.gitbook/assets/image (174).png>)
 
 5\. Make sure you've already [downloaded the Uplink CLI](../../../downloads/download-uplink-cli.md) and run `uplink setup`.
 

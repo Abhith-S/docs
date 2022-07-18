@@ -44,11 +44,11 @@ There are benefits to each method of integration. To provide users with the best
 
 Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page within your project and then click on ‘**Create Access Grant**’&#x20;
 
-![](<../.gitbook/assets/image (149) (1).png>)
+![](<../.gitbook/assets/image (149).png>)
 
 then give your new Access Grant a name.
 
-![](<../.gitbook/assets/image (161) (1).png>)
+![](<../.gitbook/assets/image (161).png>)
 
 Assign permissions to the Access Grant.
 
@@ -93,7 +93,7 @@ Once the FileZilla Pro client is open, select the **Open the Site Manager** icon
 
 Now, add the appropriate **Satellite** url (without adding `htpps://`) and simply copy your Access Grant that was previously generated within your Storj DCS account to the **Access Grant** field:
 
-![](<../.gitbook/assets/image (137) (1) (1).png>)
+![](<../.gitbook/assets/image (137).png>)
 
 Hit **Connect**, and access to your Storj DCS account should be established.
 
@@ -103,7 +103,7 @@ In this section, we’ll go through the Storj FileZilla Pro integration leveragi
 
 Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page within your project and then click on **Create Access Grant +**. A modal window will pop up where you should enter a name for this access grant.
 
-![](<../.gitbook/assets/image (149) (1).png>)
+![](<../.gitbook/assets/image (149).png>)
 
 Assign the permissions you want this access grant to have, then click on **Continue in Browser**:
 
@@ -149,7 +149,7 @@ Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location. N
 
 10\. Click on the **Endpoints** column of the new region row and enter the _**Endpoint address**_ for Storj DCS, generated earlier during the creation of the Storj Gateway MT credentials (without adding `https://`).
 
-![](<../.gitbook/assets/image (140) (1).png>)
+![](<../.gitbook/assets/image (140).png>)
 
 11\. Click on **OK.**
 
@@ -169,7 +169,7 @@ Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location. N
 {% hint style="info" %}
 If this is the first time you connect, you may see a message like this:
 
-![](<../.gitbook/assets/image (26) (1).png>)
+![](<../.gitbook/assets/image (26).png>)
 
 You will need to confirm it by clicking the **OK** button.
 {% endhint %}

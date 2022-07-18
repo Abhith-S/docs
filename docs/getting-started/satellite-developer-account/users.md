@@ -14,10 +14,10 @@ When you add another user to your project, that user will have full access to th
 
 Navigate to the **Users** screen.&#x20;
 
-![](<../../.gitbook/assets/image (131) (1) (1).png>)
+![](<../../.gitbook/assets/image (131) (1).png>)
 
 Select the **Add** button
 
-![](<../../.gitbook/assets/image (167) (2).png>)
+![](<../../.gitbook/assets/image (167).png>)
 
 Type in the email addresses that the users have registered with their Satellite Accounts. The Users will be added to the Project Team and notified via email.

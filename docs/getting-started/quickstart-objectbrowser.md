@@ -36,7 +36,7 @@ When you click the **Next >** button you will be placed into the **Objects** vie
 
 If you have not yet created a bucket, the bucket _**demo-bucket**_ will be created automatically to allow you to upload objects right away.
 
-![](<../.gitbook/assets/image (139) (1).png>)
+![](<../.gitbook/assets/image (139).png>)
 
 To upload your first object, **drag it into the browser** or select **Upload File** and browse to the file you wish to upload.
 
@@ -52,11 +52,11 @@ When you drag and drop your file into the Satellite Admin Console Object Browser
 
 1\. If you select the three vertical dots on the right side of the file, a popup menu will appear:
 
-![](<../.gitbook/assets/image (125) (1).png>)
+![](<../.gitbook/assets/image (125).png>)
 
 2\. Select the **Delete** command.
 
-![](<../.gitbook/assets/image (166) (1) (1).png>)
+![](<../.gitbook/assets/image (166) (1).png>)
 
 3\. Confirm deletion with **Yes**.
 
@@ -66,7 +66,7 @@ Buckets are your containers that store objects.&#x20;
 
 You can create your buckets in the **Objects** view or if you click on the **<-Back to Buckets** button in the bucket view.
 
-![](<../.gitbook/assets/image (141) (1).png>)
+![](<../.gitbook/assets/image (141).png>)
 
 To create a new bucket, click the **New bucket** button in the **Objects** view. A new module window will pop up called **Create Bucket**. Please provide a name using only lower case alphanumeric characters and dashes (this is a limitation for compatibility with existing object storages).
 
@@ -94,7 +94,7 @@ Be careful when deleting buckets - If you have objects in the bucket being delet
 
 After an upload completes, you will have the option of creating a share link. If you wish, click the file name - it will open a preview with a map. Here you can click the **Share** button.
 
-![](<../.gitbook/assets/image (148) (1) (1).png>)
+![](<../.gitbook/assets/image (148) (1).png>)
 
 Or you can click on the three vertical dots to the right of the file you want to share, and select **Share** to share your object.
 

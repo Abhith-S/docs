@@ -77,7 +77,7 @@ Once the download is complete you'll be able to open the CyberDuck client. By se
 * **Access Key ID:**
 * **Secret Access Key:**
 
-![](<../.gitbook/assets/image (26) (1) (1).png>)
+![](<../.gitbook/assets/image (26) (1).png>)
 
 To configure **Storj DCS** as the decentralized cloud storage network target you’ll need to generate Storj credentials. [_Let’s take a look_](how-to-use-cyberduck-and-storj-dcs.md#generate-credentials-to-the-gateway-mt)_._
 
@@ -110,17 +110,17 @@ Navigate to the [**Access**](../getting-started/satellite-developer-account/acce
 
 Assign the permissions you want this access grant to have, then click on **Continue in Browser**:
 
-![](<../.gitbook/assets/image (131) (1).png>)
+![](<../.gitbook/assets/image (131).png>)
 
 {% hint style="info" %}
 _If you do not feel comfortable entering this sensitive information into your browser, we understand. Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, please select “Continue in CLI” and follow_ [_these instructions_](../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) _instead._
 {% endhint %}
 
-![](<../.gitbook/assets/image (159) (1) (1).png>)
+![](<../.gitbook/assets/image (159) (1).png>)
 
 **Generate and Save the Encryption Passphrase.** If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you if you choose "Generate Phrase.") You will need this passphrase later if you want to again access files uploaded with this encryption phrase.
 
-![](<../.gitbook/assets/image (124) (1).png>)
+![](<../.gitbook/assets/image (124).png>)
 
 Be sure to download the Access Grant to save it and then click on the **Generate S3 Gateway Credentials** link.&#x20;
 
@@ -128,7 +128,7 @@ Be sure to download the Access Grant to save it and then click on the **Generate
 
 Now click on the **Generate Credentials** button.
 
-![](<../.gitbook/assets/image (165) (1).png>)
+![](<../.gitbook/assets/image (165).png>)
 
 Copy your _**Access Key**_, _**Secret Key**_, and _**Endpoint**_ to a safe location.
 
@@ -141,7 +141,7 @@ Whether using Windows or macOS, you’ll simply add the Storj Gateway S3 credent
 * Enter your S3 Gateway Credentials Access Key into the **Access Key ID** selection
 * Enter your S3 Gateway Credentials Secret Key into the **Secret Access Key** selection
 
-![](<../.gitbook/assets/image (26) (1) (1).png>)
+![](<../.gitbook/assets/image (26) (1).png>)
 
 **Click Connect**&#x20;
 

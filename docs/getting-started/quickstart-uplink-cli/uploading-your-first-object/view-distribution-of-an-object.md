@@ -57,4 +57,4 @@ URL       : https://link.storjshare.io/s/juexo54k2db7lt5fawuqkupqkcfa/cakes/chee
 
 This is a real distribution of your file's pieces that you uploaded to the network. You can share this file with anyone you'd like.
 
-![](<../../../.gitbook/assets/image (131) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (131) (1) (1).png>)
