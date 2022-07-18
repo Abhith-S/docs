@@ -124,6 +124,7 @@
 * [Storj IPFS Pinning Service (Beta)](how-tos/storj-ipfs-pinning-service-beta.md)
 * [Simplify File Management with S3 Browser and Storj DCS](how-tos/simplify-file-management-with-s3-browser-and-storj-dcs.md)
 * [How to backup your WordPress site with UpdraftPlus to Storj DCS](how-tos/how-to-backup-your-wordpress-site-with-updraftplus-to-storj-dcs.md)
+* [Create and host Chainstate Snapshots](how-tos/create-and-host-chainstate-snapshots.md)
 * [Dataverse Integration Guide](how-tos/dataverse-integration-guide.md)
 * [Nextcloud with Storj DCS](https://github.com/storj-thirdparty/nextcloud-app/#readme)
 
