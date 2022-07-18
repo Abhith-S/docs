@@ -46,7 +46,7 @@ Users interested in accessing their Storj DCS bucket(s) via S3 Browser can do so
 
 Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page within your project and then click on **Create Access Grant +.**
 
-![](<../.gitbook/assets/image (149).png>)
+![](<../.gitbook/assets/image (149) (1).png>)
 
 Once you’ve selected **Create Access Grant,** a new window will pop up where you can enter a name for this access grant.
 
@@ -54,7 +54,7 @@ Once you’ve selected **Create Access Grant,** a new window will pop up where y
 
 Assign the permissions you want this access grant to have, then click on **Continue in Browser**:
 
-![](<../.gitbook/assets/image (123).png>)
+![](<../.gitbook/assets/image (123) (1).png>)
 
 If you click **Continue in Browser**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with Gateway MT for S3 compatibility. Only then will your access grant be shared with our servers.
 
@@ -64,15 +64,15 @@ If you already have created other access grants before, please enter the Encrypt
 
 To generate S3 Gateway Credentials, click on the **Generate S3 Gateway Credentials** link:
 
-![](<../.gitbook/assets/image (166).png>)
+![](<../.gitbook/assets/image (166) (1).png>)
 
 Copy and save the Access Grant in a safe place and then click on the **Generate Credentials** button.
 
-![](<../.gitbook/assets/image (178).png>)
+![](<../.gitbook/assets/image (178) (1).png>)
 
 Keep your **Access Key, Secret Key, and Endpoint** in a safe location. We’ll be using this shortly!
 
-![](<../.gitbook/assets/image (142).png>)
+![](<../.gitbook/assets/image (142) (2).png>)
 
 {% hint style="info" %}
 Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, that’s completely understandable, and you should select **Continue in CLI** and follow [these instructions](../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md).

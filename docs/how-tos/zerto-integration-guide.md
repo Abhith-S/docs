@@ -45,7 +45,7 @@ On the `New Repository` wizard screen:
 
 
 
-<img src="../.gitbook/assets/image (153).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (153) (1).png" alt="" data-size="original">
 
 After populating all fields, click `Save`. You should now see the Storj Repo as part of your LTR repository list.
 
@@ -71,7 +71,7 @@ Check the following Long-Term Retention settings and click `Done`:
 
 Returning to the VPG management page, click `Actions` then `Run Retention Process`. This will initiate an upload of a copy of the virtual machine to the Storj repository.
 
-![](<../.gitbook/assets/image (150).png>)
+![](<../.gitbook/assets/image (150) (1).png>)
 
 
 

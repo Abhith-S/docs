@@ -94,6 +94,7 @@
 
 ## How To's
 
+* [Arq Integration Guide](how-tos/arq-integration-guide.md)
 * [Iconik Integration Guide](how-tos/iconik-integration-guide.md)
 * [Zerto Integration Guide](how-tos/zerto-integration-guide.md)
 * [Photos+ Integration Guide](how-tos/photos+-integration-guide.md)

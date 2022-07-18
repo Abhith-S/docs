@@ -16,7 +16,7 @@ Blockchain consensus offers very strong guarantees, but this comes at a heavy co
 
 Storj DCS is an enterprise, production-ready version of the Storj network, complete with guaranteed SLAs. All user uploads and downloads on Storj DCS uses metainformation from Storj DCS [Satellites which are special nodes on the network that audit storage nodes](https://storj.io/blog/2018/12/decentralized-auditing-and-repair-the-low-key-life-of-data-resurrection/) and ensure Storage Nodes properly storing files and managing metadata for users storing data on the network.
 
-![](<../../.gitbook/assets/image (145).png>)
+![](<../../.gitbook/assets/image (145) (1).png>)
 
 As shown in the above architecture, there are three primary peer classes within the Storj network.  All are open source, and capable of being run by any third party, making the network architecture fundamentally decentralized.&#x20;
 
