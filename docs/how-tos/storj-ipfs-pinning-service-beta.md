@@ -176,3 +176,32 @@ https://www.storj-ipfs.com/ipfs/<cid>
 ```
 
 In cases where the gateway is unable to retrieve a given CID (e.g., returns a 404 not found error), please double check that you are using the correct CID and that it was uploaded to the Storj IPFS service.
+
+### Peering your IPFS node with Storj pinning nodes
+
+If you run your own IPFS node that retrieves a lot of data pinned on the Storj IPFS Pinning Service, you may want to prioritize the connections to the Storj IPFS nodes. This will improve the download performance by bypassing the DHT lookup for the data.
+
+Prioritizing connections to certain peers is called **Peering**, and you can tell IPFS which peers to prioritize by editing the [`Peering` configuration](https://docs.ipfs.io/how-to/configure-node/#peering) in your IPFS config file.
+
+To _peer_ with Storj IPFS nodes, you could update the `Peering` section of your config to include their ID and addresses:
+
+```json
+{
+  "Peering": {
+    "Peers": [
+      {
+        "ID": "12D3KooWFFhc8fPYnQXdWBCowxSV21EFYin3rU27p3NVgSMjN41k",
+        "Addrs": ["/ip4/5.161.92.43/tcp/4001", "/ip4/5.161.92.43/udp/4001/quic", "/ip6/2a01:4ff:f0:3b1e::1/tcp/4001", "/ip6/2a01:4ff:f0:3b1e::1/udp/4001/quic"]
+      },
+      {
+        "ID": "12D3KooWSW4hoHmDXmY5rW7nCi9XmGTy3foFt72u86jNP53LTNBJ",
+        "Addrs": ["/ip4/5.161.55.227/tcp/4001", "/ip4/5.161.55.227/udp/4001/quic", "/ip6/2a01:4ff:f0:1e5a::1/tcp/4001", "/ip6/2a01:4ff:f0:1e5a::1/udp/4001/quic"]
+      },
+      {
+        "ID": "12D3KooWSDj6JM2JmoHwE9AUUwqAFUEg9ndd3pMA8aF2bkYckZfo",
+        "Addrs": ["/ip4/5.161.92.36/tcp/4001", "/ip4/5.161.92.36/udp/4001/quic", "/ip6/2a01:4ff:f0:3764::1/tcp/4001", "/ip6/2a01:4ff:f0:3764::1/udp/4001/quic"]
+      }
+    ]
+  }
+}
+```
