@@ -56,41 +56,29 @@ Please _****_ consult [Satellite Quickstart](../getting-started/satellite-develo
 
 ### Generate Credentials to the Gateway MT
 
-**Navigate to the Access** page within your project and then click on **Create Access Grant +**. A modal window will pop up where you should enter a name for this access grant.
+**Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](<../.gitbook/assets/Screen Shot 2021-04-16 at 10.05.30 AM.png>)
+![](<../.gitbook/assets/image (24).png>)
 
-![](<../.gitbook/assets/Screen Shot 2021-04-16 at 9.02.50 AM.png>)
+![](<../.gitbook/assets/image (17).png>)
 
-**Assign the permissions** you want this access grant to have, (in this case, just select the default permissions) then click on **Continue in Browser**:
+**Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
 
-![](<../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.15 AM.png>)
+![](<../.gitbook/assets/image (28).png>)
 
-**Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you, as shown below.)
+**Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-{% hint style="warning" %}
-**This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
+![](<../.gitbook/assets/image (3).png>)
 
-Please note that Storj does not know or store your encryption passphrase, so if you lose it, you will not be able to recover your files.
-{% endhint %}
+Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
-{% hint style="info" %}
-Please _**save**_ this **Encryption Passphrase** in a safe place as it will be required to decrypt and view your sentry mode videos from the web.&#x20;
-{% endhint %}
+![](<../.gitbook/assets/image (1).png>)
 
-![](<../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.34 AM.png>)
+Click the **Create my Access** link to finish generating of S3 credentials.
 
-Click ** **_**Next**_ to proceed to **Access Grant** generation. Please then **save** the **Access Grant** in a safe place. This is usable for other integration paths not covered in this guide.
+![](../.gitbook/assets/image.png)
 
-![](<../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.50 AM.png>)
-
-**Click** on the _**Generate S3 Gateway Credentials**_ link **above** and then **click** on the _**Generate Credentials**_ button as seen below.&#x20;
-
-![](<../.gitbook/assets/Screen Shot 2021-04-16 at 9.03.54 AM.png>)
-
-**Copy** your **Access Key, Secret Key,** and **Endpoint** to a safe location. We will use this information later to configure Rclone with the hosted Gateway MT.&#x20;
-
-![](<../.gitbook/assets/Screen Shot 2021-04-16 at 9.04.08 AM.png>)
+Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or download them. We will use this information later to configure Rclone with the hosted Gateway MT.&#x20;
 
 Now we have our **credentials** and can move on to configuring teslausb.
 
@@ -190,7 +178,7 @@ storj-dcs-us1-gateway
 # select 1 ( 1 / Use this if unsure. Will use v4 signatures and an empty region.\ "")
 1
 # enter endpoint (use your own endpoint, the example shows the Americas region gateway)
-https://gateway.us1.storjshare.io
+https://gateway.storjshare.io
 # use default location_constraint 
 # use default ACL
 # edit advanced config

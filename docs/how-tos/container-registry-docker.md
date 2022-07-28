@@ -96,7 +96,7 @@ uplink cp manifest.json sj://registry/v2/elek/herbsttag/manifests/sha256sum:be9e
 Now we are almost there. There are two remaining parts. First, we need to register a custom domain for our _sj://registry_ bucket. The exact process is documented [here](https://storj-labs.gitbook.io/dcs/how-tos/host-a-static-website/host-a-static-website-with-the-cli-and-linksharing-service), in short, an uplink command can be used to save the access grant and assign it to a domain:
 
 ```bash
-uplink share --public sj://registry/ --base-url https://link.eu1.storjshare.io --dns registry.anzix.net --auth-service https://auth.eu1.storjshare.io
+uplink share --public sj://registry/ --base-url https://link.storjshare.io --dns registry.anzix.net --auth-service https://auth.storjshare.io
 ```
 
 The command returns all the important information to modify the DNS zones. The usage of this information depends on the DNS registrar.
@@ -106,7 +106,7 @@ The command returns all the important information to modify the DNS zones. The u
 # Remember to update the $ORIGIN with your domain name. You may also change the $TTL.
 $ORIGIN example.com.
 $TTL    3600
-registry.anzix.net     IN CNAME  link.eu1.storjshare.io.
+registry.anzix.net     IN CNAME  link.storjshare.io.
 txt-registry.anzix.net IN TXT    storj-root:docker
 txt-registry.anzix.net IN TXT    storj-access:jvydrxvotvks3tulle6pkvzmsgza
 ```

@@ -18,7 +18,7 @@ One license allows you to install one instance of S3 Browser on a single compute
 
 As noted, S3 Browser is only available for Windows, supporting **Windows XP/Vista/7/8/10/11 and Windows Server 2003/2008/2012/2016/2019/2022.**
 
-Users can download the S3 Browser client by navigating to the S3 Browser homepage at [https://s3browser.com/](https://s3browser.com/) and selecting the _Download Now_ icon, or at [https://s3browser.com/download.aspx](https://s3browser.com/download.aspx).
+Users can download the S3 Browser client by navigating to the S3 Browser homepage at [https://s3browser.com/](https://s3browser.com/) and selecting the _Download_ icon, or at [https://s3browser.com/download.aspx](https://s3browser.com/download.aspx).
 
 Some stats for the S3 Browser Download:&#x20;
 
@@ -36,7 +36,7 @@ There is no option to download S3 Browser via CLI
 
 ### Generate Credentials to the Gateway MT
 
-Users interested in accessing their Storj DCS bucket(s) via S3 Browser can do so via the hosted AWS multitenant gateway known as Gateway MT. This backward-compatible hosted gateway is one of the most versatile ways to get up and running with Storj DCS when using platforms such as S3 Browser or other file manager platforms that support Storj DCS.
+Users interested in accessing their Storj DCS bucket(s) via S3 Browser can do so via the hosted AWS multi-tenant gateway known as Gateway MT. This backward-compatible hosted gateway is one of the most versatile ways to get up and running with Storj DCS when using platforms such as S3 Browser or other file manager platforms that support Storj DCS.
 
 **Gateway MT offers the following:**
 
@@ -44,38 +44,32 @@ Users interested in accessing their Storj DCS bucket(s) via S3 Browser can do so
 * Supports parallelism for upload and multi transfer for download
 * A 1GB upload will result in 1GB of data being uploaded to storage nodes across the network based on the S3 standard
 
-Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page within your project and then click on **Create Access Grant +.**
+**Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](<../.gitbook/assets/image (149) (1).png>)
+![](<../.gitbook/assets/image (24).png>)
 
-Once you’ve selected **Create Access Grant,** a new window will pop up where you can enter a name for this access grant.
+![](<../.gitbook/assets/image (17).png>)
 
-![](<../.gitbook/assets/image (156) (1).png>)
+**Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
 
-Assign the permissions you want this access grant to have, then click on **Continue in Browser**:
+![](<../.gitbook/assets/image (28).png>)
 
-![](<../.gitbook/assets/image (123) (1).png>)
+**Enter the Encryption Passphrase** you used for creating your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-If you click **Continue in Browser**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with Gateway MT for S3 compatibility. Only then will your access grant be shared with our servers.
+![](<../.gitbook/assets/image (3).png>)
 
-If you already have created other access grants before, please enter the Encryption Passphrase you used for your other access grants in the **Enter Phrase** tab. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase. The GUI will automatically generate one on the client-side for you if you open the **Generate Phrase** tab, as shown in the screenshot below. Be sure to save the encryption phrase in a safe place.
+Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
-![](<../.gitbook/assets/image (143) (1).png>)
+![](<../.gitbook/assets/image (1).png>)
 
-To generate S3 Gateway Credentials, click on the **Generate S3 Gateway Credentials** link:
+Click the **Create my Access** link to finish generating of S3 credentials.
 
-![](<../.gitbook/assets/image (166) (1).png>)
+![](../.gitbook/assets/image.png)
 
-Copy and save the Access Grant in a safe place and then click on the **Generate Credentials** button.
-
-![](<../.gitbook/assets/image (178) (1).png>)
-
-Keep your **Access Key, Secret Key, and Endpoint** in a safe location. We’ll be using this shortly!
-
-![](<../.gitbook/assets/image (142) (2).png>)
+Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or download them. We’ll be using this shortly!
 
 {% hint style="info" %}
-Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, that’s completely understandable, and you should select **Continue in CLI** and follow [these instructions](../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md).
+Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, that’s completely understandable, and you should go back to the main **Access** page and select **Create Keys for CLI** and follow [these instructions](../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md).
 {% endhint %}
 
 ### Configuring Storj + S3 Browser
@@ -96,7 +90,9 @@ Optionally, you’ll be able to protect your Access Keys with a master password 
 
 Check the box **Use secure transfer (SSL/TSL)** to secure all transfers via (SSL/TLS).
 
-Finallly, hit **Connect**.
+![](<../.gitbook/assets/image (23).png>)
+
+Finally, hit **Connect**.
 
 If you’ve added in your S3 Gateway Credentials properly, you’ll see the following:
 

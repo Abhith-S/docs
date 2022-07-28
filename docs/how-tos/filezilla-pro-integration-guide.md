@@ -42,58 +42,59 @@ There are benefits to each method of integration. To provide users with the best
 
 ### Storj + FileZilla Pro Via Native Uplink
 
-Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page within your project and then click on ‘**Create Access Grant**’&#x20;
+Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) **** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](<../.gitbook/assets/image (149) (1).png>)
+![](<../.gitbook/assets/image (24).png>)
 
-then give your new Access Grant a name.
-
-![](<../.gitbook/assets/image (161) (1).png>)
-
-Assign permissions to the Access Grant.
-
-![](<../.gitbook/assets/image (146).png>)
-
-If you click **Continue in Browser**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with [Gateway MT](../api-reference/s3-compatible-gateway/) for S3 compatibility. Only then will your access grant be shared with our servers.
-
-Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, that’s completely understandable, and you should instead select **Continue in CLI** and follow [these instructions](../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md).
-
-![](<../.gitbook/assets/image (154).png>)
+![](<../.gitbook/assets/image (2).png>)
 
 {% hint style="info" %}
-The instructions below assume you selected **Continue in Browser**.
+If you click **Encrypt My Access**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with [Gateway MT](../getting-started/gateway-mt/) for S3 compatibility. Only then will your access grant be shared with our servers. Storj does not know or store your encryption passphrase.
+
+However, if you are still reluctant to enter your passphrase into our web application, that's completely understandable, and you should cancel creation of Access Grant in Web UI, select **Create Keys for CLI** and follow these [instructions](../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md).
+
+**The instructions below assume you selected **_**Encrypt My Access.**_
 {% endhint %}
 
-Select a passphrase type:
+**Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
 
-* Either create your own encryption passphrase&#x20;
-* or generate a 12-word mnemonic passphrase.&#x20;
+![](<../.gitbook/assets/image (28).png>)
+
+Select a **Passphrase** type: Either **Enter** your own _**Encryption Passphrase**_ or **Generate** a 12-Word _**Mnemonic Passphrase**_. Make sure you **save your encryption passphrase** as you'll not be able to reset this after it's created.
+
+**Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
+
+![](<../.gitbook/assets/image (3).png>)
 
 {% hint style="warning" %}
-Make sure you save your encryption passphrase as you’ll not be able to reset this after it’s created.
+**This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
 
-This passphrase is important! Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want to change the passphrase!&#x20;
+Importantly, if you want two access grants to have access to the same data, **they must use the same passphrase**. You won't be able to access your data if the passphrase in your access grant is different than the passphrase you uploaded the data with.
 
-Importantly, if you want various access grants to have access to the same data, they _**must use the same passphrase**_. You won’t be able to access your data if the passphrase in your access grant is different from the passphrase you uploaded the data with.
+Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
 {% endhint %}
+
+Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
+
+![](<../.gitbook/assets/image (1).png>)
+
+Click the **Create my Access** link to finish generating of Access Grant.
+
+![](<../.gitbook/assets/image (16).png>)
 
 {% hint style="danger" %}
 Please note that Storj does not know or store your encryption passphrase, so if you lose it, you will not be able to recover your files. Please store it in a safe place.
 {% endhint %}
 
-![](<../.gitbook/assets/image (155).png>)
-
 Now that the Access Grant has been generated, this will allow for integration with FileZilla Pro via native uplink. Let's take a look.
-
-![](https://lh5.googleusercontent.com/9jq5zC6Ljxn9uE0BxpuWyxuUUtYzOBt5zZ7DFoHiUy1be6kwvVgOYTWG05qYG6sZeZycOheip7mqt4lH-GvTy4Q-cQGzbROxhESpHP6UuJJLAohQD1MhWFdYe7A3xDnPiGlBOm57)
 
 Once the FileZilla Pro client is open, select the **Open the Site Manager** icon at the top left of the FileZilla Pro client. Once open, start by selecting the **New Site** button and _**Storj - Decentralized Cloud Storage**_ as the protocol.
 
-![](https://lh5.googleusercontent.com/q0XPBbEHQ21ObuKtrqZ9qwKxnGnhj2L2DzrHTfA6ONmMeGjHI8HO6idJ1cSEAkCooeG-uNLji\_gucZ-cRuu3pPm4dydSfDyQO6KVIs7DiJSmJZm-aI0eucXhBujHi-EYZbENvwhE)
+![](<../.gitbook/assets/image (6).png>)
 
 Now, add the appropriate **Satellite** url (without adding `htpps://`) and simply copy your Access Grant that was previously generated within your Storj DCS account to the **Access Grant** field:
 
-![](<../.gitbook/assets/image (137) (1) (1).png>)
+![](<../.gitbook/assets/image (137) (1) (2).png>)
 
 Hit **Connect**, and access to your Storj DCS account should be established.
 
@@ -101,29 +102,37 @@ Hit **Connect**, and access to your Storj DCS account should be established.
 
 In this section, we’ll go through the Storj FileZilla Pro integration leveraging Gateway MT.
 
-Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page within your project and then click on **Create Access Grant +**. A modal window will pop up where you should enter a name for this access grant.
+**Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](<../.gitbook/assets/image (149) (1).png>)
+![](<../.gitbook/assets/image (24).png>)
 
-Assign the permissions you want this access grant to have, then click on **Continue in Browser**:
+![](<../.gitbook/assets/image (17).png>)
 
-![](<../.gitbook/assets/image (146).png>)
+**Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
 
-Enter the encryption passphrase you used for your other access grants (click on the **Enter Phrase** option at the top far right to do so.) If this is your first access grant, use the **Generate Phrase** option as shown below - we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one for you on the client-side.)
+![](<../.gitbook/assets/image (28).png>)
 
-![](<../.gitbook/assets/image (154).png>)
+**Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-When you are ready - click **Next**.
+![](<../.gitbook/assets/image (3).png>)
 
-![](<../.gitbook/assets/image (155).png>)
+{% hint style="warning" %}
+**This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
 
-Click on the **Generate S3 Gateway Credentials** link and then click on the **Generate Credentials** button.
+Importantly, if you want two access grants to have access to the same data, **they must use the same passphrase**. You won't be able to access your data if the passphrase in your access grant is different than the passphrase you uploaded the data with.
 
-![](<../.gitbook/assets/image (157).png>)
+Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
+{% endhint %}
 
-Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location. Now you are ready to use FileZillaPro to work with Gateway MT.
+Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
-![](<../.gitbook/assets/image (173).png>)
+![](<../.gitbook/assets/image (1).png>)
+
+Click the **Create my Access** link to finish generating of S3 credentials.
+
+![](../.gitbook/assets/image.png)
+
+Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or download them.
 
 ### Setting up regions
 
@@ -149,9 +158,13 @@ Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location. N
 
 10\. Click on the **Endpoints** column of the new region row and enter the _**Endpoint address**_ for Storj DCS, generated earlier during the creation of the Storj Gateway MT credentials (without adding `https://`).
 
-![](<../.gitbook/assets/image (140) (1).png>)
+![](<../.gitbook/assets/image (140) (2).png>)
 
-11\. Click on **OK.**
+11\. Click on **OK**.
+
+{% hint style="success" %}
+Instead of using regional endpoints, you can also use the common `gateway.storjshare.io` to route access automatically to the closest location.
+{% endhint %}
 
 ### Adding a new site to FileZillaPro
 

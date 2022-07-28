@@ -18,7 +18,7 @@ If you click the **(i)** icon on the right of the Satellite short name, you will
 
 The [_**Account Settings**_](my-account.md#account-settings) page allows you to [**Edit Profile**](my-account.md#undefined), [**Change Password**](my-account.md#undefined) or enable/disable [**Two-Factor Authentication**](my-account.md#undefined).
 
-![](<../../.gitbook/assets/image (135) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (135) (1) (1).png>)
 
 ### Edit Profile
 
@@ -38,6 +38,6 @@ Provide an **Old Password**, your **New Password** and **Confirm Password**. Sel
 
 ### Two-Factor Authentication
 
-![](<../../.gitbook/assets/image (140) (1) (1).png>)
+![](<../../.gitbook/assets/image (140) (1).png>)
 
 After enabling of [_**Two-Factor Authentication**_](my-account.md#undefined) you will be asked for the one-time code from your favorite TOTP during the login next time.

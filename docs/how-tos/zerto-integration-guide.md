@@ -26,7 +26,7 @@ On the left-hand side of the ZVM dashboard, click the `Setup` button (icon looks
 
 Tab over to `Repositories` and click `New Repository`.
 
-![](<../.gitbook/assets/image (131).png>)
+![](<../.gitbook/assets/image (131) (2).png>)
 
 
 
@@ -49,11 +49,11 @@ On the `New Repository` wizard screen:
 
 After populating all fields, click `Save`. You should now see the Storj Repo as part of your LTR repository list.
 
-![](<../.gitbook/assets/image (128).png>)
+![](<../.gitbook/assets/image (128) (2).png>)
 
 You may optionally verify Zerto's connection via the Storj DCS website. To do so, please sign in to your Storj DCS account, click on `Buckets` on the left-hand side, then select your demo-bucket from the `Buckets` view, and provide the encryption passphrase.  You will be taken to this bucket’s page where you will see a _repository.config_ file, confirming the connection.
 
-![](<../.gitbook/assets/image (132).png>)
+![](<../.gitbook/assets/image (132) (1).png>)
 
 ![](<../.gitbook/assets/image (161).png>)
 
@@ -65,7 +65,7 @@ On the left-hand side click `VPGs`. On the VPG management screen, tick the box n
 
 Check the following Long-Term Retention settings and click `Done`:
 
-<img src="../.gitbook/assets/image (123).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (123) (2).png" alt="" data-size="original">
 
 
 
@@ -85,7 +85,7 @@ Once the initial Retention Process has been completed, you may “accidentally�
 
 ![](<../.gitbook/assets/image (129).png>)
 
-![](<../.gitbook/assets/image (125).png>)
+![](<../.gitbook/assets/image (125) (1).png>)
 
 
 
@@ -95,7 +95,7 @@ Return to the ZVM console and start a File Level Restore. Click `Restore` then `
 
 Search for the deleted file share and click on it. Then click `Restore File`.
 
-![](<../.gitbook/assets/image (138).png>)
+![](<../.gitbook/assets/image (138) (2).png>)
 
 ![](<../.gitbook/assets/image (140).png>)
 

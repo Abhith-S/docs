@@ -14,7 +14,7 @@ By using hosted Gateway MT you are opting in to **** [**server-side encryption**
 
 ## Configure Object Browser Access
 
-**Navigate to the Buckets** page within your project. If you do not have any buckets yet - we will create a `demo-bucket` for you.
+**Navigate to the** [**Buckets**](satellite-developer-account/objects.md) page within your project. If you do not have any buckets yet - we will create a `demo-bucket` for you.
 
 When you click on the bucket, you will be prompted to read carefully - The object browser uses [Server-side encryption](../concepts/encryption-key/design-decision-server-side-encryption.md).
 
@@ -22,15 +22,21 @@ When you click on the bucket, you will be prompted to read carefully - The objec
 Don't forget to save your **Encryption Passphrase** generated below, you will need it for future access.
 {% endhint %}
 
-If this is your first time using the object browser, you **must create an encryption passphrase.** We strongly encourage you to use a mnemonic phrase. The GUI automatically generates one on the client side for you in the **Generate a new passphrase** tab. You can also download it as a text file.
+![](<../.gitbook/assets/image (9).png>)
 
-![](<../.gitbook/assets/image (144) (1).png>)
+If this is your first time using the object browser, you **must create an encryption passphrase.** We strongly encourage you to use a mnemonic phrase. The GUI automatically generates one on the client side for you with the **Generate passphrase** option. You can also download it as a text file.
 
-Alternatively, you can enter your own passphrase in the **Enter your own passphrase** tab.
+![](<../.gitbook/assets/image (14).png>)
 
-To continue, you need to mark the checkbox _**\[v] I understand, and I have saved the passphrase**_, this will enable the button **Next >**.
+Alternatively, you can enter your own passphrase using the **Enter passphrase** option. Finish selection by click on **Continue** button.
 
-When you click the **Next >** button you will be placed into the **Objects** view if you already have buckets, otherwise a new bucket _**demo-bucket**_ will be created and you will be placed into that bucket view.
+![](<../.gitbook/assets/image (8).png>)
+
+To continue, you need to mark the checkbox _**\[v] I understand, and I have saved the passphrase.**_ This will enable the **Continue** button.
+
+![](<../.gitbook/assets/image (15).png>)
+
+When you click the **Continue** button, you will be placed into the **Objects** view if you already have buckets, otherwise a new bucket _**demo-bucket**_ will be created and you will be placed into that bucket view.
 
 ## Upload files and folders
 
@@ -40,7 +46,7 @@ If you have not yet created a bucket, the bucket _**demo-bucket**_ will be creat
 
 To upload your first object, **drag it into the browser** or select **Upload File** and browse to the file you wish to upload.
 
-You can upload not only files but folders too, just **drag them into the browser** or select **Upload Folder** and browse to the folder you wish to upload.
+You can upload not only files but also folders, just **drag them into the browser** or select **Upload Folder** and browse to the folder you wish to upload.
 
 If you want to create a folder, you can do that with the **New Folder** button.
 
@@ -50,13 +56,13 @@ When you drag and drop your file into the Satellite Admin Console Object Browser
 
 ## Deleting files
 
-1\. If you select the three vertical dots on the right side of the file, a popup menu will appear:
+1\. If you select the three vertical dots on the right side of a file, a popup menu will appear:
 
-![](<../.gitbook/assets/image (125) (1).png>)
+![](<../.gitbook/assets/image (125).png>)
 
 2\. Select the **Delete** command.
 
-![](<../.gitbook/assets/image (166) (1) (1).png>)
+![](<../.gitbook/assets/image (166) (1).png>)
 
 3\. Confirm deletion with **Yes**.
 
@@ -64,13 +70,13 @@ When you drag and drop your file into the Satellite Admin Console Object Browser
 
 Buckets are your containers that store objects.&#x20;
 
-You can create your buckets in the **Objects** view or if you click on the **<-Back to Buckets** button in the bucket view.
+You can create your buckets in the **Objects** view or if you click on the **<-Back to Buckets** button, in the bucket view.
 
-![](<../.gitbook/assets/image (141) (1).png>)
+![](<../.gitbook/assets/image (141) (2).png>)
 
-To create a new bucket, click the **New bucket** button in the **Objects** view. A new module window will pop up called **Create Bucket**. Please provide a name using only lower case alphanumeric characters and dashes (this is a limitation for compatibility with existing object storages).
+To create a new bucket, click the **New bucket** button in the **Buckets** view. A new module window will pop up called **Create Bucket**. Please provide a name using only lower case alphanumeric characters and dashes (this is a limitation for compatibility with existing object storages).
 
-![](<../.gitbook/assets/image (168) (1) (1).png>)
+![](<../.gitbook/assets/image (10).png>)
 
 After creating your new bucket, you will be placed into the bucket where you can [make folders and/or upload files](quickstart-objectbrowser.md#upload-files-and-folders).
 
@@ -87,14 +93,14 @@ After creating your new bucket, you will be placed into the bucket where you can
 3\. Type the _**Bucket Name**_ and **Confirm Delete Bucket**.
 
 {% hint style="warning" %}
-Be careful when deleting buckets - If you have objects in the bucket being deleted, they will be deleted too!
+Be careful when deleting buckets - If you still have objects in the bucket being deleted, they will be deleted too!
 {% endhint %}
 
 ## Share a file
 
 After an upload completes, you will have the option of creating a share link. If you wish, click the file name - it will open a preview with a map. Here you can click the **Share** button.
 
-![](<../.gitbook/assets/image (148) (1) (1).png>)
+![](<../.gitbook/assets/image (148) (1).png>)
 
 Or you can click on the three vertical dots to the right of the file you want to share, and select **Share** to share your object.
 

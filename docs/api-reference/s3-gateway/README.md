@@ -165,7 +165,7 @@ If you would like to choose your own access name, please be sure to only use low
 
 4\.  Enter the [API Key](../../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) you generated:
 
-![Didn't save your Access token? Simply create another one in the satellite web interface.](<../../.gitbook/assets/image (1).png>)
+![Didn't save your Access token? Simply create another one in the satellite web interface.](<../../.gitbook/assets/image (1) (1).png>)
 
 5\. Create and confirm an encryption passphrase, which is used to encrypt your files before they are uploaded:
 
@@ -368,4 +368,3 @@ aws s3 --endpoint=http://localhost:7777 rm s3://bucket-name/your-large-file.mp4
 [`sync`](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html) - Syncs directories and S3 prefixes. Recursively copies new and updated files from the source directory to the destination. Only creates folders in the destination if they contain one or more files
 
 And that's it! You've learned how to use our S3-compatible Gateway. Ideally, you'll see how easy it is to swap out AWS for the Uplink, going forward.
-

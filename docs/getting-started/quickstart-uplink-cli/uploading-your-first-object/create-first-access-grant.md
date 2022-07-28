@@ -8,27 +8,29 @@ description: >-
 
 [You need to have a satellite account and installed Uplink CLI](../prerequisites.md).
 
-Navigate to the **Access** page within your project and then click on **Continue**.&#x20;
+Navigate to the [**Access**](../../satellite-developer-account/access-grants.md) **** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](<../../../.gitbook/assets/image (124) (2) (1) (1).png>)
+![](<../../../.gitbook/assets/image (24).png>)
 
-Give your new **** Access Grant a **name.**
-
-![](<../../../.gitbook/assets/image (156) (1) (1).png>)
-
-**Assign** **permissions** to the Access Grant.
-
-![](<../../../.gitbook/assets/image (181).png>)
+![](<../../../.gitbook/assets/image (2).png>)
 
 {% hint style="info" %}
-If you click **Continue in Browser**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with [Gateway MT](../../gateway-mt/) for S3 compatibility. Only then will your access grant be shared with our servers. Storj does not know or store your encryption passphrase.
+If you click **Encrypt My Access**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with [Gateway MT](../../gateway-mt/) for S3 compatibility. Only then will your access grant be shared with our servers. Storj does not know or store your encryption passphrase.
 
-However, if you are still reluctant to enter your passphrase into our web application, that's completely understandable, and you should select **Continue in CLI** and follow these [instructions](../generate-access-grants-and-tokens/generate-a-token.md).
+However, if you are still reluctant to enter your passphrase into our web application, that's completely understandable, and you should cancel creation of Access Grant in Web UI, select **Create Keys for CLI** and follow these [instructions](../generate-access-grants-and-tokens/generate-a-token.md).
 
-**The instructions below assume you selected **_**Continue in Browser.**_
+**The instructions below assume you selected **_**Encrypt My Access.**_
 {% endhint %}
 
+**Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
+
+![](<../../../.gitbook/assets/image (28).png>)
+
 Select a **Passphrase** type: Either **Enter** your own _**Encryption Passphrase**_ or **Generate** a 12-Word _**Mnemonic Passphrase**_. Make sure you **save your encryption passphrase** as you'll not be able to reset this after it's created.
+
+**Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
+
+![](<../../../.gitbook/assets/image (3).png>)
 
 {% hint style="warning" %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
@@ -38,8 +40,12 @@ Importantly, if you want two access grants to have access to the same data, **th
 Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (157) (1).png>)
+Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
+
+![](<../../../.gitbook/assets/image (1).png>)
+
+Click the **Create my Access** link to finish generating of Access Grant.
+
+![](<../../../.gitbook/assets/image (16).png>)
 
 Access Grant is generated. **The Access Grant will only display once.** Save this information in a password manager or wherever you prefer to store sensitive information.&#x20;
-
-![](<../../../.gitbook/assets/image (164) (1) (1).png>)

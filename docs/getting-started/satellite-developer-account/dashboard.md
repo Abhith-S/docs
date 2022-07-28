@@ -14,7 +14,7 @@ Learn more about [Projects](../../concepts/key-architecture-constructs.md#projec
 
 On the Project Dashboard, there are a number of navigational elements and information displays:
 
-![](<../../.gitbook/assets/image (134) (1) (1).png>)
+![](<../../.gitbook/assets/image (134) (1).png>)
 
 1.  &#x20;**Projects management** - This element allows you to add Projects and switch between different Projects. There you also have a [**Manage Projects**](manage-projects.md) setting.
 

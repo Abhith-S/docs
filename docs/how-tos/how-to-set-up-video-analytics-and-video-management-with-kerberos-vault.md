@@ -25,33 +25,69 @@ With these prerequisites satisfied, we can begin configuring Kerberos Vault to u
 
 ### Creating a Storj Bucket and Access Credentials
 
-The first step in configuring Storj as the storage backend for Kerberos.io is to create a bucket in your Storj DCS account and [generate S3 access credentials](../getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant.md) for the bucket.
-
-![](<../.gitbook/assets/Kerberos doc graphic 4.gif>)
+The first step in configuring Storj as the storage backend for Kerberos.io is to create a bucket in your Storj DCS account and [generate S3 access credentials](../getting-started/gateway-mt/#generate-credentials-to-the-gateway-mt) for the bucket.
 
 Kerberos Vault will then use the bucket information and access grant to connect with Storj.
-
-![](<../.gitbook/assets/Kerberos doc graphic 5.gif>)
 
 For this, do the following steps:
 
 1. Log in to your Storj DCS account
-2. On the main dashboard, click **"New Bucket"**
-3. Give your bucket a descriptive name in the text box, for example "**kerberosvault**"
-4. Click **Create Bucket**
-5. Once back on the main dashboard, select your new bucket
-6. On the left-hand side, click **Access**
-7. In the top-right, click **Create Access Grant**
-8. In the new window, give your access grant a descriptive name, for example "**kerberoskey**", and click **Next**
-9. Choose the appropriate permissions you wish to grant Kerberos Vault for this bucket:
-   * **Download** / **Update** / **List** / **Delete** - these are the actions that Kerberos.io will be able to perform
-   * **Duration** - this is the time until this access grant will expire
-   * **Buckets** - this sets which bucket (or buckets) Kerberos.io will have access to.
-10. Click **Continue in browser**
-11. Enter your encryption passphrase for this access grant and click **Next**
-12. Save the access grant key which is displayed and click **Generate S3 Gateway Credentials**
-13. On the next page, click **Generate Credentials**
-14. Save the **Access Key**, **Secret Key**, and **End Point** to use with Kerberos Vault in a safe place
+2. On the main dashboard, click [**Buckets**](../getting-started/satellite-developer-account/objects.md) and **New Bucket**
+3. Give your bucket a descriptive name in the text box, for example "**kerberos-vault**"
+
+![](<../.gitbook/assets/image (26).png>)
+
+4\. Click **Continue**. You will be prompted to select your Encryption - either **Generate passphrase** or **Enter passphrase**.
+
+{% hint style="info" %}
+If this is your first time using the object browser, you **must create an encryption passphrase.** We strongly encourage you to use a mnemonic phrase. The GUI automatically generates one on the client side for you with the **Generate passphrase** option. You can also download it as a text file.
+{% endhint %}
+
+![](<../.gitbook/assets/image (14).png>)
+
+5\. To continue, you need to mark the checkbox _**\[v] I understand, and I have saved the passphrase.**_ This will enable the **Continue** button. When you click it - the bucket "_**kerberos-vault**_" will be created.
+
+![](<../.gitbook/assets/image (15).png>)
+
+{% hint style="warning" %}
+**This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
+
+Importantly, if you want two access grants to have access to the same data, **they must use the same passphrase**. You won't be able to access your data if the passphrase in your access grant is different than the passphrase you uploaded the data with.
+
+Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
+{% endhint %}
+
+6\. Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page, then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
+
+![](<../.gitbook/assets/image (24).png>)
+
+![](<../.gitbook/assets/image (17).png>)
+
+7\. In the new window, give your access grant a descriptive name, for example “**kerberosvault**”
+
+8\. Choose the appropriate permissions you wish to grant Kerberos Vault for this bucket:
+
+* **Download** / **Update** / **List** / **Delete** - these are the actions that Kerberos.io will be able to perform
+* **Duration** - this is the time until this access grant will expire
+* **Buckets** - this sets which bucket (or buckets) Kerberos.io will have access to.
+
+9\. Click **Encrypt My Access**
+
+![](<../.gitbook/assets/image (27).png>)
+
+10\. Select **Create My Own Passphrase** and provide your Encryption Phrase used during creation of "_**kerberos-vault**_" bucket earlier. To continue click either **Copy to clipboard** or **Download .txt**.
+
+![](<../.gitbook/assets/image (25).png>)
+
+11\. To confirm creation mark the checkbox **\[v] I understand that Storj does not know or store my encryption passphrase. If I lose it, I won't be able to recover files.**, this will enable **Create my Access** button.
+
+![](<../.gitbook/assets/image (18).png>)
+
+12\. When you click on **Create my Access** the window with S3 Credentials will be opened
+
+![](<../.gitbook/assets/image (4).png>)
+
+13\. Copy S3 Keys and S3 Endpoint or click **Download .txt** to use with Kerberos Vault in a safe place.
 
 After completing these steps, you are ready to configure Kerberos Vault with your new bucket's access credentials.
 
@@ -63,10 +99,10 @@ Now it is time to tell Kerberos where to store videos (your Storj bucket) and ho
 
 1. From the main Kerberos Vault dashboard, select **Storage Providers** (on the left menu)
 2. In the window that pops up, in the drop-down menu under **Select Storage Provider**, choose **Storj**.
-3. Under **Provider Name**, enter a descriptive name for this provider to be referred to in your Kerberos instance (for example, **"storjdcs"**)
-4. For **Bucket Name**, enter the same bucket name as the one created above (in this tutorial, that would be **"kerberos-vault"**)
+3. Under **Provider Name**, enter a descriptive name for this provider to be referred to in your Kerberos instance (for example, _**storjdcs**_)
+4. For **Bucket Name**, enter the same bucket name as the one created above (_in this tutorial, that would be **kerberos-vault**_)
 5. **Region** this is not relevant for Storj or an edge deployment and can be left blank
-6. **Hostname** is the [gateway hostname (without `https://`)](../api-reference/s3-compatible-gateway/#regions-and-points-of-presence) for your Storj bucket's region (for example, **"gateway.us1.storjshare.io"**)
+6. **Hostname** is the [gateway hostname (without `https://`)](../api-reference/s3-compatible-gateway/#regions-and-points-of-presence) for your Storj bucket's: _**gateway.storjshare.io**_
 7. Under **Storj Credentials**, enter the **Access Key** and **Secret Key** you saved earlier when creating your access credentials.
 8. Finally, click **Validate** to ensure your access is correct and **Add Integration** to finish setup.
 

@@ -21,29 +21,37 @@ By selecting this integration pattern you are opting in to [server-side encrypti
 
 ### Generate Credentials to the Gateway MT
 
-**Navigate to the Access** page within your project and then click on **Create Access Grant +**. A modal window will pop up and you can enter a name for this access grant.
+**Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](<../../.gitbook/assets/image (124) (2) (1).png>)
+![](<../../.gitbook/assets/image (24).png>)
 
-![](<../../.gitbook/assets/image (144) (1) (1).png>)
+![](<../../.gitbook/assets/image (17).png>)
 
-**Assign the permissions** you want this access grant to have, then click on **Continue in Browser**:
+**Assign the permissions** you want this access grant to have, then click on **Encrypt My Access**:
 
-![](<../../.gitbook/assets/image (181).png>)
+![](<../../.gitbook/assets/image (28).png>)
 
-**Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase. (The GUI automatically generates one on the client-side for you)
+**Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-![](<../../.gitbook/assets/image (157) (1).png>)
+![](<../../.gitbook/assets/image (3).png>)
 
-**Click on the Generate S3 Gateway Credentials** link **** and then click on the 'Generate Credentials' button.&#x20;
+{% hint style="warning" %}
+**This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
 
-![](<../../.gitbook/assets/image (164) (1) (1).png>)
+Importantly, if you want two access grants to have access to the same data, **they must use the same passphrase**. You won't be able to access your data if the passphrase in your access grant is different than the passphrase you uploaded the data with.
 
-![](<../../.gitbook/assets/image (137) (1) (1) (1) (1).png>)
+Please note that **Storj does not know or store your encryption passphrase**, so if you lose it, you will not be able to recover your files.
+{% endhint %}
 
-**Copy your Access Key, Secret Key, and Endpoint** to a safe location.&#x20;
+Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
-![](<../../.gitbook/assets/image (160).png>)
+![](<../../.gitbook/assets/image (1).png>)
+
+Click the **Create my Access** link to finish generating of S3 credentials.
+
+![](../../.gitbook/assets/image.png)
+
+Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or download them.
 
 Now you are ready to **configure** Rclone
 

@@ -16,29 +16,29 @@ We will continue with configuring the UpdraftPlus plugin after we have created t
 
 ## Generate Gateway MT credentials
 
-Please sign in to your Storj DCS account and **Navigate to the Access** page within your project and then click on **Create Access Grant +**. A modal window will pop up which allows you to enter a name for this access grant.
+Please sign in to your Storj DCS account and **Navigate to the Access** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
 
-![](<../.gitbook/assets/image (124) (2) (1).png>)
+![](<../.gitbook/assets/image (24).png>)
 
-![](<../.gitbook/assets/image (144) (1) (1).png>)
+![](<../.gitbook/assets/image (17).png>)
 
-**Assign the permissions** you want this access grant to have, then click on **Continue in Browser**:
+**Assign the permissions** you want this access grant to have, then click on **Encrypt My Access.**
 
-![](<../.gitbook/assets/image (181).png>)
+![](<../.gitbook/assets/image (28).png>)
 
-**Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase. (The GUI automatically generates one on the client-side for you.)
+**Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-![](<../.gitbook/assets/image (157) (1).png>)
+![](<../.gitbook/assets/image (3).png>)
 
-**Click on the Generate S3 Gateway Credentials** link **** and then click on the 'Generate Credentials' button.&#x20;
+Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
-![](<../.gitbook/assets/image (164) (1) (1).png>)
+![](<../.gitbook/assets/image (1).png>)
 
-![](<../.gitbook/assets/image (137) (1) (1) (1) (1).png>)
+Click the **Create my Access** link to finish generating of S3 credentials.
 
-**Copy your Access Key, Secret Key, and Endpoint** to a safe location, as you will be needing these to configure the UpdraftPlus plugin to work using Storj DCS as its back end.
+![](../.gitbook/assets/image.png)
 
-![](<../.gitbook/assets/image (160).png>)
+Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or download them.
 
 Now you are ready to configure **UpdraftPlus** plugin.
 
@@ -50,7 +50,7 @@ Now that we have finished generating the Gateway MT credentials, let´s go back 
 
 1\. Click the **Settings** tab at the top part of the _**Settings**_ page of the **UpdraftPlus** plugin.
 
-![](<../.gitbook/assets/image (136) (1).png>)
+![](<../.gitbook/assets/image (136) (2).png>)
 
 2\. Specify a preferred backup schedule for files and/or databases and how many incremental backups you want to have. See [https://wordpress.org/plugins/updraftplus/](https://wordpress.org/plugins/updraftplus/) for more details.
 

@@ -77,19 +77,19 @@ Once the download is complete you'll be able to open the CyberDuck client. By se
 * **Access Key ID:**
 * **Secret Access Key:**
 
-![](<../.gitbook/assets/image (26) (1) (1).png>)
+![](<../.gitbook/assets/image (30).png>)
 
 To configure **Storj DCS** as the decentralized cloud storage network target you’ll need to generate Storj credentials. [_Let’s take a look_](how-to-use-cyberduck-and-storj-dcs.md#generate-credentials-to-the-gateway-mt)_._
 
 ### Using CyberDuck with Storj - macOS
 
-Once the download is complete you'll be able to open the CyberDuck client. By selecting the **+** button in the bottom left-hand corner of the client, you'll be able to add a connection bookmark, facilitating the connection between CyberDuck and Storj DCS. Select **Amazon S3** from the drop-down.
+Once the Cyberduck download is complete you'll be able to open the CyberDuck client. By selecting the **+** button in the bottom left-hand corner of the client, you'll be able to add a connection bookmark, facilitating the connection between CyberDuck and Storj DCS. Select **Amazon S3** from the drop-down.
 
 ![](<../.gitbook/assets/Copy of CyberDuck MAC pt1.png>)
 
-This is where you will add **Server, Access Key ID, and the Secret Access Key** for Storj Gateway MT .
+This is where you will add **Server, Access Key ID, and the Secret Access Key** for Storj Gateway MT.
 
-![](<../.gitbook/assets/image (179).png>)
+![](<../.gitbook/assets/image (29).png>)
 
 To configure **Storj DCS** as the decentralized cloud storage network target you’ll need to generate Storj credentials. [_Let’s take a look_](how-to-use-cyberduck-and-storj-dcs.md#generate-credentials-to-the-gateway-mt)_._
 
@@ -104,49 +104,45 @@ One of the most versatile ways to get up and running with **Storj DCS** is throu
 * 1GB upload will result in 1GB of data being uploaded to storage nodes across the network
 * Based on S3 standard
 
-Navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page within your project and then click on **Create Access Grant +**. A modal window will pop up where you should enter a name for this access grant.
+In your Storj DCS dashboard, navigate to the [**Access**](../getting-started/satellite-developer-account/access-grants.md) page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant, permissions and select buckets.
 
-![](<../.gitbook/assets/image (144).png>)
+![](<../.gitbook/assets/image (17).png>)
 
-Assign the permissions you want this access grant to have, then click on **Continue in Browser**:
+Assign the permissions you want this access grant to have, then click on **Encrypt My Access**:
 
-![](<../.gitbook/assets/image (131) (1).png>)
+![](<../.gitbook/assets/image (28).png>)
 
 {% hint style="info" %}
-_If you do not feel comfortable entering this sensitive information into your browser, we understand. Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, please select “Continue in CLI” and follow_ [_these instructions_](../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) _instead._
+_If you do not feel comfortable entering this sensitive information into your browser, we understand. Storj does not know or store your encryption passphrase. However, if you are still reluctant to enter your passphrase into our web application, please go back to the main **Access**_ page _and follow_ [_these instructions_](../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) _instead. Otherwise, continue with the next step below._
 {% endhint %}
 
-![](<../.gitbook/assets/image (159) (1) (1).png>)
+![](<../.gitbook/assets/image (3).png>)
 
-**Generate and Save the Encryption Passphrase.** If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you if you choose "Generate Phrase.") You will need this passphrase later if you want to again access files uploaded with this encryption phrase.
+**Generate and Save the Encryption Passphrase.** If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you if you choose "Generate Phrase.") You will need this passphrase later if you want to again access files uploaded with this encryption phrase. To continue either click on **Copy to clipboard** or **Download .txt**.
 
-![](<../.gitbook/assets/image (124) (1).png>)
+![](<../.gitbook/assets/image (1).png>)
 
-Be sure to download the Access Grant to save it and then click on the **Generate S3 Gateway Credentials** link.&#x20;
+Confirm that you copied or downloaded your Encryption Phrase and click on **Create my Access**.
 
-![](<../.gitbook/assets/image (169).png>)
+![](../.gitbook/assets/image.png)
 
-Now click on the **Generate Credentials** button.
-
-![](<../.gitbook/assets/image (165) (1).png>)
-
-Copy your _**Access Key**_, _**Secret Key**_, and _**Endpoint**_ to a safe location.
+Be sure to download the S3 credentials to save them. You can also click on **Learn More** to learn how to use S3 credentials.
 
 ### Configuring Storj + Cyberduck
 
 Whether using Windows or macOS, you’ll simply add the Storj Gateway S3 credentials into the CyberDuck client to establish the connection. Click the **Open Connection** button to create a new connection.
 
-* First start by selecting S3 from the drop-down menu
+* First start by selecting Amazon S3 from the drop-down menu
 * Enter your S3 Gateway Credentials Endpoint for the **Server** selection (**without `https://`**)
 * Enter your S3 Gateway Credentials Access Key into the **Access Key ID** selection
 * Enter your S3 Gateway Credentials Secret Key into the **Secret Access Key** selection
 
-![](<../.gitbook/assets/image (26) (1) (1).png>)
+![](<../.gitbook/assets/image (30).png>)
 
-**Click Connect**&#x20;
+After you have entered all the required data, click **Connect.**&#x20;
 
 {% hint style="info" %}
-_Use endpoint without `https://`, i.e. **gateway.us1.storjshare.io** in the Cyberduck **Server** entry above, otherwise Cyberduck will revert to WEBDAV (HTTPS) causing a connection error._
+_Use endpoint without `https://`, i.e. **gateway.storjshare.io** in the Cyberduck **Server** entry above, otherwise Cyberduck will revert to WEBDAV (HTTPS) causing a connection error._
 
 As seen here:
 
@@ -157,9 +153,9 @@ As seen here:
 
 Back to the open connection in Cyberduck as we referenced above in [**Using CyberDuck with Storj - macOS**](how-to-use-cyberduck-and-storj-dcs.md#using-cyberduck-with-storj-macos) you now have all the information you need to send files to your **Storj DCS** network.
 
-*   **select your saved bookmark** Here, you'll see the Amazon S3 server window reopen. To move forward, you'll simply just add in your Storj Gateway S3 credentials that we previously configured.
+*   **select your saved bookmark:** Here, you'll see the Amazon S3 server window reopen. To move forward, you'll simply just add in your Storj Gateway S3 credentials that we previously configured.
 
-    <img src="../.gitbook/assets/image (179).png" alt="" data-size="original">
+    ![](<../.gitbook/assets/image (29).png>)
 * Enter your S3 Gateway Credentials Endpoint for the **Server** selection
 * Enter your S3 Gateway Credentials Access Key into the **Access Key ID** selection
 * Enter your S3 Gateway Credentials Secret Key into the **Secret Access Key** selection
