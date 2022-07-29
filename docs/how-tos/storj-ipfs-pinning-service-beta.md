@@ -18,7 +18,7 @@ All content uploaded to the Storj IPFS service via the HTTP endpoint below is pi
 
 ### HTTP Upload endpoint
 
-Uploading content follows the [IPFS HTTP RPC for /api/v0/add](https://docs.ipfs.io/reference/http/api/#api-v0-add) with two small differences:
+Uploading content follows the [IPFS HTTP RPC for /api/v0/add](https://docs.ipfs.io/reference/http/api/#api-v0-add) with two minor differences:
 
 1. The only optional argument supported is `wrap-with-directory`&#x20;
 2. You must specify the credentials given when invited to participate in the beta as _HTTP basic authentication._
@@ -27,7 +27,7 @@ Uploading content follows the [IPFS HTTP RPC for /api/v0/add](https://docs.ipfs.
 _**This is not the same as your Storj DCS username and password. Do not use your Storj DCS username and password to try and use the IPFS Pinning Service.**_
 {% endhint %}
 
-#### Example using cURL&#x20;
+#### Example for pinning a single file using cURL&#x20;
 
 For example, this is how it would work with cURL and a file you wanted to pin called `/path/file.extension`. Please replace _**ipfs\_beta\_user**_ and _**ipfs\_beta\_password**_ with the beta credentials you received when accepted into the beta.
 
@@ -39,7 +39,7 @@ curl -u ipfs_beta_user:ipfs_beta_password -X POST -F file=@/path/file.extension 
 The '`@`' before the file path is required for the upload to work properly. For example, if the file you wanted to upload was `/home/hello/hi.jpg`, the curl argument would be `file=@/home/hello/hi.jpg`.
 {% endhint %}
 
-#### Example using JavaScript
+#### Example for pinning a single file using JavaScript
 
 You'll need [Node.js](https://nodejs.org) installed on your local system for this example.
 
@@ -55,31 +55,35 @@ npm init
 
 NPM will ask a few questions about your project and create a `package.json` file.
 
-2\. Add the `axios` HTTP client to your project dependencies.
+2\. Add the `got` HTTP client and the `form-data` library to your project dependencies.
 
-Install the latest version of the `axios` package:
+Install the latest versions of the `got` and `form-data` packages:
 
 ```shell
-npm install axios
+npm install got form-data
 ```
 
-3\. Create a file called `upload.js` and open it with your code editor.
+3\. Create a file called `upload-file.mjs` and open it with your code editor.
+
+{% hint style="info" %}
+A `.mjs` extension indicates an ES6 module file. For more details see [here](https://stackoverflow.com/questions/57492546/what-is-the-difference-between-js-and-mjs-files).
+{% endhint %}
 
 Below is the code we need to upload a file and pin it on the Storj IPFS pinning service.
 
-Paste in the code below and read through it. Feel free to remove the comments - they're just there to highlight what's going on.
+Paste in the code below and read through it. Feel free to remove the comments - they're just there to highlight what's happening.
 
-{% code title="upload.js" %}
+{% code title="upload-file.mjs" %}
 ```javascript
-// The 'axios' module gives a promised-based HTTP client.
-const axios = require('axios');
+// The 'got' module gives a promised-based HTTP client.
+import got from 'got';
 
-// The 'fs' built-in module provides us access to the file system.
-const fs = require('fs');
+// The 'fs' built-in module provides access to the file system.
+import fs from 'fs';
 
-// The 'form-data' built-in module helps us submit forms and file uploads
+// The 'form-data' module helps us submit forms and file uploads
 // to other web applications.
-const FormData = require('form-data');
+import FormData from 'form-data';
 
 /**
   * Uploads a file from `filepath` and pins it to the Storj IPFS pinning service.
@@ -96,24 +100,13 @@ async function pinFileToIPFS(username, password, filepath) {
     data.append('file', fs.createReadStream(filepath));
 
     // Execute the Upload request to the Storj IPFS pinning service
-    return axios.post(url,
-        data,
-        {
-            auth: {
-                username: username,
-                password: password
-            },
-            headers: {
-                'Content-Type': `multipart/form-data; boundary= ${data._boundary}`,
-            },
-            // These arguments remove any client-side upload size restrictions
-            maxContentLength: Infinity,
-            maxBodyLength: Infinity,
+    return got.post(url, {
+        username: username,
+        password: password,
+        headers: {
+            'Content-Type': `multipart/form-data; boundary= ${data._boundary}`,
         },
-    ).then(function (response) {
-        console.log(response)
-    }).catch(function (error) {
-        console.error(error)
+        body: data
     });
 };
 
@@ -121,10 +114,10 @@ async function pinFileToIPFS(username, password, filepath) {
  * The main entry point for the script that checks the command line arguments and
  * calls pinFileToIPFS.
  * 
- * To simplify the example, we don't do any fancy command line parsing. Just three
+ * To simplify the example, we don't do fancy command line parsing. Just three
  * positional arguments for imagePath, name, and description
  */
- async function main() {
+async function main() {
     const args = process.argv.slice(2)
     if (args.length !== 3) {
         console.error(`usage: ${process.argv[0]} ${process.argv[1]} <username> <password> <filepath>`)
@@ -132,12 +125,12 @@ async function pinFileToIPFS(username, password, filepath) {
     }
 
     const [username, password, filepath] = args
-    const result = await pinFileToIPFS(username, password, filepath)
-    console.log(result)
+    const response = await pinFileToIPFS(username, password, filepath)
+    console.log(response.body)
 }
 
 /**
- * Don't forget to actually call the main function!
+ * Don't forget to call the main function!
  * We can't `await` things at the top level, so this adds
  * a .catch() to grab any errors and print them to the console.
  */
@@ -154,7 +147,121 @@ main()
 You should now be able to run the script and give it the path to a file. You'll also need to supply your username and password for the Storj IPFS pinning service.
 
 ```
-node upload.js ipfs_beta_user ipfs_beta_password /path/file.extension
+node upload-file.mjs ipfs_beta_user ipfs_beta_password /path/file.extension
+```
+
+Please replace _**ipfs\_beta\_user**_ and _**ipfs\_beta\_password**_ with the beta credentials you received when accepted into the beta.
+
+#### Example for pinning a folder using JavaScript
+
+This example builds on top of the example for pinning a single file.
+
+1\. Add the `recursive-js` and `base-path-converter` libraries to your project dependencies.
+
+Install the latest versions of the `recursive-js` and `base-path-converter` packages:
+
+```bash
+npm install recursive-js base-path-converter
+```
+
+2\. Create a file called `upload-folder.mjs` and open it with your code editor.
+
+{% hint style="info" %}
+A `.mjs` extension indicates an ES6 module file. For more details see [here](https://stackoverflow.com/questions/57492546/what-is-the-difference-between-js-and-mjs-files).
+{% endhint %}
+
+Below is the code we need to upload a folder and pin it on the Storj IPFS pinning service.
+
+Paste in the code below and read through it. Feel free to remove the comments - they're just there to highlight what's happening.
+
+{% code title="upload-folder.mjs" %}
+```javascript
+// The 'got' module gives a promised-based HTTP client.
+import got from 'got';
+
+// The 'fs' built-in module provides access to the file system.
+import fs from 'fs';
+
+// The 'form-data' module helps us submit forms and file uploads
+// to other web applications.
+import FormData from 'form-data';
+
+// The 'recursive-fs' module provides async recursive file system operations.
+import rfs from 'recursive-fs';
+
+// The 'base-path-converter' module trims file paths from a base path.
+import basePathConverter from 'base-path-converter';
+
+/**
+  * Uploads a folder from `folderpath` and pins it to the Storj IPFS pinning service.
+  * @param {string} username your username for the Storj IPFS pinning service
+  * @param {string} password your password for the Storj IPFS pinning service
+  * @param {string} folderpath the path to the folder
+  */
+async function pinFolderToIPFS(username, password, folderpath) {
+    // The HTTP upload endpoint of the Storj IPFS pinning service
+    const url = `https://www.storj-ipfs.com/api/v0/add`;
+
+    // Create a form with the folder and its files to upload 
+    let data = new FormData();
+    const { dirs, files } = await rfs.read(folderpath);
+    for (const file of files) {
+        data.append(`file`, fs.createReadStream(file), {
+            filepath: basePathConverter(folderpath, file),
+        });
+    }
+
+    // Execute the Upload request to the Storj IPFS pinning service
+    return got.post(url, {
+        username: username,
+        password: password,
+        headers: {
+            "Content-Type": `multipart/form-data; boundary=${data._boundary}`,
+        },
+        body: data
+    }).on('uploadProgress', progress => {
+        console.log(progress);
+    });
+};
+
+/**
+ * The main entry point for the script that checks the command line arguments and
+ * calls pinFolderToIPFS.
+ * 
+ * To simplify the example, we don't do fancy command line parsing. Just three
+ * positional arguments for username, password, and folder path.
+ */
+async function main() {
+    const args = process.argv.slice(2)
+    if (args.length !== 3) {
+        console.error(`usage: ${process.argv[0]} ${process.argv[1]} <username> <password> <folderpath>`)
+        process.exit(1)
+    }
+
+    const [username, password, folderpath] = args
+    const response = await pinFolderToIPFS(username, password, folderpath)
+    console.log(response.body)
+}
+
+/**
+ * Don't forget to call the main function!
+ * We can't `await` things at the top level, so this adds
+ * a .catch() to grab any errors and print them to the console.
+ */
+main()
+  .catch(err => {
+      console.error(err)
+      process.exit(1)
+  })
+```
+{% endcode %}
+
+3\. Run your script with node.
+
+You should now be able to run the script and give it the path to a folder. You'll also need to supply your username and password for the Storj IPFS pinning service.
+
+```
+node upload-folder.mjs ipfs_beta_user ipfs_beta_password /path/folder
 ```
 
 Please replace _**ipfs\_beta\_user**_ and _**ipfs\_beta\_password**_ with the beta credentials you received when accepted into the beta.
