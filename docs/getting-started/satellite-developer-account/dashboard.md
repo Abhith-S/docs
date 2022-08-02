@@ -14,18 +14,18 @@ Learn more about [Projects](../../concepts/key-architecture-constructs.md#projec
 
 On the Project Dashboard, there are a number of navigational elements and information displays:
 
-![](<../../.gitbook/assets/image (134) (1).png>)
+![](<../../.gitbook/assets/Screenshot 2022-07-30 103716.jpg>)
 
 1.  &#x20;**Projects management** - This element allows you to add Projects and switch between different Projects. There you also have a [**Manage Projects**](manage-projects.md) setting.
 
     ![](<../../.gitbook/assets/image (133) (1) (1).png>)
-2. **Project Navigation** - This element allows you to move between the different functions related to the project you have selected, to view the [**Dashboard**](dashboard.md), use the [**Objects**](objects.md) to interact with data stored on Storj DCS through a web browser interface, create [**Access**](access-grants.md) for native integrations and credentials for the [hosted S3-compatible gateway](../../api-reference/s3-compatible-gateway/), invite other developers to collaborate with you on [your Project](manage-projects.md) in [**Users**](users.md), see [**Billing**](billing.md), check [**Resources**](resources.md) and [**Quick Start**](quick-start.md), manage your Account in [**My Account**](my-account.md).
-3. **Storage Utilization** - This element displays the amount of storage utilized in the current month [measured in GB hours](../../billing-payment-and-accounts-1/pricing/billing-and-payment.md#object-storage).
+2. **Project Navigation** - This element allows you to move between the different functions related to the project you have selected, to view the [**Dashboard**](dashboard.md), use the [**Objects**](objects.md) to interact with data stored on Storj DCS through a web browser interface, create [**Access**](access-grants.md) for native integrations and credentials for the [hosted S3-compatible gateway](../../api-reference/s3-compatible-gateway/), invite other developers to collaborate with you on [your Project](manage-projects.md) in [**Users**](users.md), see [**Billing**](billing.md), check [**Resources**](resources.md) and [**Quick Start**](quick-start.md), and manage your Account in [**My Account**](my-account.md).
+3. **Storage Utilization** - This element displays the amount of storage utilized in the current month, [measured in GB hours](../../billing-payment-and-accounts-1/pricing/billing-and-payment.md#object-storage).
 4. **Bandwidth Utilization** - This element  element displays the amount of download bandwidth utilized in the current month [measured in GB](../../billing-payment-and-accounts-1/pricing/billing-and-payment.md#bandwidth-fee).
-5. **Project Details** - This element displays the number of users added to a project, the number of [Access Grants](access-grants.md), the current number of [Buckets](../../concepts/key-architecture-constructs.md#bucket) and the [estimated charge for the current month](../../billing-payment-and-accounts-1/pricing/billing-and-payment.md).
-6. **Bucket Information** - This element displays the names of [Buckets](../../concepts/key-architecture-constructs.md#bucket), the current month usage on Buckets and the number of objects in Buckets.
+5. **Project Details** - This element displays the current [billed](../../billing-payment-and-accounts-1/pricing/) amount in USD, number of [objects](../../billing-payment-and-accounts-1/pricing/#static-object-storage) and number of [segments](../../billing-payment-and-accounts-1/pricing/#segments) used in the current month and the [estimated charge for the current month](../../billing-payment-and-accounts-1/pricing/billing-and-payment.md).
+6. **Bucket Information** - This element displays the names of your [Buckets](../../concepts/key-architecture-constructs.md#bucket), the current month´s usage for the Buckets and the number of objects in the Buckets.
 
-Here are some links to help you get a better understand of your Satellite Admin Console and Storj DCS constructs:
+Here are some links to help you get a better understanding of your Satellite Admin Console and Storj DCS constructs:
 
 {% hint style="info" %}
 Learn more about [Key Architecture Constructs](../../concepts/key-architecture-constructs.md) under Concepts.
@@ -37,4 +37,4 @@ Learn more about [adding a Payment Method](../../billing-payment-and-accounts-1/
 Learn [how usage and billing are calculated](../../billing-payment-and-accounts-1/pricing/billing-and-payment.md) under Billing, Payment & Accounts.
 {% endhint %}
 
-Next we'll learn about creating/deleting buckets, uploading, downloading, viewing the object map, and sharing access to objects through the [Object Browser in the Satellite Admin Console](objects.md).
+Next, we'll learn about creating/deleting buckets, uploading, downloading, viewing the object map, and sharing access to objects through the [Object Browser in the Satellite Admin Console](objects.md).
