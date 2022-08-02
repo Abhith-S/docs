@@ -110,7 +110,11 @@ Copy the access grant in file. You'll use it later in the template below.
 ![](<../.gitbook/assets/Screen Shot 2022-07-01 at 3.06.19 PM.png>)
 
 {% hint style="warning" %}
-When populating the template, only publish the access grant that is limited to downloads. Do not use the access grant that was used to upload snapshots.
+When populating the template, only use the access grant that is limited to downloads. Do not use the access grant that was used to upload snapshots.
+{% endhint %}
+
+{% hint style="danger" %}
+We recommend not publicly publishing access grants.
 {% endhint %}
 
 Adapt the [Download blockchain snapshots template](https://github.com/storj/chainstate-snapshots/blob/main/download-chainstate-template.md), changing `<your_access_grant>` fields to the Download-only access grant. \
