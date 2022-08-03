@@ -33,7 +33,7 @@ New Users should be presented with the option to “Create a backup plan”.  Ex
 
 Pick “New Backup Plan” from Arq’s File menu. Click “Add Storage Location”, choose “Storj”, and click Continue:
 
-![](<../.gitbook/assets/image (34).png>)
+![](<../.gitbook/assets/image (34) (2).png>)
 
 Copy and paste the “Access Key” and “Secret Key” values from your web browser into the “Storj Access Key ID” and “Storj Secret Access Key” fields in Arq and click “Continue”:
 
@@ -41,7 +41,7 @@ Copy and paste the “Access Key” and “Secret Key” values from your web br
 
 Check “Use existing bucket”, choose your bucket, and click “Continue”:
 
-![](<../.gitbook/assets/image (32).png>)
+![](<../.gitbook/assets/image (32) (2).png>)
 
 Click “Continue” to use the storage location you just added:
 

@@ -61,3 +61,30 @@ Mobile app download links:
 11\. Click **Start** to begin synchronizing your library. You may check via the Storj DCS dashboard or use any of our command line tools to see your library has been backed up to Storj.
 
 ![](https://lh4.googleusercontent.com/QwQtZYzE0sYPyEa2nwxaoQI4ofUSihdl5QHjRkXE2JrdlFSasYpb0935sRvG48WI9jMF\_zjhDquHS1spOkWHqMq4TQehCLzkACARqzh4UkNcIM6OUiAveNQjtAEcSYS4cWlgPewFSqNADcxyvw)
+
+## How to automatically import your photos from Google Photos to Photos+
+
+1. Request a Google Takeout of your Google Photos by visiting [https://takeout.google.com](https://takeout.google.com/)
+2. Select Google Photos only for export.
+
+![](<../.gitbook/assets/image (34).png>)
+
+3\. Choose your export location. If you have enough free storage space on Google Drive or Dropbox, select it as the location and the 50GB export size. If you don’t have enough free storage, select “Send download link via email” and the 10GB export size. Please wait until you get an email from Google that your export has been completed.
+
+![](<../.gitbook/assets/image (44).png>)
+
+4\. If you have not done so already, [sign up for Photos+](photos+-integration-guide.md#introduction) and [configure your Storj account through the Photos+ iOS/Android app](photos+-integration-guide.md#configure-photos+-to-use-storj-dcs). Then sign in to your Photos+ account on your **desktop or tablet** browser at [https://photosplus.app](https://photosplus.app/).
+
+5\. Click **Import** from the main menu
+
+6\. Click **Select from Google Drive**, **Dropbox** or **Select from Computer** depending on where you saved your Google Takeout file.
+
+![](<../.gitbook/assets/image (32).png>)
+
+7\. Once our system downloads your file from Google Drive or Dropbox, or it receives it via the upload from your computer, it will parse it and show you the albums and the number of photos and videos it contains.
+
+8\. Confirm the selections and click **Start Import** to begin the import process.
+
+![](<../.gitbook/assets/image (52).png>)
+
+Your photos and videos will automatically appear in the Library section as they are imported, and you may track the import progress by going back to the Import section.
