@@ -265,6 +265,8 @@ func (conv *Convert) Convert(fullPath string) error {
 	conv.ReplaceMath(&page)
 	conv.ReplaceStarryNight(&page)
 	conv.ReplaceUnderlines(&page)
+	conv.ReplaceBoldPeriod(&page)
+	conv.ReplaceZeroWidth(&page)
 
 	// patch a filename containing a .
 	if strings.Contains(contentPath, "config.yaml.md") {
@@ -725,6 +727,18 @@ func (conv *Convert) ReplaceStarryNight(page *Page) {
 func (conv *Convert) ReplaceUnderlines(page *Page) {
 	page.Content = replaceAll(`( *__ +|( +__ *))`, page.Content, " ")
 	page.Content = replaceAll(`\b__\b`, page.Content, "")
+}
+
+// ReplaceBoldPeriod replaces **.**
+func (conv *Convert) ReplaceBoldPeriod(page *Page) {
+	page.Content = replaceAll(`\*\*\.\*\*`, page.Content, ".")
+}
+
+// ReplaceZeroWidth replaces \u200b and \u200c
+func (conv *Convert) ReplaceZeroWidth(page *Page) {
+	page.Content = replaceAll("\\*\\*\u200b\\*\\*", page.Content, "")
+	page.Content = replaceAll("\u200b", page.Content, "")
+	page.Content = replaceAll("\u200c", page.Content, "")
 }
 
 func (conv *Convert) AddSectionIndices() {
