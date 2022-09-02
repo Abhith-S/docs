@@ -4,12 +4,14 @@
     {{- .Content -}}
   </article>
   {{ else }}
-  <article class="markdown">
     <h1>{{ .Title }}</h1>
     {{ range sort .Pages }}
-    <a href="{{ .RelPermalink }}" class="book-big-link"><img src="{{ "svg/toc.svg" | relURL }}">{{ partial "docs/title.html" . }}</a>
+    <article class="markdown">
+      <h2 class="no-border-top"><a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a></h2>
+      <p>{{ index (findRE "<p.*?>(.*)</p>" .Content 1) 0 | plainify | truncate 270 }} <i><a href="{{ .RelPermalink }}">Read More...</a></i></p>
+      <p></p>
+    </article>
     {{ end }}
-  </article>
   {{ end }}
 {{ end }}
 
