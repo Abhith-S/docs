@@ -8,7 +8,7 @@
     {{ range sort .Pages }}
     <article class="markdown">
       <h2 class="no-border-top"><a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a></h2>
-      <p>{{ index (findRE "<p.*?>(.*)</p>" .Content 1) 0 | plainify | truncate 270 }} <i><a href="{{ .RelPermalink }}">Read More...</a></i></p>
+      <p>{{ index (findRE "<p[^>]*>(.*)" .Content 1) 0 | plainify | replaceRE "&[lr]squo;" "'" | truncate 270 }} <i><a href="{{ .RelPermalink }}">Read More...</a></i></p>
       <p></p>
     </article>
     {{ end }}
