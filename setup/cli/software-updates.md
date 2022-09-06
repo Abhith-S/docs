@@ -8,7 +8,7 @@ description: >-
 
 ## Automatic Updates
 
-You can set up automatic updates for your `storagenode` Docker container using `watchtower`. Watchtower will look for new updates to the Docker container on Docker Hub in a random interval between 12 and 72 hours and automatically update your storage node when it sees a new version.&#x20;
+As of v1.52.2, the storagenode software will automatically update itself.  We recommend that you install Watchtower in the event that the base image needs updating. Watchtower will look for new updates to the Docker container on Docker Hub in a random interval between 12 and 72 hours and automatically update your base image when it sees a new version.&#x20;
 
 First, please pull the latest watchtower image from docker:
 
