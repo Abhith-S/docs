@@ -161,7 +161,7 @@ The satellite address should be entered as \<nodeid>@\<address>:\<port> for exam
 If you would like to choose your own access name, please be sure to only use lowercase letters. Including any uppercase letters will result in your access name not getting recognized when creating buckets.
 {% endhint %}
 
-![](<../../.gitbook/assets/image (44) (1).png>)
+![](<../../.gitbook/assets/image (44).png>)
 
 4\.  Enter the [API Key](../../getting-started/quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) you generated:
 

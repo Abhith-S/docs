@@ -46,7 +46,7 @@ uplink setup
 For anyone who has previously configured an Uplink, please use a named access. If you want to replace the default access, you need to either [Create an Access Grant](../uploading-your-first-object/create-first-access-grant.md) and use the [`uplink access import`](../../../api-reference/uplink-cli/access-command/access-import.md#import-access-grant-and-replace-the-existing-access) command with `--force` flag to import it, or use the [`uplink access create --import-to <name>`](../../../api-reference/uplink-cli/access-command/access-create.md#create-an-access-grant-and-replace-the-existing-access) command with `--force` flag to create an Access Grant in CLI and import it to the specified access in the local store of Uplink.
 {% endhint %}
 
-7\. Follow the prompts. When asked for your API Key, enter it (you should have saved it in step 4 above).
+7\. Follow the prompts. When asked for your API Key, enter it (you should have saved it in step 5 above).
 
 8\. Generate the Access Grant by running `uplink share` with no restrictions.
 
