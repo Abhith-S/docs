@@ -29,15 +29,19 @@ Specify the **Project Name**, optional **Description** and confirm the creating 
 
 ## Modify the existing Project
 
-To modify the existing Project on the _**Projects**_ screen you can select a needed project and modify its name or description.
+To modify the existing Project on the _**Projects**_ screen&#x20;
 
-![](<../../.gitbook/assets/image (136) (1) (1).png>)
+<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+
+you can select a needed project and modify its name or description.
+
+<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 ### Changing Project Limits
 
 If your account tier allows you to change [your Limits](../../concepts/limits.md), you will have more options than a [Free tier](../../billing-payment-and-accounts-1/pricing/free-tier.md).
 
-![](<../../.gitbook/assets/image (179) (1).png>)
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 Select **Edit** to the right of the limit to change it. However, it will not allow to increase limits greater than your available maximum. To change the maximum you need to [file a support request to change your limits](../../billing-payment-and-accounts-1/pricing/usage-limit-increases.md).
 

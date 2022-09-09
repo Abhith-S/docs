@@ -40,10 +40,10 @@
   * [Buckets](getting-started/satellite-developer-account/objects.md)
   * [Access](getting-started/satellite-developer-account/access-grants.md)
   * [Users](getting-started/satellite-developer-account/users.md)
-  * [Billing](getting-started/satellite-developer-account/billing.md)
   * [Resources](getting-started/satellite-developer-account/resources.md)
   * [Quick Start](getting-started/satellite-developer-account/quick-start.md)
-  * [My Account](getting-started/satellite-developer-account/my-account.md)
+  * [My Account](getting-started/satellite-developer-account/my-account/README.md)
+    * [Billing](getting-started/satellite-developer-account/my-account/billing.md)
 
 ## downloads
 

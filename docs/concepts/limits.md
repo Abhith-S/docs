@@ -20,7 +20,7 @@ Adding a credit card as payment method will result in your per project limits be
 
 ### STORJ token Payment method
 
-However, if your only payment method on file is STORJ token, you can submit a [request to increase your projects limits](../billing-payment-and-accounts-1/pricing/usage-limit-increases.md).&#x20;
+However, if your only payment method on file is STORJ token, you can submit a [request to increase your projects limits](../billing-payment-and-accounts-1/pricing/usage-limit-increases.md). You should [deposit](../getting-started/satellite-developer-account/my-account/billing.md#adding-storj-tokens) a sufficient amount of tokens to your account to cover potential usage up to the requested limits for at least for the next 3 months. You will be charged only for actual usage above a [Free Tier](limits.md#free-tier).
 
 {% hint style="info" %}
 Note that you could avoid having to wait for a manual project limit increase to be applied by adding a credit card as backup payment method. In this case, your usage would still get paid from your STORJ balance if it is sufficient to cover your outstanding charges. Only usage that exceeds what can be covered by your STORJ balance at time of invoicing would get charged to the credit card.
