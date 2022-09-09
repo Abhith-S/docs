@@ -67,11 +67,11 @@ Mobile app download links:
 1. Request a Google Takeout of your Google Photos by visiting [https://takeout.google.com](https://takeout.google.com/)
 2. Select Google Photos only for export.
 
-![](<../.gitbook/assets/image (62).png>)
+![](<../.gitbook/assets/image (34).png>)
 
 3\. Choose your export location. If you have enough free storage space on Google Drive or Dropbox, select it as the location and the 50GB export size. If you don’t have enough free storage, select “Send download link via email” and the 10GB export size. Please wait until you get an email from Google that your export has been completed.
 
-![](<../.gitbook/assets/image (34).png>)
+![](<../.gitbook/assets/image (39).png>)
 
 4\. If you have not done so already, [sign up for Photos+](photos+-integration-guide.md#introduction) and [configure your Storj account through the Photos+ iOS/Android app](photos+-integration-guide.md#configure-photos+-to-use-storj-dcs). Then sign in to your Photos+ account on your **desktop or tablet** browser at [https://photosplus.app](https://photosplus.app/).
 
@@ -85,6 +85,6 @@ Mobile app download links:
 
 8\. Confirm the selections and click **Start Import** to begin the import process.
 
-![](<../.gitbook/assets/image (184).png>)
+![](<../.gitbook/assets/image (46).png>)
 
 Your photos and videos will automatically appear in the Library section as they are imported, and you may track the import progress by going back to the Import section.
