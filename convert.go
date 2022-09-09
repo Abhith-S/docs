@@ -575,7 +575,7 @@ func (conv *Convert) AbsRef(page *Page, rel string) string {
 
 // FixTrailingSpace fixes some weird content issues in the markdown files.
 func (conv *Convert) FixTrailingSpace(page *Page) {
-	page.Content = replaceAll(` ?&#x20;`, page.Content, "")
+	page.Content = replaceAll(`&#x20;`, page.Content, "")
 	page.Content = replaceAll(` *$`, page.Content, "")
 }
 
