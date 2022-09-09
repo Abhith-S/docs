@@ -18,3 +18,21 @@ In case of Docker installation, you should use `tcp` and `udp` notations in the 
 Linux users, please take a look at [linux-configuration-for-udp.md](linux-configuration-for-udp.md "mention")
 
 Windows users, please take a look at the Firewall configuration instructions in the [#setup-port-forwarding-router-port-forwarding-configuration](../port-forwarding.md#setup-port-forwarding-router-port-forwarding-configuration "mention") section for Windows.
+
+If you configured QUIC while your node was running, you need to restart it to apply the changes (the QUIC connectivity is checked only on startup).
+
+{% tabs %}
+{% tab title="Docker" %}
+```
+docker restart -t 300 storagenode
+```
+{% endtab %}
+
+{% tab title="Windows" %}
+To restart the `storagenode` service you can use either Services applet or elevated PowerShell:
+
+```
+Restart-Service storagenode
+```
+{% endtab %}
+{% endtabs %}
