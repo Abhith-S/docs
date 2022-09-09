@@ -16,7 +16,7 @@ description: How to backup your files with Arq and Storj DCS.
 
 **Your Storj Account**
 
-1. You’ll need a Storj account. Sign up [here](https://us1.storj.io/signup), or log into your existing account [here](https://us1.storj.io/login).
+1. You’ll need a Storj account. Sign up [here](https://storj.io/signup), or log into your existing account [here](https://storj.io/login).
 2. Click on [**Buckets**](../getting-started/satellite-developer-account/objects.md) in the Storj DCS console and [create a bucket](../getting-started/quickstart-objectbrowser.md#creating-buckets) for your Arq backups.
 3. Click on [**Access**](../getting-started/satellite-developer-account/access-grants.md) in the Storj DCS console and click [**Create S3 Credentials**](../getting-started/satellite-developer-account/access-grants.md#create-s3-credentials).
 4. Give it a name, select _**All**_ permissions and click **Encrypt My Access**.
