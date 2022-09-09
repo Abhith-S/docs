@@ -32,7 +32,7 @@ Navigate to [https://storj.io/signup](https://storj.io/signup) or login to an ex
 
 ![](https://lh5.googleusercontent.com/RhslyMTj8ubEkpt-yHlE3w3eUPF6MX5-gK5H\_QU5TzqVMQV7TL4H5H7JcW4gWeU7WyoveqwK2IEu0ADjL-q4Jy3cDyVSoNHN8tgBS\_swT2\_ob-FZ6zP\_QLhpYai\_gM5wHYU3ObIfYPrPVNg-gcABe4A\_AtZRSsg-xzVcQlJ5hhnLS2vUKTikpDPvAg)
 
-### Create a Storj bucket
+### Create a Storj Bucket
 
 &#x20;You need to create a Storj bucket for Comet to create Storage Vaults in.&#x20;
 
@@ -43,28 +43,28 @@ Navigate to [https://storj.io/signup](https://storj.io/signup) or login to an ex
     <figure><img src="https://lh4.googleusercontent.com/8e7Gk8yvyWm_V67JUVErQo3yRb89O4R9YwiEmixsbtSQK8J43vkGvxac9XpSPWSPmISRmK2HF3JHjnKLimYN1dQTYZNcRpUcPFLsrqxnLbwMkBNB7u8hQzb9ro8RzMZZXNvcQE_kvOIO7NgF5oWO7GLPSrFKjXpUy2FbfK7U9AfdvNbRAo96QLuYDw" alt=""><figcaption></figcaption></figure>
 3. Name the bucket something identifiable such as “comet-backups”\
    ![](https://lh6.googleusercontent.com/6\_SKlYLgxlTYsLJRrOKU4WPVcHOv31VOfpx79riaV1UXksquQXWP1lOqBfe667F6uZ\_GGE21DuwxoNzy\_0XORbDuSYt0wb\_f6lT9lQS2MbH1p5L4nutVVGtFxXE5OK2dWdTjY1ot-mt1sleyl11X68SeVtmmdMUq7GZ-UwRPMsvnuktFmtFMAD2TNQ)
-4. Select “Continue
+4. Select "Continue"
 5. Generate a passphrase or enter your own.\
    ![](https://lh3.googleusercontent.com/EkKbpTiLXC953KQLMbHfbCFKZ2xm3y9WLA8XoQJk0U7aLAIe1lhS3c4kXTpI1ibHMnRRWjXkE7Yacoq7DlBphVZxzwcce2PxiJU6VjKv99Sa8zZ3qOl6bpmA-08BW1VqtO14lO4SZj2ZnQIdb264zi1l9kO3Olo2caw3rQocOAylBg8PRFSIj5Mxkg)
-6. Select “Continue
+6. Select "Continue"
 7. Record the passphrase somewhere safe.
 
 {% hint style="info" %}
-Remember your passphrase as you will need it for future access of your data. Storj is unable to recover your passphrase for you
+Remember your passphrase as you will need it for future access of your data. Storj is unable to recover your passphrase for you.
 {% endhint %}
 
-### Create Storj access key
+### Create Storj Access Key
 
 You will need to configure a Storj access key for Comet to be able to create Storage Vaults.&#x20;
 
-To create an API Access grant in the Storj web console:
+To create an API Access key in the Storj web console:
 
 1. Navigate to "Access" on the left side menu
 2. Click "Create Keys for CLI" under the API key block\
    ![](<../.gitbook/assets/Screen Shot 2022-09-09 at 9.03.17 AM.png>)\
 
 3. **Type:** API Access
-4. **Name:** The name of the access g (e.g. Comet)
+4. **Name:** The name of the access key (e.g. Comet)
 5. **Permissions:** All
 6. **Buckets:** Feel free to specify the bucket created above (e.g. comet-backups), or leave as “All”\
    ![](https://lh3.googleusercontent.com/mOYHJkcfQ7qj5BpkgICFBB35-EsRStC64m\_gAloDXsRfl3QrHw2r2kMNfidqog0l1070zvRyU7UmJLtox7mE0OfKYGp4Mok1yvS9Eqov2V\_5MDRIYethXeYYVlfe5g45\_JM-w32wuZb3H4w0BAQaL75Mim4VNQxN5HwvlBqg6L3DthzF8icKwWQvBQ)
@@ -83,7 +83,7 @@ To create an API Access grant in the Storj web console:
    1. **Description:** What the storage will be called on the Comet Server
    2. **Satellites:** The location of the Storj satellite server. You can locate which satellite you're using by looking at the url of the Storj web console. \
       ![](<../.gitbook/assets/Screen Shot 2022-09-09 at 9.11.25 AM.png>)
-   3. **API Key**: The API key created in [#configuring-the-storj-access-key](cometbackup-integration-guide.md#configuring-the-storj-access-key "mention")
+   3. **API Key**: The API key created in [#create-storj-access-key](cometbackup-integration-guide.md#create-storj-access-key "mention")
    4. **Passphrase**: The passphrase created in [#create-a-storj-bucket](cometbackup-integration-guide.md#create-a-storj-bucket "mention")
    5. **Bucket**: The name of the bucket created in [#create-a-storj-bucket](cometbackup-integration-guide.md#create-a-storj-bucket "mention")\
       ![](https://lh4.googleusercontent.com/Nq8t3od-8LOpq6Ez65J4\_I9Mer3560zSWbdQw26V72x8sKoV23ILtclJ6pPMKWJfr2HqjN4vkyFGQjYWU88tEZZ83CfemCeyZfBHkOqBbIT9\_3wPgp7xVsLfE3TpxOqIgFCCj\_hTI55Dd9DG\_GtBpTtYgqyj5NWIvKpH63CWx5WI0KEwqlQN4stk3w)
