@@ -14,11 +14,11 @@ description: >-
 
 4\. Provide name, permissions and optionally buckets, select **Create Keys**.
 
-![](<../../../.gitbook/assets/image (12) (2).png>)
+![](<../../../.gitbook/assets/image (12) (1).png>)
 
 5\. Copy and save the **Satellite Address** and **API Key** in a safe place or download them as they will only appear once.
 
-![](<../../../.gitbook/assets/image (21) (2).png>)
+![](<../../../.gitbook/assets/image (21).png>)
 
 6\. Make sure you've already [downloaded the Uplink CLI](../../../downloads/download-uplink-cli.md) and run `uplink setup`.
 

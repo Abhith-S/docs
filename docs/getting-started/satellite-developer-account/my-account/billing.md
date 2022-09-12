@@ -22,7 +22,7 @@ If you select the **Current Billing Period** on the top right, you will see two 
 
 After selecting the **Previous Billing Period** you can see how much you were billed in it.
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can expand any Project to see details of the charge. See [billing-and-payment.md](../../../billing-payment-and-accounts-1/pricing/billing-and-payment.md "mention") for details.
 
@@ -38,7 +38,7 @@ In the _**Billing History**_ screen you can see a list of paid invoices and can 
 
 To add a [**Payment Method**](../../../billing-payment-and-accounts-1/storj-token/) you can select **Add STORJ** or **Add Card**.
 
-<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
 
 Please read the [pricing](../../../billing-payment-and-accounts-1/pricing/ "mention") section for details.
 
@@ -46,7 +46,7 @@ Please read the [pricing](../../../billing-payment-and-accounts-1/pricing/ "ment
 
 You can select to **Add STORJ** on the _**Billing**_ screen.
 
-<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
 
 We will automatize STORJ payments in the near future, but for now, you will need to [contact support](https://supportdcs.storj.io/hc/en-us/requests/new?ticket\_form\_id=360000683212) to request paying in STORJ tokens.
 
@@ -68,7 +68,7 @@ To see the full **Balance History,** you can select it with the arrow drowdown n
 
 This will show the **Balance History** page.
 
-<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can view STORJ deposit details with the **Checkout** button.
 
@@ -84,6 +84,6 @@ Please provide a valid Card number, expiration date and CVC, then confirm adding
 
 You can **Add a Coupon Code** or scan it:
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (2).png" alt=""><figcaption></figcaption></figure>
 
 The added Coupon will be listed under **Payment Method** near the bottom of the screen.

@@ -20,7 +20,7 @@ Give your Access Grant a name:
 
 Set any access restrictions you want encoded into your Access Grant. Through the Satellite Admin Console, you can set basic restrictions on your Access Grant. You can get [more sophisticated using the CLI](../quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) and add [further, more granular restrictions](../../api-reference/uplink-cli/share-command.md), for example, at the path prefix level within a Bucket.
 
-![](<../../.gitbook/assets/image (5) (1).png>)
+![](<../../.gitbook/assets/image (5).png>)
 
 Next, enter an [Encryption Passphrase](../../concepts/access/encryption-and-keys/) for your Access Grant. Note that this encryption passphrase is handled by the browser and is not stored by the Satellite. You can either **Generate Passphrase** or **Create My Own Passphrase**.
 
@@ -48,7 +48,7 @@ Remember, when you generate credentials for the Storj DCS S3-compatible Gateway 
 
 When you generate credentials for the Storj DCS S3-compatible Gateway, the Admin Console will create and register your Access Grant with the [Gateway auth service](../../concepts/edge-services/auth-service.md) and display the credentials required to configure your client app to work with the Storj DCS S3-compatible Gateway.
 
-![](<../../.gitbook/assets/image (41).png>)
+![](../../.gitbook/assets/image.png)
 
 ## Create Keys for CLI
 
@@ -60,11 +60,11 @@ When you generate credentials for the Storj DCS S3-compatible Gateway, the Admin
 
 4\. Provide name, permissions and optionally buckets, select **Create Keys**.
 
-![](<../../.gitbook/assets/image (12) (2).png>)
+![](<../../.gitbook/assets/image (12) (1).png>)
 
 5\. Copy and save the **Satellite Address** and **API Key** in a safe place or download them as they will only appear once.
 
-![](<../../.gitbook/assets/image (21) (2).png>)
+![](<../../.gitbook/assets/image (21).png>)
 
 6\. Make sure you've already [downloaded the Uplink CLI](../../downloads/download-uplink-cli.md) and run `uplink setup`.
 

@@ -33,7 +33,7 @@ By selecting this integration pattern you are opting in to [server-side encrypti
 
 **Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-![](<../../.gitbook/assets/image (3) (1).png>)
+![](<../../.gitbook/assets/image (3).png>)
 
 {% hint style="warning" %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
@@ -49,7 +49,7 @@ Click either on the **Copy to clipboard** link or **Download .txt** and then con
 
 Click the **Create my Access** link to finish generating of S3 credentials.
 
-![](<../../.gitbook/assets/image (41).png>)
+![](../../.gitbook/assets/image.png)
 
 Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or download them.
 

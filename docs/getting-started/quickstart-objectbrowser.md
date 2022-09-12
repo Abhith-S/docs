@@ -22,7 +22,7 @@ When you click on the bucket, you will be prompted to read carefully - The objec
 Don't forget to save your **Encryption Passphrase** generated below, you will need it for future access.
 {% endhint %}
 
-![](<../.gitbook/assets/image (9) (2).png>)
+![](<../.gitbook/assets/image (9).png>)
 
 If this is your first time using the object browser, you **must create an encryption passphrase.** We strongly encourage you to use a mnemonic phrase. The GUI automatically generates one on the client side for you with the **Generate passphrase** option. You can also download it as a text file.
 
@@ -30,11 +30,11 @@ If this is your first time using the object browser, you **must create an encryp
 
 Alternatively, you can enter your own passphrase using the **Enter passphrase** option. Finish selection by click on **Continue** button.
 
-![](<../.gitbook/assets/image (8) (1).png>)
+![](<../.gitbook/assets/image (8).png>)
 
 To continue, you need to mark the checkbox _**\[v] I understand, and I have saved the passphrase.**_ This will enable the **Continue** button.
 
-![](<../.gitbook/assets/image (15) (2).png>)
+![](<../.gitbook/assets/image (15).png>)
 
 When you click the **Continue** button, you will be placed into the **Objects** view if you already have buckets, otherwise a new bucket _**demo-bucket**_ will be created and you will be placed into that bucket view.
 
@@ -76,7 +76,7 @@ You can create your buckets in the **Objects** view or if you click on the **<-B
 
 To create a new bucket, click the **New bucket** button in the **Buckets** view. A new module window will pop up called **Create Bucket**. Please provide a name using only lower case alphanumeric characters and dashes (this is a limitation for compatibility with existing object storages).
 
-![](<../.gitbook/assets/image (10) (3).png>)
+![](<../.gitbook/assets/image (10).png>)
 
 After creating your new bucket, you will be placed into the bucket where you can [make folders and/or upload files](quickstart-objectbrowser.md#upload-files-and-folders).
 

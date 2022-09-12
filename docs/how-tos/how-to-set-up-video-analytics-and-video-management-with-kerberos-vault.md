@@ -47,7 +47,7 @@ If this is your first time using the object browser, you **must create an encryp
 
 5\. To continue, you need to mark the checkbox _**\[v] I understand, and I have saved the passphrase.**_ This will enable the **Continue** button. When you click it - the bucket "_**kerberos-vault**_" will be created.
 
-![](<../.gitbook/assets/image (15) (2).png>)
+![](<../.gitbook/assets/image (15).png>)
 
 {% hint style="warning" %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
@@ -73,19 +73,19 @@ Please note that **Storj does not know or store your encryption passphrase**, so
 
 9\. Click **Encrypt My Access**
 
-![](<../.gitbook/assets/image (27) (2).png>)
+![](<../.gitbook/assets/image (27) (1).png>)
 
 10\. Select **Create My Own Passphrase** and provide your Encryption Phrase used during creation of "_**kerberos-vault**_" bucket earlier. To continue click either **Copy to clipboard** or **Download .txt**.
 
-![](<../.gitbook/assets/image (25) (2).png>)
+![](<../.gitbook/assets/image (25) (1).png>)
 
 11\. To confirm creation mark the checkbox **\[v] I understand that Storj does not know or store my encryption passphrase. If I lose it, I won't be able to recover files.**, this will enable **Create my Access** button.
 
-![](<../.gitbook/assets/image (18) (2).png>)
+![](<../.gitbook/assets/image (18).png>)
 
 12\. When you click on **Create my Access** the window with S3 Credentials will be opened
 
-![](<../.gitbook/assets/image (4) (2).png>)
+![](<../.gitbook/assets/image (4).png>)
 
 13\. Copy S3 Keys and S3 Endpoint or click **Download .txt** to use with Kerberos Vault in a safe place.
 

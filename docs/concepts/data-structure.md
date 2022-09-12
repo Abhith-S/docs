@@ -17,7 +17,7 @@ description: How data is logically segmented on the network
 
 ### Advanced Concepts
 
-![Overview of Files (objects), segments, stripes, erasure shares, and pieces](<../.gitbook/assets/image (20) (1).png>)
+![Overview of Files (objects), segments, stripes, erasure shares, and pieces](<../.gitbook/assets/image (20) (1) (1).png>)
 
 **Bucket:** represent a collection of objects. You can upload, download, list, and delete objects of any size or shape.
 
