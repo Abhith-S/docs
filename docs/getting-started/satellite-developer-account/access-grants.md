@@ -60,7 +60,7 @@ When you generate credentials for the Storj DCS S3-compatible Gateway, the Admin
 
 4\. Provide name, permissions and optionally buckets, select **Create Keys**.
 
-![](<../../.gitbook/assets/image (12) (1).png>)
+![](<../../.gitbook/assets/image (12) (2).png>)
 
 5\. Copy and save the **Satellite Address** and **API Key** in a safe place or download them as they will only appear once.
 

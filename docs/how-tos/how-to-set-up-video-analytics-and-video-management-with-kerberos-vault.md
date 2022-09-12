@@ -73,11 +73,11 @@ Please note that **Storj does not know or store your encryption passphrase**, so
 
 9\. Click **Encrypt My Access**
 
-![](<../.gitbook/assets/image (27) (1).png>)
+![](<../.gitbook/assets/image (27) (2).png>)
 
 10\. Select **Create My Own Passphrase** and provide your Encryption Phrase used during creation of "_**kerberos-vault**_" bucket earlier. To continue click either **Copy to clipboard** or **Download .txt**.
 
-![](<../.gitbook/assets/image (25) (1).png>)
+![](<../.gitbook/assets/image (25).png>)
 
 11\. To confirm creation mark the checkbox **\[v] I understand that Storj does not know or store my encryption passphrase. If I lose it, I won't be able to recover files.**, this will enable **Create my Access** button.
 

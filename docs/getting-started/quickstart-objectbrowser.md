@@ -22,7 +22,7 @@ When you click on the bucket, you will be prompted to read carefully - The objec
 Don't forget to save your **Encryption Passphrase** generated below, you will need it for future access.
 {% endhint %}
 
-![](<../.gitbook/assets/image (9).png>)
+![](<../.gitbook/assets/image (9) (2).png>)
 
 If this is your first time using the object browser, you **must create an encryption passphrase.** We strongly encourage you to use a mnemonic phrase. The GUI automatically generates one on the client side for you with the **Generate passphrase** option. You can also download it as a text file.
 
