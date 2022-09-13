@@ -104,7 +104,6 @@
 * [Comet Backup Integration Guide](how-tos/cometbackup-integration-guide.md)
 * [Configure Tools for the Partner Program](how-tos/configure-tools-for-the-partner-program.md)
 * [Fastly Integration](how-tos/fastly-integration.md)
-* [Configure Filebase for easy upload](https://filebase.com)
 * [Backup With Duplicati](how-tos/backup-with-duplicati.md)
 * [NFT storage for OpenSea](how-tos/nft-storage.md)
 * [Sync Files With Rclone](how-tos/sync-files-with-rclone/README.md)
