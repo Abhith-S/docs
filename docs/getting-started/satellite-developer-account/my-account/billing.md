@@ -22,7 +22,7 @@ If you select the **Current Billing Period** on the top right, you will see two 
 
 After selecting the **Previous Billing Period** you can see how much you were billed in it.
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
 
 You can expand any Project to see details of the charge. See [billing-and-payment.md](../../../billing-payment-and-accounts-1/pricing/billing-and-payment.md "mention") for details.
 
@@ -76,7 +76,7 @@ You can view STORJ deposit details with the **Checkout** button.
 
 You can also select to **Add Card** on the _**Billing**_ screen. You will be prompted to specify Card details.
 
-<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (3).png" alt=""><figcaption></figcaption></figure>
 
 Please provide a valid Card number, expiration date and CVC, then confirm adding the Card with the **Add Card** button. Storj does not store your card details, they are only used to register your Card with our payment processor [Stripe](https://stripe.com/).
 

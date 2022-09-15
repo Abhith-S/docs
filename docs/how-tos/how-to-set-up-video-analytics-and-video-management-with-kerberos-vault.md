@@ -85,7 +85,7 @@ Please note that **Storj does not know or store your encryption passphrase**, so
 
 12\. When you click on **Create my Access** the window with S3 Credentials will be opened
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image (4) (2).png>)
 
 13\. Copy S3 Keys and S3 Endpoint or click **Download .txt** to use with Kerberos Vault in a safe place.
 

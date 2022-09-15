@@ -64,7 +64,7 @@ Click either on the **Copy to clipboard** link or **Download .txt** and then con
 
 Click the **Create my Access** link to finish generating of S3 credentials.
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (12).png>)
 
 Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or download them. We’ll be using this shortly!
 

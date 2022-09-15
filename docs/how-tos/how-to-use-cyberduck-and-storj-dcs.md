@@ -124,7 +124,7 @@ _If you do not feel comfortable entering this sensitive information into your br
 
 Confirm that you copied or downloaded your Encryption Phrase and click on **Create my Access**.
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (12).png>)
 
 Be sure to download the S3 credentials to save them. You can also click on **Learn More** to learn how to use S3 credentials.
 
