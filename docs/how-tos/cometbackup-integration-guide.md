@@ -86,5 +86,11 @@ To create an API Access key in the Storj web console:
    4. **Passphrase**: The passphrase created in [#create-a-storj-bucket](cometbackup-integration-guide.md#create-a-storj-bucket "mention")
    5. **Bucket**: The name of the bucket created in [#create-a-storj-bucket](cometbackup-integration-guide.md#create-a-storj-bucket "mention")\
       ![](https://lh4.googleusercontent.com/Nq8t3od-8LOpq6Ez65J4\_I9Mer3560zSWbdQw26V72x8sKoV23ILtclJ6pPMKWJfr2HqjN4vkyFGQjYWU88tEZZ83CfemCeyZfBHkOqBbIT9\_3wPgp7xVsLfE3TpxOqIgFCCj\_hTI55Dd9DG\_GtBpTtYgqyj5NWIvKpH63CWx5WI0KEwqlQN4stk3w)
-4. Once complete you should now be able to request a new Storj Storage Vault for a user.\
+4. Once complete you should now see Storj as an option in the Storage Templates section in your Comet Server.\
+   ![](<../.gitbook/assets/Storj Storage.png>)
+5. You will now be able to request a new Storj Storage Vault for a user.\
    ![](https://lh3.googleusercontent.com/TqQOk5N0fIGOuBiDOHJWyqGhxVfxddjuZYIE3EL-IvhwbMnuO-HSgUK9-fneTNlVLkJRD6DfB9MzwYG1lmzDR9VB48NMJrUho9my-V6LqL2N4ZFScE4b5-Xas0kpTjL0XnNIA9YrqLpOAHa6g\_5WDaPBQ47MldrafK1p3O-z0grEhgq6j9H8uA4GIA)
+
+You will also be able to request a Storj Storage Vault when you add new users.
+
+![](<../.gitbook/assets/Storj New User.png>)
