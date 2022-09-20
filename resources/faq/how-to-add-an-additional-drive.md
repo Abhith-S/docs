@@ -93,8 +93,8 @@ We assume that the second node would be run on the same device as a first one.
 1. Go to your router and forward port `28968` to `28968` and the IP of your device.
 2. `docker run` will contain:
 
-```
-docker run .... -p 28968:28967/tcp -p 28968:28967/udp -p 172.0.0.1:14003:14002 -e ADDRESS=my.ddns.tld:28968 ....
+```shell-session
+docker run .... -p 28968:28967/tcp -p 28968:28967/udp -p 127.0.0.1:14003:14002 -e ADDRESS=my.ddns.tld:28968 ....
 ```
 
 _Please, use the full command from_ [_CLI - run Storage Node_](../../setup/cli/storage-node.md#running-the-storage-node)_, the above is an excerpt showing only the changed parts._
