@@ -8,7 +8,7 @@ description: >-
 
 [You need to have a satellite account and installed Uplink CLI](../prerequisites.md).
 
-Navigate to the [**Access**](../../satellite-developer-account/access-grants.md) **** page within your project and then click on **Create S3 Credentials**. A modal window will pop up where you should enter a name for this access grant.
+Navigate to the [**Access**](../../satellite-developer-account/access-grants.md) **** page within your project and then click on **Create Access Grant**. A modal window will pop up where you should enter a name for this access grant.
 
 ![](<../../../.gitbook/assets/image (24).png>)
 
