@@ -41,7 +41,7 @@ you can select a needed project and modify its name or description.
 
 If your account tier allows you to change [your Limits](../../concepts/limits.md), you will have more options than a [Free tier](../../billing-payment-and-accounts-1/pricing/free-tier.md).
 
-<figure><img src="../../.gitbook/assets/image (10) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 Select **Edit** to the right of the limit to change it. However, it will not allow to increase limits greater than your available maximum. To change the maximum you need to [file a support request to change your limits](../../billing-payment-and-accounts-1/pricing/usage-limit-increases.md).
 

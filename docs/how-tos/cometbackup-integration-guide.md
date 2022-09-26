@@ -29,7 +29,7 @@ If you do not currently have a Comet Server, please refer to Comet’s [getting 
 To begin setting up Comet with Storj, you'll need to first create an account on Storj.
 
 Navigate to [https://storj.io/signup](https://storj.io/signup) or login to an existing Storj account.\
-![](<../.gitbook/assets/image (8).png>)
+![](<../.gitbook/assets/image (8) (2).png>)
 
 ### Create a Storj Bucket
 
@@ -37,12 +37,12 @@ Navigate to [https://storj.io/signup](https://storj.io/signup) or login to an ex
 
 1. Navigate to “Buckets” on the left side menu
 2. Click “New Bucket” on the top right\
-   ![](<../.gitbook/assets/image (4).png>)
+   ![](<../.gitbook/assets/image (4) (1).png>)
 3. Name the bucket something identifiable such as “comet-backups”\
-   ![](<../.gitbook/assets/image (6).png>)
+   ![](<../.gitbook/assets/image (6) (2).png>)
 4. Select "Continue"
 5. Generate a passphrase or enter your own.\
-   ![](<../.gitbook/assets/image (9).png>)
+   ![](<../.gitbook/assets/image (9) (1).png>)
 6. Select "Continue"
 7. Record the passphrase somewhere safe.
 
@@ -63,7 +63,7 @@ To create an API Access key in the Storj web console:
 4. **Name:** The name of the access key (e.g. Comet)
 5. **Permissions:** All
 6. **Buckets:** Feel free to specify the bucket created above (e.g. comet-backups), or leave as “All”\
-   ![](<../.gitbook/assets/image (7).png>)
+   ![](<../.gitbook/assets/image (7) (1).png>)
 7. Click “Create Keys” and record the API key somewhere safe.
 
 ## Comet setup
@@ -74,7 +74,7 @@ To create an API Access key in the Storj web console:
    1. &#x20;For Comet-Hosted “Settings -> Storage -> Storage Templates”
    2. For Self-Hosted “Settings -> Authentication -> Storage Templates”
 2. Click the green “Add” button to add a new Storage Template.\
-   ![](../.gitbook/assets/image.png)
+   ![](<../.gitbook/assets/image (32).png>)
 3. Change the “Type” to Storj DCS and then fill in the fields
    1. **Description:** What the storage will be called on the Comet Server
    2. **Satellites:** The location of the Storj satellite server. You can locate which satellite you're using by looking at the url of the Storj web console. \
@@ -83,11 +83,11 @@ To create an API Access key in the Storj web console:
    4. **Passphrase**: The passphrase created in [#create-a-storj-bucket](cometbackup-integration-guide.md#create-a-storj-bucket "mention")
    5. **Bucket**: The name of the bucket created in [#create-a-storj-bucket](cometbackup-integration-guide.md#create-a-storj-bucket "mention")\
       \
-      ![](<../.gitbook/assets/image (10).png>)
+      ![](<../.gitbook/assets/image (10) (4).png>)
 4. Once complete you should now see Storj as an option in the Storage Templates section in your Comet Server.\
    ![](<../.gitbook/assets/Storj Storage.png>)
 5. You will now be able to request a new Storj Storage Vault for a user.\
-   ![](<../.gitbook/assets/image (2).png>)
+   ![](<../.gitbook/assets/image (2) (1).png>)
 
 You will also be able to request a Storj Storage Vault when you add new users.
 

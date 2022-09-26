@@ -28,7 +28,7 @@ Please sign in to your Storj DCS account and **Navigate to the Access** page wit
 
 **Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (3) (1).png>)
 
 Click either on the **Copy to clipboard** link or **Download .txt** and then confirm that you copied your Encryption Phrase to a safe place.
 
@@ -36,7 +36,7 @@ Click either on the **Copy to clipboard** link or **Download .txt** and then con
 
 Click the **Create my Access** link to finish generating of S3 credentials.
 
-![](<../.gitbook/assets/image (12).png>)
+![](<../.gitbook/assets/image (41).png>)
 
 Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or download them.
 

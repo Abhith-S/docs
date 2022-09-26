@@ -12,7 +12,7 @@ Navigate to the [**Access**](../../satellite-developer-account/access-grants.md)
 
 ![](<../../../.gitbook/assets/image (24).png>)
 
-![](<../../../.gitbook/assets/image (2) (2).png>)
+![](<../../../.gitbook/assets/image (2).png>)
 
 {% hint style="info" %}
 If you click **Encrypt My Access**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with [Gateway MT](../../gateway-mt/) for S3 compatibility. Only then will your access grant be shared with our servers. Storj does not know or store your encryption passphrase.
@@ -30,7 +30,7 @@ Select a **Passphrase** type: Either **Enter** your own _**Encryption Passphrase
 
 **Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-![](<../../../.gitbook/assets/image (3).png>)
+![](<../../../.gitbook/assets/image (3) (1).png>)
 
 {% hint style="warning" %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!

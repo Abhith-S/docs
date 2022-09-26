@@ -16,7 +16,7 @@ Let's start with creating an Access Grant. Click the **Create Access Grant** But
 
 Give your Access Grant a name:
 
-![](<../../.gitbook/assets/image (2) (2).png>)
+![](<../../.gitbook/assets/image (2).png>)
 
 Set any access restrictions you want encoded into your Access Grant. Through the Satellite Admin Console, you can set basic restrictions on your Access Grant. You can get [more sophisticated using the CLI](../quickstart-uplink-cli/generate-access-grants-and-tokens/generate-a-token.md) and add [further, more granular restrictions](../../api-reference/uplink-cli/share-command.md), for example, at the path prefix level within a Bucket.
 
@@ -48,7 +48,7 @@ Remember, when you generate credentials for the Storj DCS S3-compatible Gateway 
 
 When you generate credentials for the Storj DCS S3-compatible Gateway, the Admin Console will create and register your Access Grant with the [Gateway auth service](../../concepts/edge-services/auth-service.md) and display the credentials required to configure your client app to work with the Storj DCS S3-compatible Gateway.
 
-![](<../../.gitbook/assets/image (12).png>)
+![](<../../.gitbook/assets/image (41).png>)
 
 ## Create Keys for CLI
 
@@ -64,7 +64,7 @@ When you generate credentials for the Storj DCS S3-compatible Gateway, the Admin
 
 5\. Copy and save the **Satellite Address** and **API Key** in a safe place or download them as they will only appear once.
 
-![](<../../.gitbook/assets/image (21).png>)
+![](<../../.gitbook/assets/image (21) (2).png>)
 
 6\. Make sure you've already [downloaded the Uplink CLI](../../downloads/download-uplink-cli.md) and run `uplink setup`.
 
@@ -134,7 +134,7 @@ The alternative for using the `uplink setup` command and then `uplink share` is 
 
 To Delete an Access Grant, select three dots on the right side of the Access Grant and choose **Delete Access**:
 
-![](<../../.gitbook/assets/image (7) (1).png>)
+![](<../../.gitbook/assets/image (7).png>)
 
 Then confirm that you want to delete the Access Grant by typing its name and confirming with **Delete Access** button.
 

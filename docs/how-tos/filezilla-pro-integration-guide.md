@@ -46,7 +46,7 @@ Navigate to the [**Access**](../getting-started/satellite-developer-account/acce
 
 ![](<../.gitbook/assets/image (24).png>)
 
-![](<../.gitbook/assets/image (2) (2).png>)
+![](<../.gitbook/assets/image (2).png>)
 
 {% hint style="info" %}
 If you click **Encrypt My Access**, our client-side javascript will finalize your access grant with your encryption passphrase. Your data will remain end-to-end encrypted until you explicitly register your access grant with [Gateway MT](../getting-started/gateway-mt/) for S3 compatibility. Only then will your access grant be shared with our servers. Storj does not know or store your encryption passphrase.
@@ -64,7 +64,7 @@ Select a **Passphrase** type: Either **Enter** your own _**Encryption Passphrase
 
 **Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (3) (1).png>)
 
 {% hint style="warning" %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
@@ -90,7 +90,7 @@ Now that the Access Grant has been generated, this will allow for integration wi
 
 Once the FileZilla Pro client is open, select the **Open the Site Manager** icon at the top left of the FileZilla Pro client. Once open, start by selecting the **New Site** button and _**Storj - Decentralized Cloud Storage**_ as the protocol.
 
-![](<../.gitbook/assets/image (6) (2).png>)
+![](<../.gitbook/assets/image (6).png>)
 
 Now, add the appropriate **Satellite** url (without adding `htpps://`) and simply copy your Access Grant that was previously generated within your Storj DCS account to the **Access Grant** field:
 
@@ -114,7 +114,7 @@ In this section, we’ll go through the Storj FileZilla Pro integration leveragi
 
 **Enter the Encryption Passphrase** you used for your other access grants. If this is your first access grant, we strongly encourage you to use a mnemonic phrase as your encryption passphrase (The GUI automatically generates one on the client-side for you.)
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (3) (1).png>)
 
 {% hint style="warning" %}
 **This passphrase is important!** Encryption keys derived from it are used to encrypt your data at rest, and your data will have to be re-uploaded if you want it to change!
@@ -130,7 +130,7 @@ Click either on the **Copy to clipboard** link or **Download .txt** and then con
 
 Click the **Create my Access** link to finish generating of S3 credentials.
 
-![](<../.gitbook/assets/image (12).png>)
+![](<../.gitbook/assets/image (41).png>)
 
 Copy your **Access Key**, **Secret Key**, and **Endpoint** to a safe location or download them.
 
