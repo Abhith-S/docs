@@ -48,7 +48,7 @@ For anyone who has previously configured an Uplink, please use a named access. I
 
 7\. Follow the prompts. When asked for your API Key, enter it (you should have saved it in step 5 above).
 
-8\. Generate the Access Grant by running `uplink share` with no restrictions.
+8\. Generate the Access Grant by running `uplink access restrict` with no restrictions.
 
 {% hint style="info" %}
 &#x20;If you chose an access name, you'll need to specify it in the following command as `--access=name`
