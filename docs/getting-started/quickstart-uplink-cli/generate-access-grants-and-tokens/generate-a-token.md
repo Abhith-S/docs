@@ -43,7 +43,7 @@ uplink setup
 {% endtabs %}
 
 {% hint style="info" %}
-For anyone who has previously configured an Uplink, please use a named access. If you want to replace the default access, you need to either [Create an Access Grant](../uploading-your-first-object/create-first-access-grant.md) and use the [`uplink access import`](../../../api-reference/uplink-cli/access-command/access-import.md#import-access-grant-and-replace-the-existing-access) command with `--force` flag to import it, or use the [`uplink access create --import-to <name>`](../../../api-reference/uplink-cli/access-command/access-create.md#create-an-access-grant-and-replace-the-existing-access) command with `--force` flag to create an Access Grant in CLI and import it to the specified access in the local store of Uplink.
+For anyone who has previously configured an Uplink, please use a named access. If you want to replace the default access, you need to either specify `--force` flag to `uplink setup` command or [Create an Access Grant](../uploading-your-first-object/create-first-access-grant.md) and use the [`uplink access import`](../../../api-reference/uplink-cli/access-command/access-import.md#import-access-grant-and-replace-the-existing-access) command with `--force` flag to import it, or use the [`uplink access create --import-to <name>`](../../../api-reference/uplink-cli/access-command/access-create.md#create-an-access-grant-and-replace-the-existing-access) command with `--force` flag to create an Access Grant in CLI and import it to the specified access in the local store of Uplink.
 {% endhint %}
 
 7\. Follow the prompts. When asked for your API Key, enter it (you should have saved it in step 5 above).
@@ -57,19 +57,19 @@ For anyone who has previously configured an Uplink, please use a named access. I
 {% tabs %}
 {% tab title="Windows" %}
 ```
-./uplink.exe share --readonly=false
+./uplink.exe access restrict --readonly=false
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
 ```
-uplink share --readonly=false
+uplink access restrict --readonly=false
 ```
 {% endtab %}
 
 {% tab title="macOS" %}
 ```
-uplink share --readonly=false
+uplink access restrict --readonly=false
 ```
 {% endtab %}
 {% endtabs %}
@@ -81,5 +81,5 @@ Keep your full-rights Access Grant secret, it contains the encryption key and wi
 9\. Your Access Grant should have been output.&#x20;
 
 {% hint style="success" %}
-The alternative for using the `uplink setup` command and then `uplink share` is to use the [`uplink access create`](../../../api-reference/uplink-cli/access-command/access-create.md) command instead, it will print the Access Grant right away.
+The alternative for using the `uplink setup` command and then `uplink access restrict` is to use the [`uplink access create`](../../../api-reference/uplink-cli/access-command/access-create.md) command instead, it will print the Access Grant right away.
 {% endhint %}
