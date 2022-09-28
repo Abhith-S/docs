@@ -43,7 +43,7 @@ uplink setup
 {% endtabs %}
 
 {% hint style="info" %}
-For anyone who has previously configured an Uplink, please use a named access. If you want to replace the default access, you need to either specify `--force` flag to `uplink setup` command or [Create an Access Grant](../uploading-your-first-object/create-first-access-grant.md) and use the [`uplink access import`](../../../api-reference/uplink-cli/access-command/access-import.md#import-access-grant-and-replace-the-existing-access) command with `--force` flag to import it, or use the [`uplink access create --import-to <name>`](../../../api-reference/uplink-cli/access-command/access-create.md#create-an-access-grant-and-replace-the-existing-access) command with `--force` flag to create an Access Grant in CLI and import it to the specified access in the local store of Uplink.
+For anyone who has previously configured an Uplink, please use a named access. If you want to replace the default access, you need to either specify the `--force` flag to the `uplink setup` command or [Create an Access Grant](../uploading-your-first-object/create-first-access-grant.md) and use the [`uplink access import`](../../../api-reference/uplink-cli/access-command/access-import.md#import-access-grant-and-replace-the-existing-access) command with `--force` flag to import it, or use the [`uplink access create --import-to <name>`](../../../api-reference/uplink-cli/access-command/access-create.md#create-an-access-grant-and-replace-the-existing-access) command with `--force` flag to create an Access Grant in CLI and import it to the specified access in the local store of Uplink.
 {% endhint %}
 
 7\. Follow the prompts. When asked for your API Key, enter it (you should have saved it in step 5 above).
